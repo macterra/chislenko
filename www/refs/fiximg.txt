@@ -1,0 +1,78 @@
+
+NAME
+       fiximg.pl - add WIDTH and HEIGHT to IMG tags in HTML files.
+
+SYNOPSIS
+       fiximg.pl -h
+       fiximg.pl [ options ] htmlfile [ ... ]
+
+DESCRIPTION
+       fiximg.pl examines HTML files and changes IMG tags to hold the WIDTH
+       and HEIGHT sizes. Putting the size in IMG tags will speed up loading
+       the page with Netscape. When HTML files are edited manually, putting
+       in  the  sizes  is quite a hassle. fiximg.pl will try to locate each
+       indicated image, and determine its size if it is a GIF or JPG image.
+
+       Images are located in two ways:
+
+       1.     the filename of the image starts with a "/". In this case the
+              DocumentRoot as set in fiximg.pl (change it to local path) is
+              used.
+
+       2.     the filename of the image starts with a "~". The user will be
+              looked up in /etc/passwd, and his directory public_html will
+              be used.
+
+       3.     in  all  other  cases  the  path  to  the  html file is used.
+
+       Unless  there  are aliases for certain image directories this scheme
+       should work.
+
+       The size is then put in the IMG tag, leaving intact everything other
+       than  the old WIDTH and HEIGHT. This means that if the old WIDTH and
+       HEIGHT  were used to resize the image, the effect will be discarded.
+
+       The  original  htmlfile  will be backupped to its original name with
+       ".bak" appended.
+
+OPTIONS
+       -h     Displays this manual page.
+
+       -l     Treat symbolic links as well. The default is not to treat
+              symbolic links, because the original file should be treated
+              instead of the link to it.
+
+SEE ALSO
+       http://www.sci.kun.nl/thalia/guide/#fiximg
+              For the latest version.
+
+BUGS
+       The  program  might not work because the path to Perl in the first
+       line  of  fiximg.pl  is wrong. See if the path is correct by doing
+       'which perl'  at  your Unix prompt. If it is not correct, you will
+       have to edit the first line.
+
+       Beware  of  so-called  Redirects;  in  our  case  our DocumentRoot 
+
+              /vol/www/thalia/web-docs/
+
+       was  redirected  to "/thalia". This caused errors when images were
+       accessed  as  "/thalia/gifs/image.gif".  The  real  image would be
+
+              /vol/www/thalia/web-docs/gifs/image.gif
+
+       but the program would come up with the filename
+
+              /vol/www/thalia/web-docs/thalia/gifs/image.gif
+
+       We  solved  it  by making a link in the DocumentRoot directory, to
+       itself,  with  the name "thalia" ("ln -s . thalia"). You have been
+       warned.
+
+ACKNOWLEDGMENTS
+       Richie B. <richie@morra.et.tudelft.nl> for the subroutine that
+       fixes user-URL's starting with "/~".
+
+AUTHOR
+       Patrick Atoon <patricka@cs.kun.nl>
+

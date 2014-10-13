@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Keywords" CONTENT="HEDG,semantic spaces,econometrics,economics,economy,ecology,metasystem, metasystems, global brain, intelligent software agents, society, collaborative filtering, advanced technology,Semantic Transports, social implications of Automated Collaborative Filtering, artificial intelligence, Automated Collaborative Filtering, social implications, economic, Internet, global brain, futurology, theory,supereconomy,hypereconomy,hypereconomics,econometrics,system theory,sistem theory,">
+<META NAME="description" CONTENT="HEDG: Hyper-Economy Development Group: software model and project plan">
+<META NAME="AUTHOR" CONTENT="Alexander_Chislenko">
+<META NAME="Publisher" CONTENT="Alexander_Chislenko">
+<META HTTP-EQUIV="Reply-to" CONTENT="sasha1@netcom.com (Alexander Chislenko)">
+<META HTTP-EQUIV="Content-language" CONTENT="en-US">
+<META NAME="rating" CONTENT="General">
+<META HTTP-EQUIV="Window-target" CONTENT="_top">
+<LINK REL=HOME HREF="http://www.lucifer.com/~sasha/HEDG/HEDG.html">
+
+<TITLE>Hyper-Economy Development Group: software model and project plan</TITLE>
+</HEAD>
+<BODY BGCOLOR="#EEEEEE">
+
+<H2>Hyper-Economy Development Group: software model and project plan</H2>
+
+<H3>Why banner exchange as the first implementation</H3>
+
+While the model itself remains generic, we have chosen banner exchange as
+the first prototype implementation for our developing hypereconomic
+system for several reasons:
+<UL>
+<LI>I have experience with similar systems (<A HREF="http://www.lucifer.com/~sasha/articles/ACF.html">ACF</A>)
+<LI>this is a good example of already existing multi-agent system
+with data practically available, and with very complex
+considerations (user preferences) producing numerous points
+of simple formal data (page views and banner clicks)
+<LI>the system can be expected to be practically useful in this
+domain as soon as it's ready.
+<LI><A HREF="http://trafficx.com">TrafficX</A> developer Joel Shellman is willing to implement it
+</UL>
+
+  I also hope to further develop the system and see it implemented
+in other domains.
+
+<H3>Project plan</H3>
+
+The first stages of the project will be implemented in Java on Win'95
+<P>
+For development and testing, a model of the domain will be used.
+Why a model? - because it allows multiple runs of the system
+without bothering real users, until things are ready.
+
+<H3>Parts of the system</H3>
+   (more detailed descriptions to follow soon)
+
+<UL>
+<LI>domain model:
+<BR>
+data representing agents of different kinds and their
+environment.  In the first implementation, that will
+be pages, banners, their categories and other parameters.
+<LI>Event model
+<BR>
+Simulates &quot;natural events&quot; in the system, i.e. things that
+happen regardless of the agents' actions.  In a banner
+exchange system, these events are represented by page views
+by Web users.  The event model will generate these events
+with frequencies and fluctuations similar to those in the
+real system.
+
+<LI>System decision model
+<BR>
+This is the brain of the system, representing collective actions of
+agents it will read the state of the environment and generate certain
+actions. In a banner exchange, it will decide what banners to show
+where and when.  The current implementation has five models:
+<BR>
+- &quot;Random&quot; - a banner is selected randomly out of banners with maximal inventory
+<BR>
+- &quot;Schedule&quot; (utility) - every site agent chooses the [generally] best banner
+out of currently available.
+<BR>
+- &quot;Economy&quot;, with sites and banners bargaining with each other for the opportunity
+of banner views, based on their individual experiences.
+<BR>
+- &quot;Intermediate&quot; - The economic decisions are made with some general knowledge on
+resource utility
+<BR>
+- &quot;hyper-economy&quot;, with sites and banners sharing their situational
+experience with each other, to find the best matches without testing
+every banner on every page.
+<BR>
+At this point the models work in a simple environment with stochastic events;
+the distribution patterns of events do not change in time.  The next stage
+should involve fluctuating environment.
+
+<LI>Environment response model
+<BR>
+The displayed banners will be &quot;clicked&quot; on or not, depending on a set
+of realistic parameters (not known to the decision- making module)
+
+<LI> assessment of decision quality
+<BR>
+a set of routines showing the system's performance statistics,
+such as average click rate [per category], speeds of adaptation
+under different conditions, etc.  This will allow us to see what
+works better - a centralized system, an economy, knowledge
+exchange, or their combinations.
+</UL>
+  After the models are tested, the real-world implementation will
+use TrafficX instead of the event model and system response model.
+The other parts will stay.
+<HR>
+Last updated January 10, 1999.
+<P>
+<A HREF="http://www.lucifer.com/~sasha/HEDG/HEDG.html">Back to hypereconomy page</A>
+</BODY>
+</HTML>

@@ -1,0 +1,128 @@
+            A complete history of humans and technology
+
+                                      Updated 17 November 1995
+
+
+=============================================================
+   I started typing a reply to the extropian list thread on
+"too many choices", and came up with the following notes on
+evolution of humans and technology that are actually getting
+close to what I really think is happening with humans.
+   I hope you will like these ideas and help me develop them.
+--------------------------------------------------------------
+
+  Let us look at things from a systemic perspective and define
+our subject as an organism consisting of a core control system
+and a bunch of sensors and actuators on the periphery. If the
+organism is small and simple, its parts may be mixed together
+and perform the same simple functions all the time.
+  In further growth we have more and more functional elements
+and an increasingly complex architecture.  The development of
+further functions within the same structure becomes difficult;
+I can list the following reasons for it:
+
+    - new additions become increasingly specialized and geared
+      towards specific and rare situations. So they offer
+      diminishing benefits, while body maintenance costs grow
+      at least linearly.  After a while, new additions to the
+      same body are just not worth it.
+
+    - in a random mutation/selection scheme, the more complex
+      the body, the less selective influence you get from each
+      of the features.
+
+  So with time it makes sense to turn to a dynamic system
+configuration.  The connected core body retains generic control
+functions which allow it to incorporate, permanently of temporarily,
+specialized attachments (a.k.a. tools, accessories, and instruments)
+- from problem-solving techniques to screwdrivers.  The open control
+system has to be more general and structured, as it has no opportunity
+to grow together with the tools, but is instead used to acquire,
+configure and manage the toolkits and exchange them with the
+environment. -  This is my understanding of the role of intelligence.
+It is still considerably simpler than the old integrated part of the
+organism, whose controls are pre-calibrated for use with its permanent
+instruments.
+  This scheme allows for rapid evolution of exosomatic attachments
+(knowledge and technological artifacts).  This shared toolkit soon
+outgrows the manipulational abilities of the personal generic
+intelligence, and puts it under stress - "too much choice/complexity".
+Though still much simpler than the old part of the organism, the
+intelligence hurts more because it is stretched more and, since it's
+the intelligence that voices its opinion, it in understandable
+selfishness pays more attention to its own problems.
+
+  The overload problem is solved by "emigration" of organisms'
+functionality.  First available method is to elevate some
+integrational features of an organism to meta-personal level.
+Thus, a loose collection of individuals ("population") turns
+into an integrated social structure, and the individual organisms
+are forced to turn into semi-specialized tools by integrating
+with particular instruments ("profession").  Still, even with a
+growing size of the social organism and improving ways of
+instrument exchange, this process is limited by the same personal
+abilities and population size.
+The second method is to delegate some generic features to the tools
+themselves and make sure they have a greater degree of autonomy
+(easy-to-use; reliable; versatile) and can, in turn, combine with
+each other and accept additional features.  We may expect that
+they would do it faster and easier than humans.
+
+  It is quite natural that the first information functions to
+migrate to the external tools are abstract and precise operations,
+as they are both most needed for an open intelligent system, and
+least efficiently implemented in biological minds - actually,
+symbolic manipulation abilities are just the latest and rather
+clumsy and slow patch on the ancient brain architecture whose
+main strengths are signal processing and image recognition.
+
+  Then the tools start taking over these areas as well...
+
+  One of the very recent phenomena is that the external tools are
+starting to get better in communication than the human symbolic
+abilities.  Written language is a wonderful and information-rich
+form of knowledge representation. Unfortunately, the human brain
+processes much slower than the physical signals.  One of the important
+reasons for proliferation of symbolic communication until recently
+was inefficiency of external information storage and transmission
+media that could not handle more than letters and digits.
+With the inventions of radio, telephone, movies, and GUI interfaces
+humans return to processing what they handle well - physical images.
+This doesn't mean decline of symbolic information processing - on the
+contrary, it is exploding and taking over analog processing.
+This process, however, is going on in the media that handle symbols
+well - and this doesn't include the brain.  So the new media are
+bypassing the human symbolic I/O and taking it upon themselves.
+ (This process is somewhat similar to what happened with digestion and
+cooking - cooking performs some of the functions of breaking up
+proteins so much better than the digestive system, that with some
+kinds of food we totally rely upon it.  I would not be surprised if
+most humans have already lost the ability to effectively digest raw
+meat.)
+
+  The complexity of human life will probably start dropping sometime
+soon together with human utility for the system.
+
+Actually, a naked human body (i.e. unsupplemented with externally
+developed knowledge or material tools)  already has no utility -
+or rather, *would* not have, as I do not believe there is a single
+human body in that state today.
+
+A growing number of humans is finding themselves of little utility
+even as tool operators, no matter how hard they try; as humans are
+losing comparative advantages over distributed and non-biological
+systems, the shrinking number of them are needed - usually those
+with particularly strong or unique skills.
+
+What will happen to humans as the result of this process may be unclear;
+However, I would expect that the human share of *input* into the
+growing network of material artifacts and knowledge will dramatically
+diminish over the next generation or two, with most people falling out
+of the process.
+
+Actually, tragic as it sounds to me, most humans probably won't care,
+as they have already no sense of, and no interest in understanding,
+the development of the global process.  (Or did they ever?)
+
+
+

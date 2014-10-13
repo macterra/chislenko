@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Refresh" CONTENT="4; URL=http://www.lucifer.com/~sasha/thinkers.html">
+<META NAME="ROBOTS" CONTENT="NOINDEX">
+<TITLE>The correct URL is http://www.lucifer.com/~sasha/thinkers.html</TITLE>
+<SCRIPT language="JavaScript">
+<!-- 
+function setLocation()
+{
+realLocation="http://www.lucifer.com/~sasha/thinkers.html"
+if (location != realLocation) 
+    location=realLocation;
+if(top.location != realLocation)
+   top.location=realLocation;
+}
+-->
+</SCRIPT> 
+
+</HEAD>
+
+<BODY >
+<STRONG>The correct URL of the Thinkers page is
+<A HREF="http://www.lucifer.com/~sasha/thinkers.html">
+http://www.lucifer.com/~sasha/thinkers.html</A>
+<BR>
+Please adjust your links!
+<P>
+I would also greatly appreciate it if you report to the maintainer
+of the page where you found this link, and me, about this,
+as I want to make sure that other people do not get lost when this
+notice goes away.
+<P>
+Thanks a lot - and sorry for the inconvenience  - Alexander Chislenko </STRONG>
+</BODY>
+</HTML>

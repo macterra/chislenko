@@ -1,0 +1,179 @@
+Alexander Chislenko  <sasha1@netcom.com>  November 12 1995
+---------------------------------------------------------------
+
+ I just read a few usenet messages under a flashy if not very meaningful
+title  "Information wants to be free", with a proposal to employ
+a software tax (on hardware sales, income or whatever) to fund
+software development, and then let people use the software for free.
+
+ If I understand it right, the proposal aims to achieve maximal 
+utilization of existing software, support small developers, allow
+faster evolution of the market and have other economic benefits.
+
+ Looks like the authors finally found the area of economic activity
+where the communist principles would really work.
+
+ I have a few little questions regarding implementation of this
+proposal, that I think are typical for any communist undertaking,
+and one suggestion on how to try this and similar experiments in
+practice without coercion.
+
+
+              IMPLEMENTATION DETAILS
+
+ First of all, how do we share the tax money among the 
+software developers?
+
+Method 1: Give each programmer the same amount of money.
+--------
+Then all citizens will declare themselves software developers, and
+share the money equally.  No good. Or do we certify programmers,
+and give money to only those who satisfy minimal requirements?
+Should we create a federal agency that will judge the competence
+of each applicant in all skills that may be necessary to write
+software?  How do we make sure that people will be motivated to
+continuously develop their skills? - Continuous graduated
+certification, and *different* salaries to back it up?
+How do we make sure that we do not get into a situation where
+everybody writes things that are simple of fun, and nobody
+writes device drivers? Or do you tell people what they should
+write to get paid?
+
+ Do we also certify project managers, QA people, receptionists,
+janitors and beta-testers?  How do we determine how many of them
+are needed for each project?
+
+- Enough here.
+
+Method 2.   Reward people for efforts 
+---------
+
+  This is so difficult to do that I can't even think of questions
+to ask.  Just one remark:  effort is the thing that sane economy is
+supposed to *minimize*.
+
+
+Method 3.  Reward people for results.
+--------
+
+   Looks promising.
+All we have to do is to measure the results.
+So how do we do it?
+
+Measure program size?   This would stimulate people to write monsters.
+Market penetration?     Again, gives advantage to those big companies,
+                        and offers incentives to write lots of little
+                        calculator programs.
+Measure actual usage time?  Everybody will write clock programs or
+                            VERY slow utilities.
+
+Measure user satisfaction?  You mean numerically?
+  How do we compare moderate mass satisfaction of people using a
+simple toolbar widget with extreme joy of an advanced DOOM player,
+or with the potential grief of people if the nuclear power station
+software failed?  What about the programs that people are always
+unhappy to use - like tax preparation packages (except when people
+pay the software tax that is ;-) )
+
+--------------------------------------------------------
+
+  OK, enough questions.
+
+By now I must have revealed myself as one of those incompetent
+skeptics who just do not want to embrace the benefits of this
+idea.
+
+ Still, it may make sense for the defenders of this idea to try
+it in practice.
+
+ For that, I have a little
+
+ 
+        PROPOSAL 
+
+on how to implement software communism without sharing its benefits
+with the skeptics - and without coercing them.
+
+  The proposal is to have two different software distribution channels.
+One of them "capitalist" - the way market works now. (There are a bunch
+of methods here actually.)
+  The other is "virtual communist": participating consumers pay voluntary
+tax, and participating producers of software divide the money and give up
+their software for free.  This is more or less the same scheme as having
+each market in it own country, except that the boundaries between the
+markets are functional rather than territorial.  The opportunity of
+having functional boundaries is granted by the high liquidity of software,
+which makes it different from most other goods.
+  If the communist distribution of software has any benefits over the
+capitalist one at least in some market segments, then those segments
+and necessary methods and levels of voluntary taxation will quickly
+reveal themselves and the communism will take over where it works best.
+If it doesn't work anywhere, we'll still have completed a valuable -
+and completely voluntary - economic experiment in which the losers will
+have nobody to blame but themselves.
+
+------------------------------------------------------------------
+
+Here is a reply from Roland Schroeder <rol@rz.uni-sb.de> and my answers:
+
+>
+>I don't think this to be a fair judgement. It's not only communists who
+>agree about the following: Goods that can be used without marginal cost
+>by another user should be priced zero to provide an efficient allocation.
+>
+>I don't think all the economists who wrote about public goods are communists...
+>
+ I did not say that the people are communist - just the methods; the same
+people may also apply other methods to other cases.
+>
+>Have a look to a wonderful article by Coase, R. (1946): The Marginal Cost 
+>Controversy; Economica 13, pp. 169
+>
+ Thanks - I wish I had time... I'd be happy to share it with others though.
+>
+>However, the other problem you mentioned, how to distribute the raised taxes 
+>among the developers in an incentive compatible way, remains still unsolved, I
+>agree with you. 
+>
+  If the system can't get people to produce anything, all suggestions of how
+to raise money to compensate them is kind of pointless, isn't it?
+
+  I agree, efficient distribution of goods with zero marginal cost is an
+interesting theoretical subject.
+
+  There is a variety of mixed approaches I can think of here.
+
+   Some are used - shareware, public domain software funded by voluntary
+contributions.
+   Some are proposed - e.g. reverse Software contract auction - the public
+declares what it needs, and people keep pledging money until somebody
+decides that they can deliver the product for this money. At this point,
+the pledges are collected.  the rest of the public uses the product for free.
+   Some I could suggest myself - e.g. software rights modeled after patent
+rights - with expiration date.  This can also be done voluntarily.
+If enough people believe in this model, a commercial program that includes
+a promise to be free after N months will have a competitive advantage over
+the one without such a promise - at least, among these customers.
+
+   These, and other opportunities seem well worth exploring and experimenting
+with.  Then we can develop a variety of funding and distribution systems
+that with time will occupy their niches in the economy and help us develop
+better theories.
+
+Fortunately it seems that voluntary approach is economically superior
+to coercive methods.  The idea of taxation under a threat of prison if
+I avoid paying the tax - and death if I try to escape from prison - just
+doesn't appeal to me.  Especially since I am already paying money I
+desperately need for important work, to pay taxes for lots of stupid things
+designed by people with less education but more coercive power than myself.
+
+   What I really do not like in this,  is that some people are proposing
+to implement this coercive taxation system in practice *now*, without even
+an idea of how to make it work.
+
+   This seems scientifically irresponsible and morally wrong.
+
+
+
+
+

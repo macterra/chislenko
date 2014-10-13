@@ -1,0 +1,476 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<HTML>
+<HEAD>
+<TITLE>Semantic Web - draft 0.28</TITLE>
+<META HTTP-EQUIV="Keywords" CONTENT="Semantic Web,Meta tags, metatags, metadata, intelligent software agents, information technology and society, Semantic Transports, social implications of Automated Collaborative Filtering, ACF and Synthetic intelligence, artificial intelligence, ACF, Automated Collaborative Filtering, semantic processing,  semantic standards, W3C, IETF, KQML, KIF, CYC, SOIF, Firefly">
+<META NAME="Description" CONTENT="A proposal for semantically enriched extension to the Web. Suggests methods of making the Web documents and links aware of their content, proposes semantic markup standards and a structure of third-party services that could utilize them.">
+<META HTTP-EQUIV="Reply-to" CONTENT="sasha1@netcom.com (Alexander Chislenko)">
+<META HTTP-EQUIV="Content-language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=windows-1251">
+<META NAME="AUTHOR" CONTENT="Alexander_Chislenko">
+<META NAME="Publisher" CONTENT="Alexander_Chislenko">
+<META NAME="rating" CONTENT="General">
+<META NAME="Distribution" CONTENT="Global">
+<META NAME="Copyright" CONTENT="Alexander Chislenko">
+<LINK REL=HOME HREF="http://www.lucifer.com/~sasha/home.html">
+<BASE HREF="http://www.lucifer.com/~sasha/articles/">
+</HEAD>
+
+<BODY BGCOLOR="#EEEEEE">
+<H1>Semantic Web vision paper</H1>
+
+
+<CENTER><A REL=copyright onMouseOver="window.status='You can conditionally copy this document'; return true" HREF="Copyright.html">&copy;</A> 1997
+<A REL=home HREF="http://www.lucifer.com/~sasha/home.html">Alexander Chislenko</A>. -
+<A onMouseOver="window.status='Click here to read about version numbering of these essays'; return true" HREF="Versions.html">Version 0.28</A> - <DATE>29 June, 1997</DATE>
+</CENTER>
+<DIV ALIGN="JUSTIFY">
+
+<H2>Purpose</H2>
+
+This document describes my vision of semantic/content-aware/intelligent Web,
+and its development from simple meta-tag processing to globally distributed AI services.
+
+The text is gradually taking shape while <A HREF="http://www.lucifer.com/~sasha/home.html">I</A> am collecting thoughts and
+studying the resources.
+
+<P>
+  The Web is probably the richest information repository in human history,
+but most of its information is passive and unstructured.  The Web doesn't
+know what it carries and for what purpose, and the users cannot
+specify what they want from it.  There are some sites that use structured
+information storage and queries, but they are just little islands of
+order in the chaotic sea of information, not communicating to each other.
+<P>
+Since 1995, there started appearing various proposals for meta-data
+representation and communication standards, and other services and
+tools that may eventually merge into the global Semantic Web.
+Hopefully, in the next few years we will see universal adoption of
+open standards for representation and sharing of meta-information.
+<P>
+ The Web should be aware of the content and purpose of its documents
+and links, and interests of its users, and make the best use of all
+encoded knowledge. Open semantic standards and communication
+protocols will allow creation of various services for knowledge
+gathering, storage, and distribution, as well as user-friendly
+client-side utilities that would communicate with these services and
+provide intelligent content selection, processing, and representation
+functions.
+<P>
+I expect that the next generation of information services will do for
+Web semantics what HTML and HTTP have done for its communication
+layer, that is to build a foundation for a global, intelligent,
+reactive knowledge exchange system.
+<P>
+In this paper,
+I will attempt to review existing efforts and proposals,
+suggest some additional areas for development, discuss perspectives
+of distributed knowledge-processing systems, and explore
+technological and organizational efforts necessary for a coordinated
+implementation of this vision.
+<P>
+It may not be necessary to formulate these ideas as a proposal. I am
+quite sure that a system like this is as invevitable a step in the
+development of a civilization as creation of communication
+infrastructure.  Most of the needed technologies are already in
+various stages of development, and a realization of a system similar
+to one suggested here seems just a matter of time, whether I or
+anybody else comes up with such a proposal or not. However,
+implementation of technological inevitabilities needs visionary
+facilitation.  Without a good vision, system developers tend to make
+stupid and costly mistakes, such as DOS 640K memory limit, year 2000
+problem, or the campaign against "the commercialization of the Net".
+With limited interest scope, the participants either attempt to take
+proprietory control over personal data and encoding standards, or
+steer the development in the direction of their particular interests.
+In the result, the real process - the development of the global body
+of knowledge - gets distorted and slows down.
+
+
+<H2>Semantic Standards</H2>
+
+This is a list of some directions in development of semantic standards.
+
+
+<H3>Structured descriptions of items</H3>
+
+  Items may include people, documents, events, things for sale,
+organizations, etc.
+<P>
+A description of a person may include: name, address, gender,
+e-mail, home page, date of birth.
+Open Profile Standard
+was just introduced for this purpose.  Another example of an existing
+personal profile standard is the
+<A HREF="http://www.geekcode.com/">Geek code</A>.
+The Geek Code probably would have been a lot more successful if somebody developed
+an interface for translating between this code and English, and some software
+for matching people based on this code.
+<P>
+A description of an event may include: type of an event (concert, conference, etc.),
+start and end times, location, price, attendance conditions.
+See, for example, the event entry form from
+<A HREF="http://www.techweb.com/calendar/calendardocs/addevent.html">Events directory</A>.
+<P>
+A description of an item for sale may include: item description, owner, price,
+offer expiration date.
+<P>
+Practically, at this point, there is a huge number of description
+forms for all kinds of items, with some meta-services, such as
+<A HREF="http://www.submit-it.com">Submit-It</A> for Web pages,
+providing translations to them.
+
+
+<H3>Relations between items</H3>
+
+Relations between documents: translation, response, table of contents, copyright statement,
+update, review, etc.
+
+<A HREF="http://www.htmlhelp.com/reference/wilbur/">HTML specification</A> contains the
+<A HREF="http://www.htmlhelp.com/reference/wilbur/head/link.html">description of syntax
+for describing documents relations</A>, but doesn't really define standards.
+<P>
+Some suggestions on <A HREF="http://www.w3.org/TR/REC-html40/types.html#type-links">
+link types</A> are available from <A HREF="http://www.w3.org">W3C</A>.
+<P>
+Relations between people and companies may be: employee, owner, member,
+founder, supporter, etc. - with descriptions of roles, periods of involvement, etc.
+<P>
+Relations between people may be: friend, spouse, employer, teacher, client,...
+<A HREF="http://www.sixdegrees.com">Six Degrees</A> website attempts to
+collect these relations in a proprietory database.
+
+</DIV>
+
+<H3>Marked document elements</H3>
+<DIV ALIGN="JUSTIFY">
+Document language should allow specification of additional semantic information
+about particular sections of the document and individual words.
+HTML suggests syntax for some of such elements on the chapter level:
+</DIV>
+<PRE>
+&lt;DIV CLASS=PREFACE&gt;
+  [preface content]
+&lt;/DIV&gt;
+
+on the paragraph level:
+
+&lt;ADDRESS&gt;
+ Alexander Chislenko,
+ 6 McLean Pl. #5
+ Cambridge MA 02140-2437 USA
+&lt;/ADDRESS&gt;
+
+And on the word level:
+
+&lt;DATE&gt;02Dec1959&lt;/DATE&gt;
+</PRE>
+
+Still, these are just hints at possible syntax; there are only a few tags suggested,
+there is no way to tell how to parse the address or what the date may refer
+to.
+
+<P>
+<DIV ALIGN="JUSTIFY">
+Ideally, there should be a way to use semantic tags to annotate the
+structure of the document and disambiguate its language for machine
+processing, intelligent communication with the user, or any other
+conceivable purpose. A truly spectacular effort in this direction is
+<A HREF="http://www.w3.org/XML/">XML</A> - eXtensible Mark-up Language,
+being developed under the auspices of
+<A HREF="http://www.w3.org/Consortium/">
+World-Wide Web Consortium</A>.
+</DIV>
+
+<H3>Item ontologies</H3>
+
+<DIV ALIGN="JUSTIFY">
+There are many services and catalogs with ontologies of items, usually
+created for convenience of browsing and searching.  The most extensive example is
+<A HREF="http://www.yahoo.com/"><IMG SRC="http://www.lucifer.com/~sasha/graphics/yahoo.gif" ALIGN=MIDDLE ALT="Yahoo" WIDTH=85 HEIGHT=23></A>
+- the biggest subject ontology for Web documents. A number of standards is also
+under development to allow coexistence of multiple ontologies, with documents
+explicitly referencing the ontologies they use.
+A good examples here is <A HREF="http://www.cs.umd.edu/projects/plus/SHOE/aaai-paper.html">SHOE
+(Simple HTML Ontology Extensions)</A>.
+
+<P>Further work in this direction should probably include organizational
+efforts to ensure compatibility of multiple ontologies, and "ontology
+negotiation" services between different agencies and integration of item
+ontologies with <A HREF="http://www.cyc.com/cyc-2-1/">general commonsense
+concept ontologies</A> of networked AI systems.
+</DIV>
+
+<H3>Agents' interests descriptions</H3>
+<DIV ALIGN="JUSTIFY">
+Besides descriptions of passive resources, many agents on the Web may need
+to specify what kind of resources they are looking for, and how they would
+like to see them delivered.  Specialized information banks may be looking
+for new records of certain types, such as new restaurants in Boston, or
+PC parts for sale.  People may be waiting for important news on their
+favorite topics, or movie recommendations from their friends.  Web pages
+may be waiting for changes in their links, so they could update them in
+real time.  Request brokers may be waiting for new request descriptions.
+<P>
+In all cases, these requests should be described in formalized formats,
+together with specifications of desired formats of expected data and
+locations of agents that should receive it.
+<P>
+A notable effort in this direction is represented by
+<A HREF="http://www.w3.org/TR/NOTE-rdm.html">RDM</A>
+(Resource Description Messages) - a mechanism to discover and
+retrieve metadata about network-accessible resources.  It is based on
+Harvest's
+<A HREF="http://kvtr.elte.hu/harvest/node42.html">
+Summary Object Interchange Format (SOIF)</A> - a syntax for
+transmitting resource descriptions and other kinds of structured objects.
+
+</DIV>
+<H2>Value-added services</H2>
+<DIV ALIGN="JUSTIFY">
+  Creation of open data representation standards will open the field for
+competition of services based on their ability to process knowledge (not
+on hoarding it as it often happens now).  This transition may be expected
+to benefit the knowledge development and distribution similarly to the
+way in which opening local market environments allowed an explosive growth
+in production and distribution of material goods.
+</DIV>
+<P>
+The services here may include:
+<UL>
+<LI>Specialized knowledge repositories and retrieval systems.
+<LI>Specialized semantic search engines.
+<LI>Market agents for selling and buying new and used goods and various
+services.
+<LI>A range of matching services - from dating to carpooling to job-seeking.
+<LI>Reputation brokers and agent certification systems
+<LI>Recommendation systems that would actively suggest things of interest
+to individuals, organizations, websites and other agents.
+<LI>Automated subject classification systems with adaptive ontologies
+and representation schemes adjustable to user's interests.
+<LI>Intelligent communication systems taking into account resources and
+interests of all sides providing features such as subject/ontology
+negotiation, privacy protection, and content filtering.
+<LI>Dynamic document maintenance tools, that would be able to perform
+"just-in-time" updates of information repositories and agent behaviors
+when some knowledge appears or changes in the environment.
+</UL>
+A good functional typology of such services may be found at
+<A HREF="http://www.isse.gmu.edu/I3_Arch/index.html">ARPA's Reference
+Architecture for the Intelligent Integration of Information</A>.
+
+<H2>Distributed Artificial Intelligence</H2>
+<DIV ALIGN="JUSTIFY">
+Most of human commonsense knowledge is generalization of observations
+(current statement included).
+Establishing relationships between observed objects allows us
+to infer features of - and relationships among - other objects.
+This task is very difficult for computers, as creation of a sufficiently
+large knowledge base requires either a tremendous manual effort
+[<A HREF="http://www.cyc.com">CYC</A>] or an ability of the system
+to automatically acquire knowledge from an ambiguous environment, such
+as images or natural language.  Machine-readable explicit representation
+of diverse semantic information should provide commonsense knowledge
+systems with a lot of "food for thought" that would help develop knowledge
+acquisition and processing algorithms, and also will prove instrumental
+in further acquiring and processing knowledge from less structured sources.
+
+<P>
+The knowledge that a common-sense system may derive from an open
+semantic dataset may include statements like:
+</DIV>
+<UL>
+<LI>Juan is a Spanish name
+<LI>all mothers are female
+<LI>Dogs don't author documents
+<LI>TV shows do not get canceled due to bad weather
+<LI>Coffins are not popular as birthday presents
+<LI>People with higher level of education make fewer spelling errors.
+<LI>Documents with keyword "humor" often contradict general semantic rules.
+</UL>
+<DIV ALIGN="JUSTIFY">
+Also, availability of vast amounts of information about people, things
+and events may allow to reduce efforts of testing of many hypotheses
+about people's social and economic behavior and health conditions from
+long and expensive research programs to a few simple queries.
+All manual queries entered into such services
+may be used by the knowledge processing systems as
+suggestions on which items may be causally or semantically related.
+<P>
+Eventually, we may see a wide variety of networked knowledge processing servers
+collecting and generalizing data in their own areas and cooperating with each
+other for "interdisciplinary" problem solving, first with direct human
+involvement, and then incresingly on their own.
+<P>
+Some suggestions on how to implement a distributed reasoning system using
+multiple specialized copies of
+<A HREF="http://www.cyc.com">CYC</A> and <A HREF="http://www.cs.umbc.edu/kqml/">KQML</A>
+for communication between them, are available at
+<A HREF="http://www.cs.umbc.edu/~cikm/iia/submitted/viewing/mayfield.html">
+The Cycic Friends Network</A>
+<P>
+Another interesting solution is represented by
+<A HREF="http://www.isse.gmu.edu/I3_Arch/X0014_AppF.AgentParadigm.html">
+Agent Communication Language (ACL)</A> developed within
+the <A HREF="http://www.cs.umbc.edu/kse/">ARPA Knowledge Sharing Effort</A>.
+ACL has a
+vocabulary, an "inner language" called
+<A HREF="http://ksl.stanford.edu/knowledge-sharing/papers/README.html#kif">
+KIF (Knowledge Interchange Format)</A>, and an "outer" language called
+<A HREF="http://www.cs.umbc.edu/kqml/">KQML
+(Knowledge Query and Manipulation Language)</A>.
+An ACL message is a KQML expression in which the arguments are terms or
+sentences in KIF formed from words in the ACL vocabulary.
+
+
+<H2>References</H2>
+
+ I am not trying to compile a complete set of projects and materials
+here, just to list some resources I found most interesting.  Many of
+them have links to other materials.
+
+<H3>Organizations</H3>
+<UL>
+<LI><A HREF="http://www.isse.gmu.edu/I3_Arch/index.html">
+    ARPA-sponsored Intelligent Integration of Information (I^3) program</A>
+<LI><A HREF="http://www.w3.org/Consortium/">World-Wide Web Consortium</A>
+<LI><A HREF="http://www.cyc.com">CYCorp - developer of CYC, consensus commonsense knowledge base</A>
+<LI><A HREF="http://www-ksl.stanford.edu/">Stanford Knowledge Systems Lab (KSL)</A><BR>
+<LI><A HREF="http://www.ispo.cec.be">
+Information Society Project Office</A> of the European Commission.
+<LI>
+<A HREF="http://www.lucifer.com/~sasha/refs/PaleopsychologyManifesto.html">International Paleopsychology Group</A>
+- studies of the history of the knowledge distribution systems in nature.
+</UL>
+
+<H3>Proposed Standards</H3>
+<UL>
+<LI>
+<A HREF="http://www.ukoln.ac.uk/metadata/resources/mcf/">Meta Content Framework references</A>
+<LI>
+<A HREF="http://www.w3.org/TR/WD-htmllink-970328">W3C spec for HTML links</A>
+<LI>
+<A HREF="http://www.roads.lut.ac.uk/Metadata/DC-ObjectTypes.html">Dublin core Standard resource types</A>
+<LI>
+<A HREF="http://www.cs.umd.edu/projects/plus/SHOE/aaai-paper.html">
+SHOE</A> - a set of Simple HTML Ontology Extensions defining semantic
+document annotations.
+<LI>
+<A HREF="http://union.ncsa.uiuc.edu/HyperNews/get/www/URNs.html">Universal Resource names</A>
+<LI>
+<A HREF="http://www.w3.org/XML/">XML - eXtensible Mark-up Language</A>
+<LI>
+<A HREF="http://arti.vub.ac.be/~as/aml/aml.htm">AML -Agent Markup Language</A>
+<LI>
+<A HREF="http://ksl.stanford.edu/knowledge-sharing/papers/README.html#kif">
+KIF</A> - Knowledge Interchange Format
+<LI><A HREF="http://www.cs.umbc.edu/kse/">Knowledge Sharing Effort at UMBC AgentWeb</A>
+<LI><A HREF="http://www.cs.umbc.edu/kqml/">KQML</A>.
+Knowledge Query and Manipulation Language is a language and protocol for
+exchanging information and knowledge developed as apart of
+the <A HREF="http://www.cs.umbc.edu/kse/">ARPA Knowledge Sharing Effort</A>.
+<LI><A HREF="http://kvtr.elte.hu/harvest/node42.html">
+Summary Object Interchange Format (SOIF)</A> - syntax for
+transmitting resource descriptions and other kinds of structured objects.
+<LI> Knowledge Representation Specification Language (KRSL) is used
+by the DARPA/Rome Laboratory Planning and Scheduling Initiative for
+specifying shared ontologies and includes built-in ontologies for
+time, measurement, resource, and planning operations.
+</UL>
+
+<H3>Tools and services</H3>
+<UL>
+<LI>
+<A HREF="http://vancouver-webpages.com/VWbot/mk-metas.html">Meta-Tag builder</A>
+<LI>
+<A HREF="http://www.dstc.edu.au/cgi-bin/RDU/Harvest/meta_simple_query.cgi">
+Metadata search engine</A>
+<LI>
+<A HREF="http://vancouver-webpages.com/META/bycount.shtml">Statistics of Meta tags usage</A>
+</UL>
+
+<H3>Publications and reference materials</H3>
+
+<UL>
+<LI>
+<A HREF="http://www.imsproject.org/technical/Metadata/History/MCF-tutorial.html">MCF Tutorial</A>
+<LI><A HREF="http://metalab.unc.edu/pub/sun-info/standards/xml/why/xmlapps.htm">
+XML, Java, and the future of the Web</A> by Jon Bosak.
+<LI><A HREF="http://www.cs.umbc.edu/agents/agentnews/">UMBC AgentNews Webletter</A>
+<LI><A HREF="http://www.ispo.cec.be/infosoc/legreg/docs/96359.html">Standardization and the Global Information Society COM (96)359</A>
+Communication from the Commission to the Council and the Parliament on
+"Standardization and the Global Information Society : The European Approach"
+- document from the <A HREF="http://www.ispo.cec.be">
+Information Society Project Office</A> of the European Commission.
+<LI><A HREF="http://vancouver-webpages.com/META/">A Dictionary of HTML Meta-tags</A>
+<LI><A HREF="http://www.ics.uci.edu/~ejw/authoring/proposals/metadata.html">
+A proposal for Metadata operations</A>
+<LI><A HREF="http://www.w3.org/DesignIssues/Metadata.html">
+Introduction into metadata architecture</A> by Tim Berners-Lee.
+<LI>
+<A HREF="http://www.psrg.lcs.mit.edu:80/~sheldon/dist-indexing-workshop-position.html">
+Services and Metadata Representation for  Distributed Information Discovery</A>
+by Mark A. Sheldon, Ron Weiss, Bienvenido Vélez, and David K. Gifford.
+</UL>
+
+<H3>Theoretical essays</H3>
+
+ In the course of human history, technology has taken over storage, transmission
+and processing of materials, energy and information.  The next stage of technology
+is going to assume an increasing role in shaping the global flows of knowledge.
+The materials listed below suggest some ideas on how this process may go,
+and where it may lead.
+<P>
+<UL>
+<LI><A HREF="http://www.lucifer.com/~sasha/mindage.html">Networking in the Mind Age</A>
+- some ideas on long-term future of distributed intelligence.
+<LI>
+<A HREF="ACF.html">Automated Collaborative Filtering and Semantic Transports</A>
+<LI>
+<A HREF="http://pespmc1.vub.ac.be/GBRAIN-L.html">Global Brain mailing list</A>
+<LI>
+Seth Russell's <A HREF="http://www.clickshop.com/ai/conjecture.htm">AI Conjecture</A>
+</UL>
+
+<H3>Other</H3>
+
+<UL>
+<LI>
+<A HREF="http://www.info.unicaen.fr/~serge/sma.html">The @gency</A> - a comprehensive list
+of resources on software agents.
+
+<LI><A HREF="http://ksl-web.stanford.edu/kst/ontolingua.html">Ontolingua server</A>
+- an effort to develop technology to support collaborative construction and
+effective use of distributed large-scale repositories of highly expressive reusable
+ontologies. The server provides a distributed collaborative
+environment to browse, create, edit, modify, and use ontologies.
+<LI>
+Seth Russell's <A HREF="http://clickshop.com/ai/jump.htm">AI links</A>
+<LI>
+<A HREF="http://www.friesian.com/hayek.htm">Friedrich Hayek</A> and followers
+- works on economy as a signaling system.
+Much of economic signaling goes through averaged price points though.
+Still, it led us to wonders of the market economy.
+With storage and processing of individual pieces of meaning we could do
+a lot more...
+<LI>
+<A HREF="http://www.ice.ru/libertarium/eng/index.html">Moscow Libertarium</A>
+attempts to extend the theory of economic signaling system, including
+secondary and derivative instruments, to social voting and decision-making
+schemes.
+<LI>
+<A HREF="http://www.public.iastate.edu/~CYBERSTACKS/Aristotle.htm">
+Project Aristotle(sm): Automated Categorization of Web Resources</A> - overview of existing projects.
+
+<LI><A HREF="http://crit.org"><FONT SIZE=4>CRIT mediator</FONT></A> - adds text-level and general backlinks to any document.
+
+<LI>
+<A HREF="http://www.fulcrum.com/english/products/fknhome.htm">Fulckrum Knowledge Network</A>
+
+</UL>
+<HR>
+<A REL=HOME HREF="http://www.lucifer.com/~sasha/home.html"><IMG SRC="http://www.lucifer.com/~sasha/graphics/cabin.gif" BORDER=0 VSPACE=2 ALT="Home" WIDTH=32 HEIGHT=25></A>
+<A HREF="mailto:sasha1@netcom.com?subject=Semantic Web"><IMG SRC="http://www.lucifer.com/~sasha/graphics/mailbox.gif" BORDER=0 VSPACE=2 ALT="Mail" WIDTH=29 HEIGHT=34></A>
+</DIV>
+<img src="http://tracker.clicktrade.com/Tracker/Depth.dll?ad=14528" ALT="" WIDTH=1 HEIGHT=1></BODY>
+</HTML>

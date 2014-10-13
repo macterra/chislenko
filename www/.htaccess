@@ -1,0 +1,1 @@
+RedirectMatch 301 /~sasha/(.*) http://www.ethologic.com/sasha/$1 

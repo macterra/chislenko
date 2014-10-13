@@ -1,0 +1,51 @@
+This document contains a list of development issues and plans for the hypereconomy project.
+
+Maintainer:  Sasha Chislenko <sasha@media.mit.edu>
+Last updated:  06/02/98
+
+ Eventually, these tasks should have names and dates against them.
+
+Urgent tasks: Finish and run simple versions of static and variable models:
+
+     - run and plot non-variable model with realistic (click rate around 5%) data
+
+     - implement and test variable response model - put adaptive response biases
+        everywhere in addition to static ones; test deaths and births; collect
+            category data incrementally (needed for adaptive computation); change
+        the mixing formulas to assure adaptation
+     - death and birth of sites doesn't seem to work well.
+     - debug variable model, run, plot, publish
+
+Immediate tasks (clean up code)
+
+     - need to separate response model from optimization code
+     - look up occurrences of ?, "should", "eventually", "ugly" in all code,
+       and handle the issues
+     - check parameters read from file (rename into HyperE.param ?)
+     - rename parameters into param.NUMXXX, etc.  (?)
+     - use new calls instead of deprecated
+     - separate code better into classes and routines
+     - all statistics variables should go into classes
+     - global constants should be accessible in all classes
+     - be ready to divide the work among multiple developers
+
+
+Development Plans for near future:
+
+     - at the end of run, compute and print total values (prices) of remaining inventory
+     - add perfect knowledge option
+     - categories should look more like generic advisory agents / resource owners
+       we can have in each category, the list of agents it covers, and in each agent,
+       a list of categories.  After that we can have a graph-like agent hierarchy
+
+Continuing issues:
+
+     - test all elements carefully
+     - speed up execution
+     - more documentation, comments
+     - report errors everywhere they may be detected
+     - occasionally, there is an out of bounds error, should fix
+
+More grand-scale plans:
+
+     - need away of generating a statistical access/response model from real-world data

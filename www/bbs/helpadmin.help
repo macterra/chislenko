@@ -1,0 +1,150 @@
+<?php
+/*****************************************************************************/
+/* Help.php                                                                  */
+/*****************************************************************************/
+/* YaBB: Yet another Bulletin Board                                          */
+/* Open-Source Project started by Zef Hemel (zef@zefnet.com)                 */
+/* Software Version: YaBB SE                                                 */
+/* ========================================================================= */
+/* Software Distributed by:    http://www.yabb.info                          */
+/* Support, News, Updates at:  http://www.yabb.info/community                */
+/*                             http://yabb.xnull.com/community               */
+/* ========================================================================= */
+/* Copyright (c) 2001-2002 Lewis Media - All Rights Reserved                 */
+/* Software by: The YaBB Development Team                                    */
+/*****************************************************************************/
+/* This file gives admins some help in the admin center                      */
+/*****************************************************************************/
+
+$helptxt[0] = "<b>Edit Categories</b><br>
+        From this menu you are able to edit \"Categories\". Categories are the 
+          upper-level topics for a forum. For example, if you had a wide-ranging 
+          site that offered information on \"Sports\" and \"Cars\" and \"Music\", these 
+          would be the top-level Categories you'd create. Under each of these 
+          categories you'd likely want to create heirarctical \"sub-categories\", 
+          or \"Boards\" for topics within each. Here's a small example: <br>
+         <ul>
+          <li><b>Sports </b>-<b> 
+            </b>A &quot;category&quot; 
+            <ul>
+              <li><b>Baseball</b> 
+                - A board under the category of &quot;Sports&quot;</li>
+              <li><b>Football</b> 
+                &nbsp;- A board under the category of &quot;Sports&quot;</li>
+            </ul>
+        </ul>
+          Categories allow you to break down the board into broad topics (\"Cars, 
+          Sports\"), and the \"Boards\" under them are the actual topics under which 
+          members can post. In the above example, a user interested in Pinto's 
+          would post a message under \"Cars->Pinto\". Categories allow people to 
+          quickly find what their interests are: Instead of a \"Store\" you have 
+          \"Hardware\" and \"Clothing\" stores you can go to. This simplifies your 
+          search for \"pipe joint compound\" because you can go to the Hardware 
+          Store \"category\" instead of the Clothing Store (where you're unlikely 
+          to find pipe joint compound)." ;
+
+$helptxt[1] = "<b>Edit Boards</b><br>
+          In this menu you can create/reorder/remove the boards under the categories 
+          discussed above. It's a simple hierarchy, with this structure: <br>
+          <ul>
+          <li><font face=\"Arial, Helvetica, sans-serif\" size=\"2\">Category</font> 
+            <ul>
+              <li><font face=\"Arial, Helvetica, sans-serif\" size=\"2\">Board1</font></li>
+              <li><font face=\"Arial, Helvetica, sans-serif\" size=\"2\">Board2</font></li>
+              <li><font face=\"Arial, Helvetica, sans-serif\" size=\"2\">... etc ...</font></li>
+            </ul>
+        </ul>
+        As noted above, a Board is a key topic underneath a broad category. 
+        If you want to discuss \"Pintos\" you'd go to the \"Auto\" category and 
+        jump into the \"Pinto\" board to post your thoughts in that board. <br>
+        Administrative functions for this menu item are to create new boards 
+        under each category, to reorder them (put \"Pinto\" behind \"Chevy\"), or 
+        to delete the board entirely." ;
+
+
+$helptxt[2] = "<b>Edit YaBB SE News</b><br>
+	This allows you to set the text for news items displayed on the Board Index page. 
+	Add any item you want (e.g., \"Don't miss the conference this Tuesday\"). Each news item is separated
+	by a carriage-return." ;
+
+$helptxt[3] = "<b>Edit Registration Agreement</b><br>
+	This allows you to set the text for the registration agreement displayed when members sign up for your board. 
+	You can add, or remove anything from the default registration agreement, which is included in YaBB" ;
+
+$helptxt[4] = "<b>View All Members</b><br>
+	View all members in the board. You are presented with a hyperlinked list of member names. You may click
+	on any of the names to find details of the members (homepage, age, etc.), and as Administrator
+	you are able to modify these parameters. You have complete control over members, including the
+	ability to delete them from the forum." ;
+
+$helptxt[5] = "<b>Edit Membergroups</b><br>
+	You may create or modify \"Member Groups\". Member Groups are special groups that you can 
+	create to restrict access to certain categories on your forum. For example, you can create
+	a category, where only the \"test\" membergroup can access and see it." ;
+
+$helptxt[6] = "<b>Email Your Members</b><br>
+	From this menu you can send messages to all members who've registered and entered their
+	email addresses (not all will, of course). You may edit the distribution list, or send messages 
+	to all. Useful for important update/news information. However, use sparingly, the board doesn't
+	have an \"opt in/out\" feature, and may users may object to having messages sent to them without 
+	their authorization." ;
+
+$helptxt[7] = "<b>Ban Members</b><br>
+	YaBB provides the ability to \"ban\" users, to prevent people who have violated the trust of the board
+	by spamming, trolling, etc. This allows you to those users who are detrimental to your forum. As an admin,
+	when you view messages, you can see each user's IP address used to post at that time. In the ban list,
+	you simply type that IP address in, save, and they can no longer post from that location.<br>You can also 
+	ban people through their email address." ;
+
+$helptxt[8] = "<b>Set Reserved Names</b><br>
+	This allows you to put in keywords or names that you want to restrict people from using as 
+	a name or username." ;
+
+$helptxt[9] = "<b>Edit Your Forum Template</b><br>
+	This brings up a simple editor for the HTML of your template code. The \"template\" (in your \"yabb\"
+	directory, as you set it up), defines the look-and-feel for your pages. It is an HTML file. You can 
+	modify the template here, or use some other HTML editing software to create the look&feel for your site." ;
+
+$helptxt[10] = "<b>Installed 'Mods' Settings and Options</b><br>
+	YaBBSE has some preinstalled mods, you can switch them on or off in this menu.";
+
+$helptxt[11] = "<b>Set censored words</b><br>
+	YaBB offers the option to censor certain words, by replacing them with another one.<br>Add a new word 
+	per line, like the example bellow:<br>clown=funny guy";
+
+//Everything below this line takes care of user support
+
+$helptxt[12] = "<b>Time Format</b><br>
+	You have the power to adjust how the time and date look for yourself. There are a lot of little letters, but it's quite simple. 
+	The conventions follow PHP's strftime function and are described as below (more details can be found at <a href=\"http://www.php.net/manual/function.strftime.php\">php.net</a>).<br>
+	<br>
+	The following characters are recognized in the format string: <br>
+	<font size=1>
+	&nbsp;&nbsp;%a - abbreviated weekday name<br>
+	&nbsp;&nbsp;%A - full weekday name<br>
+	&nbsp;&nbsp;%b - abbreviated month name<br> 
+	&nbsp;&nbsp;%B - full month name<br>
+	&nbsp;&nbsp;%d - day of the month (01 to 31) <br>
+	&nbsp;&nbsp;%D - same as %m/%d/%y <br>
+	&nbsp;&nbsp;%e - day of the month (1 to 31)<br>
+	&nbsp;&nbsp;%H - hour using a 24-hour clock (range 00 to 23) <br>
+	&nbsp;&nbsp;%I - hour using a 12-hour clock (range 01 to 12) <br>
+	&nbsp;&nbsp;%m - month as a number (01 to 12) <br>
+	&nbsp;&nbsp;%M - minute as a number <br>
+	&nbsp;&nbsp;%p - either \"am\" or \"pm\" according to the given time<br>
+	&nbsp;&nbsp;%R - time in 24 hour notation <br>
+	&nbsp;&nbsp;%S - second as a decimal number <br>
+	&nbsp;&nbsp;%T - current time, equal to %H:%M:%S <br>
+	&nbsp;&nbsp;%y - 2 digit year (00 to 99) <br>
+	&nbsp;&nbsp;%Y - 4 digit year<br>
+	&nbsp;&nbsp;%Z - time zone or name or abbreviation <br>
+	&nbsp;&nbsp;%% - a literal '%' character <br>
+	</font>";
+
+$helptxt[13] = "<b>XML Syndication</b><br>
+	This box displays news items as pulled from an XML file at <a href=\"http://www.yabb.info/yabbinfo.xml\">yabb.info</a>.
+	This file is polled at most once every 30 minutes, and recent copy is cached on your server.  You should check here
+	for important news items from the YaBB SE Team.<p>
+	P.S. If you really want, you can syndicate this XML file your site ;)" ;
+
+?>

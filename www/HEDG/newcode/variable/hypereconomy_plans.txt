@@ -1,0 +1,74 @@
+This document contains a list of development issues and plans for the hypereconomy project.
+
+Maintainer:  Sasha Chislenko <sasha@media.mit.edu>
+Last updated:  06/05/98
+
+ Eventually, these tasks should have names and dates against them.
+
+Urgent tasks: Finish and run simple versions of static and variable models:
+
+     - run and plot non-variable model with realistic (click rate around 5%) data
+
+     - implement and test variable response model - put adaptive response biases
+        everywhere in addition to static ones; test deaths and births; collect
+            category data incrementally (needed for adaptive computation); change
+        the mixing formulas to assure adaptation
+     - death and birth of sites doesn't seem to work well.
+     - debug variable model, run, plot, publish
+
+Immediate tasks (clean up code)
+
+     - split array MatchingSites into two named arrays (MatchingBanners and
+       MatchingCategories ?)
+     - variable access model - frequency of access to categories of sites changing
+       with time
+     - add round function to miscFunc to round the data to the given precision.
+     - put variables like numClicks, CatImps, and increment functions into Agent class
+       this would allow, among other things, better, incapsulated increment functions
+     - category class should contain one category, not all of them.
+       then, each category can also contain its statistics with sites, banners, and
+       categories, just like sites and banners do.  Should we derive category from
+       agent then too?
+     - put printing functions into corresponding classes (banner data line and header
+       should be printed in banner.java, etc.)
+     - need to separate response model from optimization code (Response.java ?)
+     - look up occurrences of ?, "should", "eventually", in all code,
+       and handle the issues
+     - check parameters read from file for correctness (rename into HyperE.param ?)
+     - rename parameters into param.NUMXXX, etc.  (?)
+     - use new calls instead of deprecated
+     - separate code better into classes and routines
+     - global constants should be accessible in all classes, that includes model types
+     - be ready to divide the work among multiple developers
+
+
+Development Plans for near future:
+
+     - use capital to actually improve performance (now it degrades it)
+     - experiment with other methods and improve them
+     - at the end of run, compute and print total values (prices) of remaining inventory
+     - add perfect knowledge option
+     - categories should look more like generic advisory agents / resource owners
+       we can have in each category, the list of agents it covers, and in each agent,
+       a list of categories.  After that we can have a graph-like agent hierarchy
+
+Continuing issues:
+
+     - test all elements carefully
+     - speed up execution
+     - more documentation, comments
+     - report errors everywhere they may be detected
+     - occasionally, there is an out of bounds error, should fix
+
+More grand-scale plans:
+
+     - need away of generating a statistical access/response model from real-world data
+     - experiment with different optimization methods and heuristic parameters: first
+       manually, then prepare performance tests, then get ready to automate the
+       optimization process.
+     - find out under what combinations of parameters what kind of models work well for
+       what group of agents (by fluctuation patterns, number of accesses, and other
+       criteria).  Find minimal test cases for all such areas.  Automate the above
+       process so these things can be found automatically on all domains.
+
+       (more to follow)

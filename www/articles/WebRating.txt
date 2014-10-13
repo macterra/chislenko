@@ -1,0 +1,274 @@
+Alexander Chislenko <sasha1@netcom.com>
+"Web rating: Bootstrapping the service - sketch"
+------------------------------------------------
+
+
+  My "message rating proposal" was a collection of my ideas about
+a dream system, and was geared toward rating of a new message flow.
+Now I'll try to talk about some ways to implement a rating system
+in practice for Web documents.
+
+ On Thu, 9 Nov 1995 I received the following.
+
+>From: Michael Frumkin <mfrumkin@atext.com>
+>To: sasha1@netcom.com
+>Subject: Re: Document rating system suggestion.
+>
+>I took a look at your writeup.  In general I like the idea.
+>Unfortunately I don't see how to make it work in practice.  All of my
+>experience shows that people do not want to spend any effort doing
+>things like ranking the quality of the messages they receive.  They
+>want to have this done automatically.  This is even more of a problem
+>initially, because the benefits of such a system would not be immediate.
+
+ Very good point...  If we were dealing with an intelligent global entity,
+a good suggestion of a new system could be sufficient.  In this situation
+we would just show how, with a bit of financing and effort, we could 
+considerably enhance the global information flows, and the system would
+thank us and start working.  However, if we are dealing with a bunch of
+independent and selfish agents, sometimes we have to treat the market
+like a brainless natural system or a small child - by creating easy paths
+so that it would flow there based on one-step "understanding" of its 
+interests.
+
+  I'll try to sketch some ideas on how to organize such process in this case,
+as I agree that this is as a crucially important issue.
+
+  Lets think of a standard large Web index.  A spider, a link database,
+user interface for searching, external power source (commercial advertizing
+or an associated on-line service).
+
+  So we want to enhance this system to be more integrated, flexible,
+personalized and more efficient for all parties - authors, readers,
+advertisers and computers - and do it in a way that would be at every
+step immediately rewarding for most participants.
+
+  I suggest to divide the process into a few stages.
+
+-------------------------------------------------------
+The following is just a BRIEF SKETCH I am typing up.
+It is nowhere near a system spec.
+Do not try to implement it one your home planet.
+
+I still think is has some merit though.
+--------------------------------------------------------
+
+  Stage 1.
+  =======
+
+
+A. Next time you run the spider, collect some statistical data
+   and put it into each database entry, such as:
+
+- size of the document
+- language of the document
+- number of links
+- number of dead links
+- number of images
+- total size of images
+- number of sites referencing this one
+  (you can do a backlink list too).
+- average importance of this site in the links -
+   - how close is this site to the beginning of the link list
+   - size of font of the link relative to others on the same page
+   - is there an inline image for the link to this site?
+- frequency of typical spelling errors
+- how long ago the site was last updated (after a few runs, this can
+  store an average frequency of updates)
+- version of HTML used and quality of HTML code as assessed by some
+  quick-and-crude tool.
+
+- [A] derived raw general indicator[s] of the quality of the site. 
+
+All of these can be easily collected by the Web spider.
+No manual effort is needed.
+
+B.  Second run of the spider.
+
+Extra fields added to each entry with the information collected
+from the documents linked to it, including:
+
+- An average quality of the referenced documents
+- An average quality of the documents referencing this one
+- number of popular sites referenced (those that are referenced in a lot
+  of other pages; by now this info is in their backlink info).
+- number of rare links (to documents that are referenced by a few others)
+
+- based on these, the quality rating for the site gets adjusted.
+
+B++ Third run, and so on - propagation and fine-tuning of averaged qualities.
+
+
+  You can also propagate other things, like keywords.
+If this site doesn't have a word 'bonsai' in it, but 46 out of 50 sites
+referencing it do, you may want to include 'bonsai' as a 'virtual' keyword
+for this site.
+
+(I'd expect that in a month or two we can have a first-round database
+filled with this data)
+--------------------------------------------------------------------------
+                                         
+
+Benefits of stage 1
+===================
+
+  The results of an index keyword search get sorted by a combination
+of relevance and general quality of the page.  The user may adjust the
+sorting criteria and some restrictions (e.g., on the language or format
+of the page - "only English please, and no postscript/TeX, no texts with
+obscene words like 'baseball'", etc.)
+
+
+  If you search for "chess" today, you may find about 6000 pages.
+The first one may easily be a line "Here chess, there chess,
+everywhere chess, chess..." as it would be regarded by the
+standard search engine as the most relevant document.
+The next may be a Turkish page with GIFs named Chess1.gif, Chess2.gif, etc.
+
+  Of course, you may find all of the popular and well-maintained chess
+directories if you just browse through those 6000 references.
+
+  The Stage I system will bring them all up on the first page.
+Of course, if you try to find the funniest joke on the Net, you will
+get a list of pages of popular directories of popular jokes.
+
+ That's not bad, but I doubt that any of the files from my humor
+directory would get there.
+
+--------------------------------------------------------------------------
+
+Stage 2.
+
+
+  Add a list of field pairs to each database entry.
+First field, "Rater code", second field, "Rating".
+Also, create an index of raters, e.g.:
+
+1. Anders Sandberg
+2. Robin Hanson
+3. Yahoo
+4. NSA
+5. ...
+
+  I'd suggest a 4-byte rater code, and 1-byte rating value.
+
+  The customers who are used to using ratings by this time, will have
+to just tell the system to substitute the generic rating for their
+favorite[s] [when it is available], or use a combination of them.
+
+  How do we get the ratings?
+
+1. Anybody can register a rater code, and rate any pages by selecting
+an appropriate code on the search form.
+
+  This is work though.
+Fortunately enough, the Web contains somewhere around 10**7 links, and
+each of them is an implicit assessment of quality and relevance of the
+referenced site. That's a good start.
+
+2. Ratings can be extracted automatically by submitting a hotlist URL to the
+site.  The name of the rater would be "Hotlist N", the rating value
+"cool link" (e.g.,  70 on a -100 to 100 scale)
+
+   Ratings can also be extracted from a whole site or directory.
+E.g. Rater: "Yahoo.science.organizations (maintainer)", value "Good enough".
+
+   The spider can also look through all documents that have "hot links" or
+"directory" in the title and/or have a sufficiently high indicator of general
+quality, and suck them in, with the rater name equal to the page URL.
+
+  All of this will fill the database with a sufficient number of alternative
+rating indexes without much manual effort on anybody's part.
+
+  At this point, maintainers of hotlists and topical indexes may notice
+that they can reach the same results by just selecting the ratings on the
+general service, with the following additional advantages:
+
+- they do not have to maintain their own servers.
+- The common service would allow the user to screen out the links
+  that are invalid or refer to documents that cannot be read by this
+  user.  The rest will be presented in the order depending on the user's
+  preferences and other rater's recommendations. Also, out of several
+  mirror sites for the same document, the user may see only the nearest
+  one (or one with the faster or cheaper connection), etc.
+
+One can also have special versions of Web browsers configured not to see
+any documents not approved by a certain rating agency, e.g. Web Prude Alliance.
+
+This provides an enabling technology for multiple voluntary censorship schemes,
+alternative private moderators, etc.
+
+
+With the implementation of the Stage 2 (I'd take 3 months for the first
+working model, after Stage 1) we have a full-scale functioning system that
+I expect to be both useful and reasonably popular.
+
+
+Stage 3.   - Quality improvement.
+=======
+
+  By now we have the general mechanism launched, and the following progress
+may run smoothly and incrementally, with most changes happening under the
+surface of user interface.
+
+  Still, this is by far not the system that I would like to have.
+The minimal enhancements I would like to see are the topical categorization
+mechanisms, correlations of ratings, and improved user profiles.
+And, of course, manual fine-tuning of the ratings which should at this point
+be immediately rewarding for the participants.
+
+ I already wrote about this, and I am mostly done with bootstrapping
+suggestions that are the topic of this message.
+
+ Still, a few remarks on correlations and propagation of ratings:
+
+We have enough of a base now to calculate them.
+So let's do it.
+
+  I personally love the transhumanist Web collection of Anders Sandberg.
+Unfortunately, Anders is still human, and cannot reference everything.
+I will be quite happy if the service allows me to find documents
+liked by people referenced by Anders (I could just follow the links, but a
+prioritized and filtered list may still be better), by people who reference
+Anders' pages (this is the point of the backlink idea, except, again,
+sorting, filtering and incorporating other people's opinions), and by people
+who reference the same things Anders does.
+
+ Anders's ratings can be propagated across the whole Web along these links
+(slowly fading with distance) and give his followers, fellow raters, and
+himself useful advice on a wide variety of documents.
+
+ Now I would finally be able to find jokes that *I* would consider funny
+and read news that *I* would consider important.
+ 
+ It still may make sense to read generic news; as Oscar Wilde once said,
+
+   "There is much to be said in favor of modern journalism.
+    By giving us the opinions of the uneducated, it keeps
+    us in touch with the ignorance of the community."
+
+(This is a kind of humor, BTW, that I want to pop up on my screen,
+whether it's massively popular or not)
+
+
+
+Further stages.
+==============
+
+Global distribution of the service, introduction of personal reputations
+and resources, multiple author and rater compensation mechanisms,
+active sophisticated personal agents, and much, much more...
+
+==========================================================================
+Yes, not everybody may use any of these features.
+Most of the life forms on Earth even do not read books still.
+Yes, the books and the Web are elitist.
+However it is this elite that is developing the global ecology of knowledge,
+and I would be happy enough if I can be of use here.  The life of others
+will hopefully benefit from this as well.
+---------------------------------------------------------------------
+  
+Comments?
+
+
+

@@ -1,0 +1,139 @@
+	On Gibson's suggestions to improve schools:
+
+
+   I just read William Gibson's suggestion to provide free long-distance
+phone services, cable access and *rights to get any commercial software
+for free to all _public_ school teachers* - and give nothing to private
+schools.
+
+   Frankly, I didn't expect anything like this from William Gibson.
+
+There are so many things to criticize here, it's really hard to pick.
+
+  Mandating all software companies to ship their products to any
+public school teacher?
+Or will the teachers just get the right to copy the software free,
+without the documentation and tech support?  How much should they
+pay for documentation, upgrades and support if they need them?
+Or if the teachers should get the manuals for free too, then why not
+*all* the books, magazines and newspapers from all those 'fat publishers',
+and allow every teacher to collect a Library of Congress worth of
+freebies? Also, allow all teachers free access to everything: movies,
+theaters, museums, [unused!] seats on planes heading for Europe, etc. 
+Would be really nice to give these rights to children themselves too,
+and - why not ? - their parents! 
+
+   Is there really a reason why I and my son shouldn't get a free copy of
+an algebra tutoring program, but his *physical education* teacher will?
+Should the English teacher have a right to request a full version of the
+MicroSoft Software Development Kit?  Or a fancy limited edition
+stock-trading program? 
+
+   One can suggest that the teacher's rights for free software
+should be limited to 'relevant' programs.
+   Still worse!
+   Consider a company whose main market *is* the classroom.
+The obligation to provide software to teachers for free will
+leave it without any commercial customers!  You will kill a big
+part of the educational software market with this plan!
+  Will the government replace it?
+  If the government knows better how to organize the production and
+distribution of educational [or any other] software, why isn't it
+doing it now?
+
+   Also, why don't we give rights for all educational software to
+students? (this sure would kill the *whole* market at once!)
+
+  How are we going to control the software piracy issues after we
+grant rights worth *millions* of dollars to hundreds of thousands
+of people?
+
+   Could anybody explain to me how this 'plan' could possibly work??!!
+
+   Politically, the idea that any producer of software should supply
+an unlimited number of copies of the product to the state institutions,
+IMO, stands in one row with totalitarianism and slavery (except that
+those, more or less, *worked*.  This won't!) 
+I even don't want to discuss such political views (had too much of
+this in the USSR).
+
+    Also, if we allow one group of people to stand above the law
+(in this case, engage in unlimited software piracy), we may be tempted
+to expand this practice.  Education is not the only problem this country
+faces. Should we allow poor hungry people to take some food for free from
+those big fat food-processing companies?  Can doctors take anything they
+want for free if it may help them to improve professionally?
+What about women, minorities, the elderly, children, handicapped and
+retarded people - wouldn't it be nice if they could satisfy their urgent
+needs at the expense of those fat companies, any time they feel like it?
+
+    If Gibson's speech is taken seriously anywhere in the educational
+establishment, it can bring a disaster.
+    Actually, since this 'plan' is as evidently impractical as it is
+disastrous, I don't think it can convince anybody, but it sure distracts
+the education professionals from _appropriate_ actions.
+
+
+
+    What would *I* suggest?
+
+    Actually, I don't believe that much in the government's involvements;
+the very idea that the only social structure that can make all things work
+is a centralized[?] territorial [??] entity (i.e. national government)
+seems so atavistic...
+
+
+    But even being a socialist, one could come up with reasonable
+suggestions on *national* actions regarding computers and education:
+
+    Implement a national-scale school voucher program.
+Allow the vouchers to be spent on educational software (including
+spelling, typing and math tutors, simulation and strategy games
+from Oregon Trail to Civilization, Logo compilers, Internet and BBS
+accounts for kids, etc.), Discovery Channel, educational books and
+tapes, etc., etc. - and you will see much more efficient allocation
+of resources, booming new markets - and, as a byproduct, you may see
+lots of companies giving free products and seminars to teachers so
+that the teachers could explain benefits of those products to the
+students!
+
+     Specify a set of necessary educational software tools, buy
+distribution rights for those tools that already exist, and order
+the rest on the competitive basis from the industry; the software
+will be appropriate, standardized and very inexpensive (due to
+elimination of marketing expenses and economies of scale).
+                                                                
+     Implement the necessary infrastructure for software superdistribution
+to allow teachers, students and the rest of the population to rent/try
+*any* software package they want very cheaply. This will create a
+multi-billion dollar industry in the process.
+
+     Create an easy-to-use distributed hypertext on Internet, with message
+rating features that would allow people of *any age* find whatever they
+(and all other people with correlating interests) like  much faster, and make
+visits to cyberspace a really rewarding pastime for anyone, while saving the
+network resources from carrying an ever increasing number of unwanted
+messages. ( Instead of installing expensive 'data highways' to carry still
+more information to people who already receive many times as much stuff as
+they can possibly read. )
+
+     Remove people who have proven they understand nothing in computers,
+education and social engineering, from any advisory positions in the national
+educational system.
+
+
+
+     I would be really interested to see William Gibson's explanation on
+why his 'rob the industry to destroy the schools' plan would work better
+than the above suggestions; in the absence of such explanation, I would be
+happy to replace Gibson on any advisory job he is invited to perform, to
+help implement the above mentioned and numerous other ideas that can really
+educate children and revitalize the industry.
+
+
+
+  I don't have Gibson's email address, but would appreciate if somebody
+forwards it to him. Not that I think it may help... :-(
+
+
+		- Alexander Chislenko <sasha1@netcom.com>    08/02/93

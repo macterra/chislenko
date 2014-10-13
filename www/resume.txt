@@ -1,0 +1,106 @@
+                 ALEXANDER CHISLENKO
+
+        6 McLean Pl. #5  Cambridge MA 02140
+        Tel. (617) 864-3382
+        Email: sasha1@netcom.com
+        Home page: <http://www.lucifer.com/~sasha/home.html>
+
+
+JOB HISTORY:
+
+March 1999-present
+
+     Intelligenesis Corporation.
+     1999 - Director of Mind Mining.
+     2000 - Director of Recommendation Systems.
+     
+October 1997-February 1999
+
+     MIT.  Researcher with the Society of Mind group at the Media Lab.
+     Research of architectures and evolutionary patterns of natural and
+     artificial complex systems built from multiple agents, content-aware
+     media, semantic spaces, and integration of cognitive and economic
+     mechanisms (Hypereconomy).
+
+1996-1997
+
+     Firefly Network, Inc.  Senior Software Engineer, working on the
+     Automated Collaborative Filtering (ACF) software. Responsibilities
+     included development of the feature-guided recommendation server
+     architecture and recommendation algorithms.  Also, wrote papers
+     on the perspectives of the ACF technology and its social implications.
+
+1993-present:
+
+      Write and occasionally lecture on perspectives of advanced
+      computing and Internet development, and philosophy of
+      technology in general.  Take part in development of a
+      number of Websites, on a pro bono and consulting basis.
+
+1990-1996:    Software House, Inc.  Senior Software Engineer.
+
+      Designed and developed real-time security systems software, including
+      communication programs, device drivers, CCTV control system, a
+      partial Fortran-to-C converter, packages of generic mathematical
+      routines for strings and abstract sets handling.
+      Created a number of software productivity tools.
+      Internationalized company's software. Maintained Internet tools.
+
+1989     "Soft Union" (USSR). Freelance programmer and group leader.
+
+      Projects included:  evolutionary and cooperative games, diet
+      optimization package, language-independent spell-checker.
+      Responsibilities: system design, programming, small company
+      management.
+
+1986-1989:  Soviet Academy of Sciences, Institute of Informatics.
+
+    Developed:
+      - Metadata-based system for menu-driven query generation on
+        expanding database.  Design and programming. INGRES, C, Unix.
+      - Model expert system for DBMS evaluation (MS-DOS, PROLOG).
+      - PROLOG-tutoring  hypertext-like system with executable parts.
+      - a specialized text compression program
+
+      Lectured and wrote articles on PROLOG use, expert systems and
+      database design. Managed the Institute's Computer Science program
+      for gifted high school students.
+
+1982-1986  Design Bureau for Automated Machines and Robotic Systems.
+
+      Designed and developed:
+
+      - network routing optimization program
+      - CAD surface representation and smoothing programs using spline
+        techniques and optimization algorithms
+      - generic multidimensional optimization package
+      - CIM short-term planning and real-time software for inventory
+        control and machine tool load optimization
+      - bitmap-graphics package for mechanical drawings output
+
+EDUCATION:   1977-1982. Leningrad State University, USSR.
+        M.S. in Mathematics, Computer Science, Education.
+
+CONTINUING EDUCATION:
+
+      Courses in computational theory, AI, cognitive science, software
+    agents, contract theory, game theory, biochemistry, C++, Motif,
+    economics, biology, psychology, philosophy, environmental studies,
+    demographics, physics, astronomy, education, speed-reading, and
+    other subjects, mainly at Leningrad University, Harvard, Tufts,
+    Boston University, and MIT.
+
+    Currently (spring 1998) taking Game Theory, Biochemistry and the
+    "Society of Mind" courses at MIT.
+
+AFFILIATIONS:
+
+     World Future Society (board member of the Greater Boston Chapter),
+     Extropy Institute (main editor of Extropy Online), Hypereconomy
+     Development group (founder and group leader), Foresight Institute,
+     Electronic Frontier Foundation, International Paleopsychology group.
+
+PUBLICATIONS
+
+     A selection of my published works is available at
+     <http://www.lucifer.com/~sasha/articles/index.html>

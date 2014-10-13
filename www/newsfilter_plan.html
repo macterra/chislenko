@@ -1,0 +1,852 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">        
+<HTML>        
+<HEAD>        
+<TITLE>Newsfilter Project</TITLE>        
+<META NAME="KEYWORDS" CONTENT="Usenet,collaborative filtering,Semantic Web,intelligent software agents, information technology and society, Semantic Transports, social implications of Automated Collaborative Filtering, ACF and Synthetic intelligence, artificial intelligence, ACF, Automated Collaborative Filtering">        
+<META NAME="Description" CONTENT="A proposal for collaborative filtering of Usenet based on semantic encoding of users' opinions.">        
+<META HTTP-EQUIV="Reply-to" CONTENT="sasha1@netcom.com (Alexander Chislenko)">        
+<META HTTP-EQUIV="Content-language" CONTENT="en-US">        
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=windows-1251">       
+<META NAME="AUTHOR" CONTENT="Alexander_Chislenko">        
+<META NAME="Publisher" CONTENT="Alexander_Chislenko">        
+<META NAME="rating" CONTENT="General">        
+<META NAME="Distribution" CONTENT="Global">        
+<META NAME="Copyright" CONTENT="Newsfilter group">        
+<LINK REL=HOME HREF="http://www.lucifer.com/~sasha/home.html">   
+</HEAD>        
+        
+<BODY BGCOLOR="#EEEEEE">        
+
+
+<H2 ALIGN=CENTER>Newsfilter project:  framework and specifications</H2>        
+<P ALIGN=RIGHT><EM>Version 0.70   Last updated  5 October 1999.</EM></P>        
+<P>        
+<DIV ALIGN="JUSTIFY">        
+<STRONG>Note:</STRONG> This document is a description and a working reference         
+for the Newsfilter project aimed at creating a public, open-source service        
+for quality-based filtering and recommendation        
+of Usenet articles. For more information please review         
+<A HREF="http://www.onelist.com/messages/newsfilter">newsfilter group discussion archives</A>        
+and references at the end of this document.          
+Please contact        
+<A HREF="mailto:sasha1@netcom.com(Alexander 'Sasha' Chislenko)?subject=Newsfilter project">Sasha Chislenko</A>        
+with any suggestions or criticisms.        
+        
+<H2>Project Goal</H2>        
+        
+The project is intended to create a technical framework for collaborative        
+document filtering and recommendations, an information infrastructure, and a
+basic set of services allowing to use people's assessments of online documents
+for improved navigation, and apply them to Usenet messages.        
+        
+<H2>Approach and aspirations</H2>        
+        
+The project aims to create a set of open standards for storage and        
+transmission of semantic encodings and client user interfaces,        
+and the first implementations of crucial architectural components.        
+This will create an easy-to-use infrastructure that should allow        
+further rapid development of the system and smooth integration        
+of additional services.        
+<P>        
+So far, Net tools concentrated on information storage, transmission,        
+and representation functions, while all semantic analysis has been        
+done by humans. Now, we can build another level of standards for        
+representing, processing, and targeting documents based on their semantic        
+encoding, and elevate the Web to a new level.  In the resulting        
+environment, the development of intelligent agents and symbolic        
+AI may become as profitable for third-party services as text        
+retrieval became with the invention of simple document-storage        
+systems.        
+        
+<H2>Project structure and deliverables</H2>        
+        
+The project aims to provide design and deliver the first implementations of:        
+<UL>        
+<LI>Formats and storage facilities for rating profiles and other user data        
+<LI>Data request functions        
+<LI>Collaborative mechanisms for combining multiple sources of ratings into        
+    a recommendation/filtering stream.        
+<LI>Client interface        
+<LI>Algorithms for generating, matching and aggregating ratings profiles
+<LI>Algorithms and interfaces for intercommunication of distributed
+recommendation and prediction services.
+<LI>Help files, online documentation, and readable published code        
+</UL>        
+        
+<H3>General scheme and information flows</H3>        
+        
+        
+In the traditional system, the user exchanges        
+content with the content repository, querying it        
+to obtain relevant documents.  The content search        
+engine knows nothing about the user.  Client interface        
+stores some simple user settings and allows browsing        
+and querieng of the content repository and posting of        
+user messages.        
+<P>        
+        
+The ratings-enriched system introduces additional        
+elements: user's own ratings profile, general ratings        
+repository, and recommendation service.        
+The right (ratings) wing of the following diagram of        
+the ratings-based system is very similar to the left        
+(content) wing, except that the advice it gives        
+are based on the user-expressed semantics of the        
+documents rather than their content.        
+<P>        
+        
+<HR>        
+<PRE>        
+        
+             Content             Profile (Ratings)        
+            repository            repository         
+               |                    |        
+               |                    |        
+            Content                 |               
+            search              recommendation        
+            engine                service        
+                \                   /          
+                 \                 /           
+                  \               /        
+                   \             /        
+                   Client interface        
+                         |        
+                         |        
+                      User [+ user profile]        
+        
+        
+</PRE>        
+<HR>        
+        
+An important concept in the proposed architecture is one        
+of an <EM>advisor</EM>.   An advisor is a human or        
+machine generator of message ratings that the user        
+decides to rely upon.  A user can have multiple advisors        
+whose recommendations may be combined.  Each advisor        
+has a named area of expertise and a reputation weight        
+relating the relative utility of their recommendations        
+to this user.        
+<P>Every user can be an advisor if he
+<P>
+1)  enters ratings
+<BR>
+and
+<BR>
+2) has anybody who is willing to follow his opinions.
+<P>
+The advisors can be also automatic (kill file or imported
+spam filter) or synthetic (e.g., an average of all human
+advisors is the &quot;community&quot; advisor, and can have a name
+like &quot;comp.ai.alife.human_community&quot;)
+<P>
+The aggregation of advisor ratings (in a given named &quot;sense&quot;,
+area, e.g. &quot;humor&quot; ) is relatively simple, except for the confidence
+calculation.
+<P>
+
+Suppose that : 
+<UL>
+<LI>Wt(A) is Advisor Weight designated by the user;
+<LI>Rating(A,M) is advisor A's rating for message M;
+<LI>Conf(A,M) is advisor A's confidence for message M.
+</UL>
+<BR>
+<P>
+Then the aggregated rating can be computed as an average rating by
+all advisors, taking weights and confidences into account:
+<PRE>
+      Sum [ Wt(A) * Rating(A,M) * Conf(A,M) ]
+R(I)= ---------------------------------------       
+          Sum [ Wt(A) * Conf(A,M) ]
+</PRE>
+<P>
+Confidence computation is more complex, and depends on all
+advosor confidences, weights, number of advisors that suggested
+their ratings, and diversity/deviation of their opinions.
+The exact formulas can be selected based on statistical 
+analysis of the recommendations, to optimize the recommendation
+quality (the accuracy of predicting user's ratings).
+      
+<H3>Basic operations of the service</H3>        
+        
+The system should allow the following operations:        
+        
+<UL>        
+<LI><STRONG>Selecting the advisor set</STRONG>        
+<BR>        
+The user can directly list good advisors and their        
+weights, or request N most reputable advisors [in        
+a given area], or ask for advisors of his friends,        
+or ask the recommendation service to find appropriate        
+advisors based on analysis of profiles and reputations,        
+or a combination of these.        
+<P>        
+        
+<LI><STRONG>Getting a general recommendation</STRONG>        
+<BR>        
+The user sends the advisor set [and an area of interest]        
+to the recommendation service.  The service retrieves        
+ratings of the advisors, aggregates them, and returns        
+a selected set of messages that according to the opinion        
+of these advisors (or worst, or most/least popular, or        
+most controversial)  This function can be also         
+performed on the client if it stores the advisor profiles.        
+Then the selected messages are fetched from the content         
+repository.        
+        
+<P>        
+<LI><STRONG>Getting a restricted recommendation</STRONG>        
+<BR>        
+The user sends a query to the search engine and gets        
+a reply with a list of messages and indicators of their        
+relevance.   This list is then passed through the advisor        
+set, and for each message the recommendation system suggests        
+its expected quality, with confidence factors.        
+Then, the messages get resorted based on all indicators of        
+relevance, quality and confidence.        
+<BR>        
+        
+(This allows taking into account personalized quality        
+expectation every time search is conducted)        
+        
+<P>        
+<LI><STRONG>Improved navigation</STRONG>        
+<BR>        
+Before presenting the user with a list of messages        
+corresponding to a given newsgroup or a search list, client        
+software should consult the recommendation service, and        
+reorder the list, putting definitely good messages on the top        
+of the list, definitely bad messages on the bottom, and        
+everything else in between.        
+<P>        
+<LI><STRONG>Rating feedback</STRONG>        
+<BR>        
+The user should be able to enter feedback to each reviewed        
+message.  The feedback may include a named rating for the        
+message, a confidence factor, and a free-form comment.        
+The user may also request to see who recommended this message,        
+and adjust the reputation factors for the those advisors.        
+This function can also be performed automatically.        
+</UL>        
+        
+        
+<H3>Data structures</H3>        
+        
+The &quot;semantic data&quot; should represent features of users, advisors,        
+and messages, as well as their relations.        
+<BR>        
+Data will be kept in standard records (database or XML) allow        
+easy extensions.        
+        
+<H3>Sample data formats</H3>        
+        
+The two basic types of data records are object description        
+records and relation (rating) description records.        
+        
+<H4>Object [User/advisor/message] description record</H4>        
+        
+An object profile consists of multiple object records,         
+describing various features of users, advisors, and messages,         
+such as name, age, preferred language, URNs, etc.        
+Each record has the following structure:        
+        
+<UL>        
+<LI>Object Id        
+<LI>Field name        
+<LI>Field value        
+<LI>Time Stamp        
+<LI>[possibly, Expiration time]        
+</UL>        
+        
+<H4>Relation record</H4>        
+        
+Relation records allow to store user and advisor ratings as well        
+as advisor records.        
+        
+<UL>        
+<LI>Object1 Id          User or advisor Id        
+<LI>Object2 Id          Advisor or message Id        
+<LI>Relation type      &quot;Advisor&quot;, or &quot;rated message&quot;        
+<LI>Relation name       area of expertise, or message feature, e.g. &quot;funny&quot;        
+<LI>Relation value      Reputation/weight/rating        
+<LI>Value Confidence        
+<LI>Time Stamp        
+<LI>[Free-form comment]        
+<LI>[possibly, Expiration time]        
+</UL>        
+        
+The confidence reflects the degree to which the source is confident        
+that the relation value is correct.  The confidence may be stronger        
+if the record was derived from combining a large number of opinions        
+of reliable agents that agreed on this value (low std.dev), and lower        
+if there were only a few not very reliable agents that deviated from        
+each other, or was derived implicitly, etc.        
+<P>        
+The reason for storing confidence explicitly is that different users        
+have different degrees of tolerance to false positive and false negative        
+recommendations.
+<BR>
+Also, people sometimes can be interested in messages with low confidence        
+as these indicate controversial or under-researched objects.        
+        
+<H3>Data repositories</H3>        
+        
+The data records may be stored in databases that may serve         
+records on request, or published as standard formatted files.         
+        
+<H3>Data requests and transports</H3>        
+        
+Data transport mechanism transfers semantic data, content, and        
+requests between data repositories, knowledge servers, and user        
+client software.        
+<BR>        
+The transport can be HTTP, remote database interface, postings on        
+a designated newsgroup (i.e., alt.newsgroups.ratings), or email.        
+Each of these mechanisms has its own advantages in terms of        
+delivery speed, privacy and efficiency.  We will start with        
+the Web interface that appears more immediately useful and        
+easy to implement.        
+        
+<H4>Data request examples</H4>        
+        
+<UL>        
+<LI> Get/write object description records         
+<LI> get a list of unrated messages among {message list}.        
+<LI> get a list of most popular messages among {user set}        
+<BR>        
+   (combination of number of ratings and average rating)        
+</UL>        
+        
+We also need to specify formats of requests to the data depository.        
+As we agreed in principle on the structures of requests and        
+data record formats, the request formats seem to be a matter of        
+protocol rather than architecture, so I'll skip them here,        
+except for the opinion that they should also be human-readable,        
+at least in one of representations.        
+<P>        
+The communication standard should also allow transparent extensions:        
+if the services on two sides of the interface can use various extensions        
+or subsets of the protocol, they should just get whatever parts of the        
+record are available and process what they can understand.        
+<P>        
+We need to specify the exact transport syntax of the above records,        
+as well as field lengths, and then, basically, we'll have the needed        
+interface - at least for the architectural purposes.        
+        
+<H3>Client Software</H3>        
+        
+Client software should improve the users' navigation in the        
+document space.  It should allow the user to annotate existing        
+documents (or will annotate them automatically, based on the user's        
+reading pattern), communicate annotations to data repositories,        
+and request recommendation from knowledge servers.  The        
+recommendations will be used to filter and reorder the documents.        
+        
+<H3>Algorithms</H3>        
+        
+The semantic services (recommendation servers, reputation brokers, etc. -        
+need a better generic name!)        
+aggregate data from multiple users and software agents (this data is        
+received from the data repositories described above) and form         
+recommendations that should be used by the client software to        
+improve selection and presentation of information to the user.        
+<P>        
+It is also possible to transmit a generic set of data and then perform        
+the last personalization round on the client, such as weigh recommendations        
+according to this user's affinity to the recommenders.  This allows to        
+preserve privacy of user data, reduces message traffic, and shifts part        
+of the computational load to the client.        
+        
+<H4>Requests to semantic servers may include</H4>        
+<UL>        
+<LI> Predict ratings for a given message by user X        
+  (e.g., &quot;funny: 0.6, confidence: 0.7;  intelligent: 0.1, confidence: 0.9&quot;)        
+<LI> Filter a given list of messages for a user X with given thresholds        
+<LI> Get a set of &quot;like-minded users&quot;/advisors for user X [for criterion C]        
+<LI> Sort a given list of messages by predicted rating/confidence combination        
+<LI> get a list of most controversial messages among user set {X}        
+   (combination of number of ratings, their standard deviation and confidence)        
+<LI> Get a list of messages that a given set of users considers similar to message I        
+<LI> Compute reputation of an advisor X (utility of their advice) among user set {Y}        
+</UL>        
+        
+Some of these functions can be iterative.        
+For example, at the beginning of session a user can request a list of        
+like-minded users, and then use this list repeatedly to filter search        
+results or listings for different groups.  The user feedback will be        
+used to adjust the similarity/reputation factors for the selected advisors.        
+<P>        
+The results of these functions should have the same structure as object and        
+relation records.        
+
+<A NAME="stage1"> </A>        
+<H2>First stage of the project</H2>        
+        
+The first stage of development should create a collaborative        
+message filtering framework and a basic functional service        
+utilizing it.        
+<P>        
+        
+This framework service should include:        
+        
+<UL>        
+<LI>User registration facility (URF)
+<P>
+A user should be assigned, minimally, a unique Id and a password.        
+The registration can also include a questionnaire.        
+<P>
+URF includes client and server sides. Client side is an HTML-form,
+server side is a database and a CGI-script. 
+<P>
+<LI> Use spam filters and kill files as advisors.
+They will also be given names (e.g. &quot;picture&quot; filter that leaves only pictures).
+A conversion utility should turn spam filter's message lists and results of kill files
+application to rating value (e.g., name=&quot;picture&quot;; rating=&quot;0.1&quot;; confidence =&quot;0.85&quot;)
+
+<P>
+<LI>Interface functions allowing users to manually select, exchange,        
+and merge advisor sets.          
+<P>        
+<LI>Facility for expressing message selection criteria for a user.        
+The selection criteria should include the maximal number of messages        
+a user wants to see in each area of interest, and threshold values        
+for message quality and aggregated advisor confidence.        
+<P>        
+<LI>A mechanism for aggregating rating streams from several advisors        
+into a collaborative recommendation filter.        
+<P>        
+<LI>A web-based news browsing facility that displays messages        
+based on this filter and collects message ratings from the user        
+that will be used in the system.         
+<P>        
+<LI>Storage and retrieval facilities for messages.        
+<BR>
+Every message has:
+<UL>
+<LI>Id
+<LI>Poster
+<LI>Date
+<LI>Size
+<LI>Body
+<LI>[optionally, other fields, like keywords]
+</UL>
+<P>        
+<LI>Storage and retrieval facilities for user profiles and ratings.        
+(the stucture of user profile and rating records is listed above)
+
+<P>        
+<LI>Sample utilities converting widely accepted message filters        
+(keyword search, spam filters, kill files) into rating streams.        
+<P>        
+<LI>Online documentation, including description of the project goals,
+list of contributors, current status, online help, to-do list, and        
+readable published code.        
+<P>        
+<LI>A minimal facility for user feedback (at least, email or a guestbook)        
+<P>        
+<LI>The project should be beta-tested by a limited group of people and        
+their suggestions should be taken into account in the document describing        
+further development plans.        
+</UL>         
+        
+  The first stage of development should result in the creation of        
+a basic, immediately useful service in a short time frame (counting        
+on 2 developers * 3 months of work) that will be scaleable and will        
+allow multiple extensions.        
+<P>        
+The extensions, to be developed and/or integrated into the service during        
+the following stages of the project, should include complex message evaluation        
+schemes, automated selection of advisors for a given person, complex content        
+search utilities in addition to browsing, additional sources of        
+information, etc.  There selection for the next stages of the project        
+will be determined during the implementation of the first stage, and        
+depending on its results and people's feedback.
+
+<A NAME="IF"></A>
+<H3>Interface specification for stage 1</H3>
+
+
+<H4>Page 1:  Welcome screen.</H4>
+
+  A short text describing the service and latest announcement.
+<P>
+  links to: 
+<P>
+<UL>
+<LI> new user registration 
+<LI> existing user login
+<BR>
+        (the above may be combined)
+<LI> online documentation
+</UL>
+
+<H4>Page 2.   New user registration</H4>
+
+    Minimally: 
+<P>
+<UL>
+<LI>name (should be unique)
+<LI>password (some simple restriction, like at least 4 letters) 
+</UL>
+Possibly more - a simple questionnaire:
+Age, gender, education level,
+a few keywords  describing interests,
+&quot;want to be on update mailing list&quot;?
+
+<H4>Page 3:  User login</H4>
+
+
+Could be the same as registration.
+Name, Password.  Cookies if we manage.
+<P>
+
+Login should give us User Id and profile.
+<P>
+
+<H4> Page 4.  Configuration screen</H4>
+   (people get here from login)
+
+<P>
+<UL>
+<LI>newsgroup selector (User's usual newsgroup set, plus ability to add)
+<LI>topic selector  (user's usual interests, plus ability to add from other
+    topics mentioned in this newsgroup)
+<LI>advisor selector
+<BR>
+The user sees a list of his usual advisors [relevant to these topics and newsgroup(s)]
+and also a list of community advisors that he can add to his own list.
+The advisor selector record looks like:
+
+<P>
+
+&lt;advisor name&gt;
+<BR>&lt;checkmark&gt;  - check to include, uncheck to exclude
+<BR>&lt;rating name&gt;
+<BR>&lt;reputation value&gt;  - [0 to 1]   User’s assigned reputation, or community reputation.
+<P>
+ 
+ E.g.:
+<P> 
+<BR>&lt;Andrei&gt;&lt;x&gt; &lt;general&gt;&lt;0.7&gt;
+<BR>&lt;Sasha&gt; &lt;x&gt; &lt;science&gt; &lt;0.6&gt;
+<BR>&lt;Sasha&gt; &lt;-&gt;  &lt;Culture&gt; &lt;0.4&gt;   (community-suggested value)
+
+<P>
+ The checked fields represent user’s advisors; the rest are taken from the most
+reputable advisors in the group, for user’s consideration, and may be included.
+<P>
+All selections should be stored in user profile for later use, so that the user doesn't
+have to re-specify them every time.
+ 
+<LI>Selection conditions: minimal rating, minimal total confidence for each message
+to be displayed.
+
+<LI> Search button. When this button is pressed server searches for all
+ messages that satisfy selected news groups and advisors, browsing page is loaded.
+<P>
+  Links to browsing and documentation pages.
+
+<H4>Page 5.  Browsing page</H4>
+
+
+ Four horizontal areas, from top down:
+<P>
+<UL>
+<LI>
+  Topmost line: newsgroup/topic selector
+<BR>
+    fields (editable): 
+<UL>
+    <LI> Name of browsing newsgroup (e.g. &quot;misc.philosophy&quot;)
+    <LI> Name of interest (e.g. &quot;religion&quot;)
+</UL>
+<P>
+<LI>  Top frame (under the top line):  message title (scrollable)
+Contains normal message title fields: poster, date, size[?], subject,
+and also predicted quality (averaged rating and confidence).
+(Maybe, also - top advisors?)
+Sortable by any field - or at least, by date and rating.
+The frame should have adjustable lower bound. Default height: 30%.
+
+<P>
+<LI> Bottom frame:  Message body (scrollable)
+<BR>  The message whose title was selected from the top frame.
+
+<P>
+<LI>  Bottom line:  Feedback fields.
+<P>
+<UL>
+   <LI> Interest (default: browsing interest from the top field)
+   <LI> rating value;
+   <LI> confidence factor (with default value, to be stored in user profile)
+   <LI> &quot;Reply&quot; button - calls a new screen for writing a reply
+        with parameters taken from the message.
+</UL>
+<P>
+   <LI> Links to: configuration page, main page.
+</UL>
+<P>
+<LI>Documentation screens:
+<P>
+<UL>
+<LI> Project description - why is it necessary, how it is useful, etc.
+<LI> Help  (how to use it)
+<LI> FAQ
+<LI> to do list (known problems and planned changes)
+<LI> feedback form  - user feedback goes to developer list and/or
+  guestbook.
+<LI> code to download
+<BR>
+  (one Zip file with all HTML pages, scripts, and installation
+   instructions)
+</UL>
+</UL>
+
+<A NAME="COMM"> </A>
+<H3>More general notes on communications between parts of the service</H3>
+
+
+In the mature service (beyond the first stage) we will have the following agents
+producing and consuming ratings data:
+<P>
+<UL>
+
+<LI>  rating agency.
+<P>
+This is an agent that takes a single message and produces a rating
+record (e.g., human; killfile; word search; any other message
+analysis mechanism).  Also known as advisor or expert.
+<P>
+<LI>  rating repository (profile server)
+<P>
+Stores and serves profiles (groups of rating records) on request
+
+<P>
+<LI>  recommendation server
+<P>
+Analyses profiles, matches users and advisors, aggregates ratings
+values for different profiles, produces composite indicators of
+quality, popularity, controversialness, etc. of messages.  Also,
+it should use statistical analysis to optimize its algorithms
+for various metrics of service quality.
+<P>  
+This is the most complex part of the ratings processing mechanism,
+and the one that will be barely present in the first stage (except,
+mostly, for merging advisor profiles)
+<P>
+<LI>  User Client
+<P>
+  (somewhat overlaps with rating agency where a human user is concerned;
+   the emphasis here is on consumption, rather than production, of ratings)
+   Issues requests for retrieval of most appropriate advisors and messages
+   in given categories.
+</UL>
+<BR>
+<HR>
+<P>
+Each of these agencies may be viewed as an Interactive Agent that can
+exchange requests with others.  The request types may partially overlap
+between these agents.  I can suggest the following types of communications
+(no claim about completeness of this list):
+<P>
+
+<UL>
+<LI>1.  Requests [typically] directed at the record server:
+<P>
+<UL>
+<LI>  profile data query (directed at the profiles/ratings database)
+<P>
+For descriptive (non-rating) part of user profile, the query
+may specify a UserId, and receive user data, or specify a condition
+on user data, and receive a set of qualifying records.
+<P>
+For ratings part, the query can specify any condition on
+rater Id, User Id, rating name, value, confidence, and time,
+and receive matching ratings records.
+<P>
+For example, a query may request all ratings by the given set of
+advisors for a selected message.
+<P>
+We can also have pending queries, with an expiration time, for agents
+who want to be notified when new data appears that matches their request.
+<P>
+<LI>  Data storage request.
+<P>
+Sends an attribute or rating record for storage
+(typically, this can be sent by a rater or recommendation server
+to a rating server)
+<BR>
+Receives a confirmation.
+<P>
+<LI>  Data removal request.
+<P>
+    Sends a condition on the data to be removed, and authorization.
+<BR>
+     Receives a confirmation.
+
+</UL>
+<P>
+<LI> 2.  Requests to the recommendation/computation server
+<P>
+<UL>
+<LI>  2a.  Simple requests
+<P>
+<UL>
+<LI>  profile merger request 
+<P>
+sends a set of rating profiles;  receives a single profile
+with combined ratings and confidence factors.
+<P>
+The simplest case here is that for computation of a predicted
+message rating by a set of advisors.
+<P>
+<LI> ?
+</UL>
+<P>
+<LI>  2b.  Complex requests  (trigger a series of consecutive operations)
+
+<P>
+<UL>
+<LI>  advisor set [re]computation
+<P>
+sends a user profile, existing advisor set, relation name, and number of
+advisors required.
+<P>
+Updates advisor set with the advisors taken from the existing advisors'
+lists, most reputable community advisors, advisors with highest 
+affinity to the user, etc., and returns a combined set with optimized
+weights.
+<P>
+<LI>  prediction request:
+<P>
+Starts with a user Id, an message Id, and rating relation name.
+Gets a list of advisors for the user.
+<BR>
+     If there are any, gets their ratings of the message.
+<BR>
+       If there are any, merges them.
+<BR>
+ If either advisors or their ratings for the message are missing,
+ starts the &quot;fallback method&quot;: gets an average rating for the message.
+ If there are no ratings, returns average rating value with confidence 0.
+<P>
+<LI>  message list reordering:  
+<P>
+Sends a user Id, a list of message Ids, and rating relation name.
+Goes through a series of operations similar to described above;
+Returns an ordered message list (by quality, in descending order. 
+Or by any other factor, if one is interested in controversial,
+popular, unknown, etc. messages)
+</UL>
+<P>
+<LI> 2c.  Special computation requests:
+<P>
+
+  Calls to special-purpose functions.
+<BR>
+For example, consistency check on the database,
+calculation of average prediction efficiency,
+optimization of algorithm parameters, reclustering
+of synthetic profiles, etc.
+</UL>
+<P>
+<LI> 3.  Other action requests:
+<BR>
+request to perform certain actions, such as publish data,
+back up the database, etc.
+
+</UL>
+<HR>
+<P>
+We can notice that the above communications are all called
+requests.  In fact, request only originates a [sequence of]
+communication(s) listed above.
+<P>
+
+The sequence of communications usually starts with a request 
+and goes through action, transfer of stored or computed
+data, and completion confirmation.  These communication
+sequences may loop, chain or extend in time to form dialogs
+and other transaction sequences.
+<P>
+
+We should be able to define transaction syntax after we settle
+on Agent Interaction Protocol, Webmind SQL interface, and other 
+related things.
+<P>
+Of course, we do not expect to implement all of these things
+in the first stage of Newsfilter.  Hopefully though, this
+discussion can help us define the service structure that can
+be extended into more complex services and be compatible with
+Webmind.
+
+<A NAME="REFS"> </A>        
+<H2>Appendix: Web resources related to the project</H2>        
+        
+<UL>        
+<LI><A HREF="http://www.e-spaces.com/unnf/stage1/index.html">Current Interface spec</A>
+<LI><A HREF="http://www.e-spaces.com/unnf/stage2/index.html">Stage 2 spec</A>
+<LI>         
+<A HREF="http://www.onelist.com/archives.cgi/newsfilter">newsfilter group discussion archives</A>.        
+<LI>
+<A HREf="
+http://research.microsoft.com/users/breese/cfalgs.html">Analysis of predictive algorithms</A>
+<LI><A HREF="http://www.rahul.net/pcm/filter/index.html">An Experiment in writing Collaborative Filtering Software</A>
+<LI><A HREF="http://www.dsv.su.se/~jpalme/select/select.html">Select - European project</A>
+<LI><A HREF="http://shadow.ieor.berkeley.edu/humor/">Jester - Collaborative jokes recommendation project</A>
+<LI><A HREF="http://www.wisdombase.org/">The Knowsys project</A>
+<LI>
+<A HREF="http://www.cs.umd.edu/projects/plus/SHOE/">SHOE - Simple HTML Ontology Extensions</A>
+<LI><A HREF="http://www.lucifer.com/~sasha/articles/ACF.html">        
+Collaborative Information Filtering and Semantic Transports</A>        
+<LI><A HREF="http://www.lucifer.com/~sasha/articles/SemanticWeb.html">Semantic Web</A>        
+ - position paper        
+<LI><A HREF="http://www.ee.umd.edu/medlab/filter/">Information Filtering Resources</A> at Medlab        
+<LI><A HREF="http://www.w3.org/P3P/">Platform for Privacy Preferences</A>
+<LI><A HREF="http://www.ee.umd.edu/medlab/filter/conferences.html">Upcoming conferences on Information filtering</A>        
+
+<LI><A HREF="http://www.mozilla.org/rdf/doc/">RDF - Resource Description Framework</A>
+<LI><A HREF="http://www.w3.org/RDF/">W3c document on RDF</A>
+<LI><A HREF="http://www.w3.org/TR/NOTE-MCF-XML/">Meta-Content Framework using XML</A>
+
+<LI>        
+<A HREF="http://www.lucifer.com/~sasha/HEDG/HEDG.html">Hypereconomy development group page</A>        
+<LI><A HREF="http://dmoz.org/Computers/Software/Internet/Clients/Filtering/">        
+Internet filtering software</A>        
+<LI><A HREF="http://dmoz.org/Computers/Software/Internet/Clients/Mail/Anti_Spam/">        
+Spam mail filtering</A>        
+<LI><A HREF="http://dmoz.org/Computers/Software/Internet/Servers/Usenet/Filtering/">        
+Usenet spam filters</A>        
+<LI><A HREF="http://www.glue.umd.edu/~dlrg/filter/software.html">        
+Freely Available Information Filtering Systems</A>        
+        
+<LI><A HREF="http://www.realize.com">realize.com</A> - a new Collaborative Usenet Spam filter        
+<LI><A HREF="http://intelligenesis.net">Intelligenesis Corporation</A>        
+    - developer of Webmind       
+<LI><A HREF="http://www.cs.umbc.edu/kqml/kqmlspec/spec.html">KQML (Knowledge Query and Manipulation langauge) specification</A>
+<LI><A HREF="http://www.sims.berkeley.edu/resources/collab/">        
+http://www.sims.berkeley.edu/resources/collab/</A> - an        
+extensive collection of references to ACF- related resources on the Web        
+compiled by <A HREF="http://www.sims.berkeley.edu/~hal/">Hal. R. Varian.</A>         
+<LI>
+<A HREF="http://www.iastate.edu/~CYBERSTACKS/Aristotle.htm">
+Project Aristotle(sm): Automated Categorization of Web Resources</A>
+<LI>        
+<A HREF="http://tracker.clicktrade.com/tracker/tracker.dll?to='http://www.consumerdemocracy.com/'&ad=50675&lp=14528">Consumer Democracy</a>        
+- consumer opinion and product ratings site.        
+        
+        
+<LI><A HREF="http://www.kr.org/qdt">Qualitative Decision Theory page</A>        
+
+<LI><A HREF="http://research.microsoft.com/research/mlas/">
+Machine learning and applied statistics group's page at Microsoft</A>
+
+</UL>        
+<P>        
+<P ALIGN=RIGHT>&copy; 1999 
+<A HREF="http://www.lucifer.com/~sasha/newsfilter_plan.html">Newsfilter group</A>
+</P>        
+</DIV>        
+<img src="http://tracker.clicktrade.com/Tracker/Depth.dll?ad=14528" ALT="" WIDTH=1 HEIGHT=1>        
+</BODY>        
+</HTML>

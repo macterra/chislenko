@@ -1,0 +1,30 @@
+
+
+Subject:      Intelligence and warm blood
+From:         sasha1@netcom.com (Alexander Chislenko)
+Date:         1995/08/04
+Message-Id:   <sasha1DCsMI7.ApD@netcom.com>
+Newsgroups:   comp.ai.alife
+
+Keith Wiley <keithw@wam.umd.edu> writes:
+
+>...
+> I'm not sure how well a cold-blooded animal
+> would fare compared to a warm-blooded animal.
+
+
+ As I understand, the main point of being "warm-blooded" is not
+being _warm_, but having a _stable_ body temperature.
+
+  The body biochemistry can be optimized to work under any particular
+temperature, but it's very difficult to have it work equally well under
+a wide range of conditions. It's much better to pick and maintain one
+temperature range, and optimize all the chemistry for it.
+  When choosing this range, one should take into account that it is easier
+to warm the body up, than to cool it down - so the temperature shelf
+should be chosen just above the highest usual temperatures in the
+existing climate.  Which is exactly where it is.
+
+  I am not sure brain biochemistry is more demanding than that of the
+rest of the body, but it sure should help the intelligence to have the
+body warm-blooded.

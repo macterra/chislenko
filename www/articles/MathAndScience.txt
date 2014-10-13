@@ -1,0 +1,71 @@
+ This is my reply to Leonard Adleman's view on relation between mathematics
+and science expressed in Wired magazine in July 1995.  I mailed it to the
+Extropian mailing list and to Len Adleman on July 26, 1995.
+---------------------------------------------------------------------------
+ 
+     [ Mumbling to myself: Great humans are about as wrong as lay
+        humans, but at least they are wrong about *important* things.  ]
+
+ WIRED quoting Leonard Adleman <http://cs.usc.edu:8374/finger?adleman> :
+
+>" "Sciences reach a point where they become mathematized," he [Adleman]
+>says, coining a new phrase.  This process begins at the fringes, but, at
+>some point, the central issues in the field become sufficiently understood
+>that they can be thought about mathematically."
+
+  Let me play with this sentence:
+
+ "The development of Mathematics reaches a point where it can be applied to
+a new set of scientific disciplines", says Chislenko...  This process begins
+at the fringes of the science, but, at some point, the mathematical methods
+become sufficiently developed to offer valuable abstractions for the central
+issues of the field."
+
+  Math that was so successfully used during the Renaissance looked nothing
+like the math that the modern sciences "grew up for".
+
+  The above passages seem about equally lop-sided.
+
+How about this:  The fringe of the human thought (or the skin of the global
+body of knowledge growing up in [my favorite metaphor of] semantic space)
+consists of raw observations, phenomenological generalizations and ad-hoc
+theories not yet extracting the functional essence of the subject from the
+heap of details. After a while, the body of knowledge digests the new field,
+makes the necessary distinctions and builds clean abstract theories
+(a.k.a. math).
+
+  When an instance of a new structural entity gets uncovered for the first
+time, we may claim that we developed a new branch of math  (that's "math
+catching up"); when existing abstract instruments are found to be useful
+for another subject field, we may claim that "The field ripened to allow formal
+theory".  For the whole process it really doesn't matter whether we developed a
+theory for one subject, and then figured out that the same theory is applicable
+to another subject, or it was the other way round.  The important thing is that
+the knowledge organisms keeps expanding and digesting/formalizing its model of
+the world.
+
+>
+>As biology joins the ranks of other hard sciences, a tantalizing
+>prospect opens up for Adleman.  After going through an age of
+>specialization, the sciences are now reuniting into a common mode of
+>inquiry.  "The next generation could produce a scientist in the old
+>sense," he says, "a real generalist, who could learn the physics,
+>chemistry, and biology, and be able to contribute to all three
+>disciplines at once."
+>
+
+  I would claim that the opposite suggestion may better reflect the truth.
+From the distance at which the scientific approach looks like "a common mode",
+you can hardly see any particular discipline.  Of course, there are some
+instruments (like calculus, linear algebra, probability and statistics) that
+are applicable to lots of different things. However, there have always
+been generic instruments: you can use numbers and rulers to measure both
+animals and houses.  Now, not only the shared theoretical toolkit seems
+[relatively!] shrinking -- even formalisms used *within one discipline*
+diverge to the extent that, for example, the best expertise in DNA modeling
+gives you little insight into neural nets or population dynamics.
+
+The diversity of knowledge is definitely running ahead of generalization...
+
+  
+  - Sasha The Weeping Generalist

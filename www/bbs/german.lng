@@ -1,0 +1,1428 @@
+<?php
+/*****************************************************************************/
+/* german.lng                                                                */  
+/* deutsche Sprachdatei für YaBB SE 1.3.0                                    */
+/* WARNUNG: Diese Sprachdatei  DARF NICHT  für YaBB SE Versionen 1.0.0 oder  */
+/* !!!!!!!  1.1.0 verwendet werden!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/*****************************************************************************/
+/* german language file for YaBB SE 1.3.0                                    */
+/* WARNING: this language file MUST NOT be used for YaBB SE versions 1.0.0   */
+/* !!!!!!!  and 1.1.0  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!       */
+/*****************************************************************************/
+/* YaBB: Yet another Bulletin Board                                          */
+/* Open-Source Project started by Zef Hemel (zef@zefnet.com)                 */
+/* Software Version: YaBB SE                                                 */
+/* ========================================================================= */
+/* Software Distributed by:    http://www.yabb.info                          */
+/* Support, News, Updates at:  http://www.yabb.info/community                */
+/*                             http://yabb.xnull.com/community               */
+/* ========================================================================= */
+/* Copyright (c) 2001-2002 Lewis Media - All Rights Reserved                 */
+/* Software by: The YaBB Development Team                                    */
+/*****************************************************************************/
+/* This program is free software; you can redistribute it and/or modify it   */
+/* under the terms of the GNU General Public License as published by the     */
+/* Free Software Foundation; either version 2 of the License, or (at your    */
+/* option) any later version.                                                */
+/*                                                                           */
+/* This program is distributed in the hope that it will be useful, but       */
+/* WITHOUT ANY WARRANTY; without even the implied warranty of                */
+/* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General */
+/* Public License for more details.                                          */
+/*                                                                           */
+/* The GNU GPL can be found in gpl.txt in this directory                     */
+/*****************************************************************************/
+$englishlngver="YaBB SE 1.3.0";
+$locale = "de_DE";
+
+$txt[1] = "Sie haben keinen Zugriff auf diesen Bereich";
+$txt[2] = "Admin";
+$txt[3] = "Kategorien bearbeiten (Reihenfolge/Neu/L&ouml;schen)";
+$txt[4] = "Foren bearbeiten (Reihenfolge/Neu/L&ouml;schen)";
+$txt[5] = "Mitglieder anzeigen/l&ouml;schen";
+$txt[6] = "E-Mail an Mitglieder";
+$txt[7] = "YaBB News editieren";
+$txt[8] = "Mitgliederkategorien bearbeiten";
+$txt[9] = "Alle Mitglieder anzeigen";
+
+$txt[10] = "Speichern";
+
+$txt[11] = "YaBB Administrator";
+$txt[12] = "Moderator";
+$txt[13] = "YaBB Jr. Poster (&uuml;ber $JrPostNum Eintr&auml;ge)";
+$txt[14] = "YaBB Full Poster (&uuml;ber $FullPostNum Eintr&auml;ge)";
+$txt[15] = "YaBB Sr. Poster (&uuml;ber $SrPostNum Eintr&auml;ge)";
+$txt[16] = "Weitere Mitgliederkategorien (eine pro Zeile)";
+
+$txt[17] = "&Auml;ndern";
+$txt[18] = "$mbname - Index";
+$txt[19] = "<i>Mitglieder</i>";
+$txt[20] = "Kategorie";
+$txt[21] = "Eintr&auml;ge";
+$txt[22] = "Letzter Eintrag";
+
+$txt[23] = "&Ouml;ffnen nicht m&ouml;glich";
+$txt[24] = "(Kein Betreff)";
+$txt[25] = "Antworten";
+$txt[26] = "Eintr&auml;ge";
+$txt[27] = "Profil anzeigen";
+$txt[28] = "Gast";
+$txt[29] = "Autor";
+$txt[30] = "am";
+$txt[31] = "L&ouml;schen";
+$txt[32] = "Eintr&auml;ge in diesem Thema";
+$txt[33] = "Neues Thema beginnen";
+
+$txt[34] = "Login";
+$txt[35] = "Username";
+$txt[36] = "Passwort";
+$txt[37] = "Bitte Username eingeben.";
+$txt[38] = "Passwort ist leer";
+$txt[39] = "Passwort falsch";
+$txt[40] = "Username nicht vorhanden.";
+
+$txt[41] = "Foren bearbeiten";
+$txt[42] = "Aktion";
+$txt[43] = "Reihenfolge";
+$txt[44] = "Vollst&auml;ndiger Name";
+$txt[45] = "Forum hinzuf&uuml;gen";
+$txt[46] = "Foren umgruppieren";
+$txt[47] = "Aktuelle Foren";
+$txt[48] = "Forum wird gel&ouml;scht";
+$txt[49] = "Mitteilungen werden gel&ouml;scht";
+$txt[50] = "Thema wird gel&ouml;scht";
+$txt[51] = "Fertig.";
+$txt[52] = "Kategorien bearbeiten";
+$txt[53] = "Aktuelle Kategorien";
+$txt[54] = "Reihenfolge &auml;ndern";
+$txt[55] = "Kategorie l&ouml;schen";
+$txt[56] = "Neue Kategorie hinzuf&uuml;gen";
+$txt[57] = "Zugriff nur f&uuml;r Mitgliederkategorie(en)";
+$txt[58] = "leer lassen falls keine";
+$txt[59] = "Neu hinzuf&uuml;gen";
+$txt[60] = "Kategorie wird gel&ouml;scht";
+$txt[61] = "die Dateien der Kategorie werden gel&ouml;scht";
+$txt[62] = "Forums-Moderator";
+$txt[63] = "Thema l&ouml;schen";
+$txt[64] = "<i>Themen:</i>";
+$txt[65] = "N&auml;chster";
+$txt[66] = "Mitteilung &auml;ndern";
+$txt[67] = "Sie haben keine Berechtigung, diese Mitteilung zu &auml;ndern";
+$txt[68] = "Name";
+$txt[69] = "E-Mail";
+$txt[70] = "Betreff";
+$txt[71] = "Symbol";
+$txt[72] = "Text";
+$txt[73] = "Die direkte L&ouml;schfunktion steht nur Moderatoren zur Verf&uuml;gng, bitte l&ouml;schen Sie diesen Eintrag mit der 'Bearbeiten' Funktion.";
+$txt[74] = "Dieser Beitrag hat Antworten, Sie m&uuml;ssen zuerst diese l&ouml;schen...";
+
+$txt[75] = "Name fehlt (obligatorisch).";
+$txt[76] = "E-Mail fehlt (obligatorisch).";
+$txt[77] = "Betreff fehlt (obligatorisch).";
+$txt[78] = "Text fehlt (obligatorisch).";
+
+$txt[79] = "Profil editieren";
+$txt[80] = "Sie haben keine Berechtigung, dieses Profil zu &auml;ndern.";
+
+$txt[81] = "Passwort eingeben";
+$txt[82] = "Passwort wiederholen";
+$txt[83] = "Website Titel";
+$txt[84] = "Website URL";
+$txt[85] = "Signatur";
+$txt[86] = "Eintr&auml;ge";
+$txt[87] = "Position";
+$txt[88] = "Profil &auml;ndern";
+$txt[89] = "User l&ouml;schen";
+
+$txt[90] = "Dieses Thema ist geschlossen, &Auml;enderungen oder neue Eintr&auml;age sind nicht erlaubt...";
+$txt[91] = "Passwort leer";
+$txt[92] = "Userprofil anzeigen von";
+$txt[93] = "Nur Moderatoren und Administratoren d&uuml;rfen dieses Thema &ouml;ffnen oder schliessen...";
+$txt[94] = "Anzahl";
+$txt[95] = "<i>Eintr&auml;ge:</i>";
+$txt[96] = "Website";
+$txt[97] = "Registrieren";
+$txt[98] = "Username eingeben";
+$txt[99] = "Der Username darf nur Buchstaben und Zahlen enthalten (Beispiel: Muster123)";
+$txt[100] = "Dieser Username ist bereits vergeben.";
+
+$txt[101] = "Nachrichten Index";
+$txt[102] = "News";
+$txt[103] = "Home";
+
+$txt[104] = "Thema schliessen/&ouml;ffnen";
+$txt[105] = "Eintrag";
+$txt[106] = "Ein Fehler ist aufgetreten!";
+$txt[107] = "von";
+$txt[108] = "Ausloggen";
+$txt[109] = "Begonnen von";
+$txt[110] = "Antworten";
+$txt[111] = "Letzter Eintrag";
+$txt[112] = "Symbol beibehalten";
+$txt[113] = "Dieses Mitglied ist:";
+$txt[114] = "Administratior Login";
+$days = array('Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag');
+$months = array('Januar','Februar','M&auml;rz','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember');
+$days_short = array('So','Mo','Di','Mi','Do','Fr','Sa');
+$months_short = array('Jan','Feb','M&auml;r','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez');
+$txt[116] = "Eintrag+beantworten"; # There should be a + instead of spaces
+$txt[117] = "Zitieren";
+$txt[118] = "Thema";
+$txt[119] = "Hilfe";
+$txt[120] = "Themen l&ouml;schen, welche &auml;lter als diese Anzahl Tage sind:";
+$txt[121] = "Mitteilung l&ouml;schen";
+$txt[122] = "Tage alt";
+$txt[123] = "GEL&Ouml;SCHT";
+$txt[124] = "Themen l&ouml;schen, die &auml;lter sind als";
+$txt[125] = "Benachrichtigen";
+$txt[126] = "M&ouml;chten Sie eine Benachrichtigung per E-Mail falls eine Antwort zu diesem Thema eintragen wird?";
+$txt[127] = "Antwort";
+$txt[128] = "Eine Antwort";
+$txt[129] = "wurde eingetragen zu einem Thema, welches Sie verfolgen.\n\nDiese befindet sich unter dem Link";
+$txt[130] = "Lieben Gruss,\ndas $mbname Team.";
+$txt[131] = "&Uuml;ber Antworten benachrichtigen";
+$txt[132] = "Thema verschieben";
+$txt[133] = "Verschieben nach";
+$txt[134] = "Sie haben keine Berechtigung, Themen zu verschieben...";
+$txt[135] = "Zensierte W&ouml;rter bearbeiten";
+$txt[136] = "Ein Wort pro Zeile in dieser Form: fuck=f**ck";
+$txt[137] = "Admin Funktionen";
+$txt[138] = "Diese Funktion steht nur Mitgliedern zur Verf&uuml;gung...";
+$txt[139] = "Seiten";
+$txt[140] = "Aktive User in den letzten 15 Minuten";
+$txt[141] = "G&auml;ste";
+$txt[142] = "Mitglieder";
+$txt[143] = "Private Nachrichten Index";
+$txt[144] = "Private Mitteilungen";
+$txt[145] = "Antwort mit Zitat";
+$txt[146] = "Antwort";
+$txt[147] = "Private Nachrichten sind nur f&uuml;r Mitglieder";
+$txt[148] = "Senden";
+$txt[149] = "Dieser User, dem Sie eine Meldung zu senden versuchen, ist nicht vorhanden...";
+$txt[150] = "An User";
+
+$txt[151] = "Keine Mitteilungen...";
+$txt[152] = "Sie haben";
+$txt[153] = "Mitteilungen";
+$txt[154] = "Mitteilung l&ouml;schen";
+
+$txt[155] = "Wartungsmodus";
+$txt[156] = "Unser Forum ist momentan im Wartungsmodus";
+$txt[157] = "Unsere Foren sind momentan im Wartungsmodus. Bitte versuchen Sie es sp&auml;ter nochmals. Vielen Dank.";
+$mtxt[1] = "Betreff f&uuml;r die Anzeige:";
+$mtxt[2] = "Meldungstext f&uuml;r die Anzeige:";
+$mtxt[3] = "Dieses Forum ist im Wartungsmodus.";
+$mtxt[4] = "Wartungsmodus.";
+$mtxt[5] = "Unser Forum ist momentan im Wartungsmodus. Bitte versuchen sie es sp&auml;ter wieder.";
+
+$txt[158] = "User online";
+$txt[159] = "Private Mitteilungen";
+$txt[160] = "Gehe zu";
+$txt[161] = "los";
+$txt[162] = "Sind Sie sicher, dass Sie dieses Thema l&ouml;schen wollen?";
+$txt[163] = "Ja";
+$txt[164] = "Nein";
+$txt[165] = "Um Beitr&auml;ge zu schreiben, m&uuml;ssen Sie eingeloggt sein. Registrieren Sie bitte ein Useraccount, falls Sie noch keines haben.";
+
+$txt[166] = "Suchresultate";
+$txt[167] = "Ende der Resultate";
+$txt[168] = "Nochmals suchen";
+$txt[169] = "N&auml;chste Seite anzeigen";
+$txt[170] = "Sorry, nichts gefunden";
+$txt[171] = "Die Resultate werden angezeigt";
+$txt[172] = "zu";
+$txt[173] = "Suche beendet f&uuml;r Themen gestartet von Autor";
+$txt[174] = "&Uuml;bereinstimmungen gefunden";
+$txt[175] = "Gestartet von Autor";
+$txt[176] = "on";
+$txt[177] = "Suche beendet f&uuml;r Eintragungen gemacht von";
+$txt[178] = "Thema Titel";
+$txt[179] = "Text-Auszug";
+$txt[180] = "Suche nach Beitr&auml;gen enthaltend";
+$txt[181] = "Wort gefunden";
+$txt[182] = "Suche";
+$txt[183] = "Suchparameter setzen";
+$txt[184] = "Bitte w&auml;hlen Sie <b>eine</b> der folgenden";
+$txt[185] = "Verfeinerungs-Parameter";
+$txt[186] = "Suche nach Themen gestartet von jemandem";
+$txt[187] = "Suche nach Themen mit Eintragungen von jemandem";
+$txt[188] = "Suche nach Forum";
+$txt[189] = "W&auml;hlen Sie ein Forum aus, in welchem gesucht werden soll, oder duchsuchen sie alle";
+$txt[190] = "Alle";
+$txt[191] = "Wieviele Resultate anzeigen?";
+
+$txt[192] = "Email erfolgreich versandt";
+$txt[193] = "Zur&uuml;ck";
+$txt[194] = "Erinnern";
+$txt[195] = "Thema von";
+$txt[196] = "Titel";
+$txt[197] = "Beitrag von";
+$txt[198] = "Ende der Beitr&auml;ge";
+$txt[199] = "Beitrag nicht gefunden";
+$txt[200] = "Liste der registrierten Mitglieder und Top $TopAmmount Poster.";
+$txt[201] = "Herzlich willkommen";
+$txt[202] = "Active Log l&ouml;schen";
+$txt[203] = "Sind Sie sicher, dass Sie das Active Log l&ouml;schen wollen?";
+$txt[204] = "Ihre YaBB Version ist";
+$txt[205] = "Die aktuelle YaBB Version ist";
+$txt[206] = "Bann-Liste editieren";
+$txt[207] = "Reservierte Namen";
+$txt[208] = "YaBB Admin Center";
+$txt[209] = "Ich liebe dieses Forum!";
+$txt[210] = "ACHTUNG! Ihre Mitteilung konnte nicht gespeichert werden. Bitte versuchen Sie es noch einmal.<br><br>Ihre Mitteilung:<br><br>";
+$txt[211] = "Letzte &Auml;nderung";
+$txt[212] = "M&ouml;chten Sie die E-Mail Benachrichtigung zu diesem Thema deaktivieren?";
+$txt[213] = "Passw&ouml;rter stimmen nicht &uuml;berein.";
+
+$txt[214] = "Neueste Beitr&auml;ge";
+
+$txt[215] = "Ihr Browser unterst&uuml;tzt diese Buttons leider nicht";
+$txt[216] = "Forum Template editieren";
+$txt[217] = "Layout/Forum Einstellungen";
+$txt[218] = "Foren/Kategorien";
+$txt[219] = "Mitglieder/Mailing";
+$txt[220] = "Variablen";
+$txt[221] = "Messages/Actives";
+$txt[222] = "Allgemeine Einstellungen des Forums";
+$txt[223] = "Sorry, Sie m&uuml;ssen sich erst registrieren, bevor Sie diese Funktion nutzen k&ouml;nnen.";
+
+$txt[224] = "Der Username darf kein  / enthalten";
+$txt[225] = "Der Username darf kein \\ enthalten";
+$txt[226] = "Optionale Komponenten";
+$txt[227] = "Ort";
+$txt[228] = "Pers&ouml;nlicher Text";
+$txt[229] = "Pers&ouml;nliches Bild";
+$txt[230] = "Kann Verzeichniss nicht &ouml;ffnen";
+$txt[231] = "Geschlecht";
+$txt[232] = "Bild/Text";
+$txt[233] = "Registrierungsdatum";
+
+$txt[234] = "Anzeige der letzten 10 Beitr&auml;ge.";
+$txt[235] = "ist das zuletzt ge&auml;nderte Thema";
+$txt[236] = "Zur&uuml;ck";
+$txt[237] = "zur Foren-&Uuml;bersicht.";
+
+$txt[238] = "M&auml;nnlich";
+$txt[239] = "Weiblich";
+
+$txt[240] = "Ung&uuml;ltiges Zeichen im Usernamen.";
+$txt[241] = "Ung&uuml;ltiges Zeichen im Passwort.";
+$txt[242] = "Ung&uuml;ltiges Zeichen im Namen.";
+$txt[243] = "Ung&uuml;ltiges Zeichen in eMail.";
+
+$txt[244] = "Der Username, den Sie zu registrieren versuchen, enth&auml;lt einen reservierten Namen. Bitte versuchen Sie einen anderen Usernamen. Reservierte Namen: ";
+$txt[245] = "Registrierung erfolgreich";
+
+$txt[246] = "About to remove topic";
+
+$txt[247] = "Hallo,";
+$txt[248] = "Willkommen,";
+$txt[249] = "Bitte";
+$txt[250] = "Zur&uuml;ck";
+$txt[251] = "Bitte w&auml;hlen Sie ein Ziel";
+
+$txt[252] = "YABBC Tags hinzuf&uuml;gen";
+$txt[253] = "Fett";
+$txt[254] = "Kursiv";
+$txt[255] = "Unterstrichen";
+$txt[256] = "Zentriert";
+$txt[257] = "Hyperlink einf&uuml;gen";
+$txt[258] = "Email einf&uuml;gen";
+$txt[259] = "Code einf&uuml;gen";
+$txt[260] = "Zitat einf&uuml;gen";
+$txt[261] = "Liste einf&uuml;gen";
+
+$txt[262] = "Schwarz";
+$txt[263] = "Rot";
+$txt[264] = "Gelb";
+$txt[265] = "Pink";
+$txt[266] = "Gr&uuml;n";
+$txt[267] = "Orange";
+$txt[268] = "Violett";
+$txt[269] = "Blau";
+$txt[270] = "Beige";
+$txt[271] = "Braun";
+$txt[272] = "Blaugr&uuml;n";
+$txt[273] = "Dunkelblau";
+$txt[274] = "Kastanienbraun";
+$txt[275] = "Hellgr&uuml;n";
+
+$txt[276] = "Smileys deaktivieren";
+$txt[277] = "W&auml;hlen Sie das aus falls Sie Code hinzuf&uuml;gen (oder falls Sie Smileys nicht m&ouml;gen).";
+$txt[278] = "Eingabe l&ouml;schen";
+$txt[279] = "Autor";
+$txt[280] = "Datum/Zeit";
+
+$txt[281] = "Standard";
+$txt[282] = "Daumen hoch";
+$txt[283] = "Daumen runter";
+$txt[284] = "Ausrufezeichen";
+$txt[285] = "Fragezeichen";
+$txt[286] = "Lampe";
+$txt[287] = "Smiley";
+$txt[288] = "&Auml;rgerlich";
+$txt[289] = "L&auml;chelnd";
+$txt[290] = "Lachend";
+$txt[291] = "Traurig";
+$txt[292] = "Zwinkernd";
+$txt[293] = "Grinsend";
+$txt[294] = "Schockiert";
+$txt[295] = "Cool";
+$txt[296] = "Huch";
+$txt[297] = "Smileys hinzuf&uuml;gen";
+
+$txt[298] = "Moderator";
+$txt[299] = "Moderatoren";
+
+$txt[300] = "Alle Themen hier als gelesen markieren";
+$txt[301] = "Views";
+$txt[302] = "Neu";
+
+$txt[303] = "Alle Mitglieder anzeigen";
+$txt[304] = "Alphabetisch";
+$txt[305] = "Anzeigen";
+$txt[306] = "Autoren";
+$txt[307] = "Email";
+
+$txt[308] = "Anzeige Mitglieder";
+$txt[309] = "von";
+$txt[310] = "Mitglieder insgesamt";
+$txt[311] = "bis";
+$txt[312] = "Alphabetisch anzeigen";
+$txt[313] = "Anzeige der";
+$txt[314] = "Aktivsten Schreiber";
+$txt[315] = "Passwort vergessen?";
+
+$txt[316] = "Posteingang";
+$txt[317] = "Datum";
+$txt[318] = "Von";
+$txt[319] = "Betreff";
+$txt[320] = "Postausgang";
+$txt[321] = "Neue Mitteilung";
+$txt[322] = "Neue Mitteilungen abholen";
+$txt[323] = "Einstellungen";
+$txt[324] = "An";
+$txt[325] = "Liste der ignorierten Teilnehmer";
+$txt[326] = "Ein Username pro Zeile.<br>Oder geben Sie * ein um alle Mitteilungen zu ignorieren.";
+$txt[327] = "Benachrichtigung per E-Mail";
+$txt[328] = "Einstellungen speichern";
+$txt[329] = "Eingabe l&ouml;schen";
+
+$txt[330] = "Themen";
+$txt[331] = "Mitglieder";
+$txt[332] = "Mitgliederliste";
+$txt[333] = "Neue Eintragungen";
+$txt[334] = "Keine neuen Eintragungen";
+
+$txt[335] = "Geben Sie Ihren Namen ein";
+$txt[336] = "Geben Sie Ihre eMail Adresse ein";
+
+$txt[337] = "Dieses Feld akzeptiert nur Zahlen von 0-9";
+
+$txt[338] = "Senden Sie eine eMail an die obige eMail Liste";
+$txt[339] = "Senden";
+$txt[340] = "Bann-Liste editieren";
+$txt[341] = "Reservierte Namen";
+$txt[342] = "Ein Wort pro Zeile.";
+$txt[343] = "&Uuml;bereinstimmung aller W&ouml;rter";
+$txt[344] = "&Uuml;bereinstimmung eines Wortes";
+$txt[345] = "&Uuml;bereinstimmung als Satz";
+$txt[346] = "Alles suchen - nur Mitglieder";
+
+$txt[347] = "Diese Seiten erlauben Dir, jede Einstellung Deines YaBB SE - Forums zu ver&auml;ndern. Sei vorsichtig mit dem, was Du &auml;nderst, denn es k&ouml;nnte die Funktion Deines Forums beeintr&auml;chtigen. Bitte bedenke auch, dass manche Einstellungen sich nur auf die G&auml;ste deines Forums auswirken (z.B. das Zeitformat).";
+$txt[348] = "Wartungsmodus?";
+$txt[349] = "Verwendete Sprachen-Datei (.lng)";
+$txt[350] = "Name des Forums";
+$txt[351] = "Forum URL";
+$txt[352] = "Cookie Name - Username";
+$txt[353] = "Cookie Name - Passwort";
+$txt[354] = "Sendmail - Pfad";
+$txt[355] = "eMail Adresse des Webmasters";
+$txt[356] = "'YaBB' Verzeichniss";
+$txt[357] = "'Data' Verzeichniss";
+$txt[358] = "'Member' Verzeichniss";
+$txt[359] = "'Boards' Verzeichniss";
+$txt[360] = "'Sources' Verzeichniss";
+$txt[361] = "'Variables' Vereichniss";
+$txt[362] = "'Avatars' Verzeichnis";
+$txt[363] = "Images URL";
+$txt[364] = "Hilfedatei";
+$txt[365] = "Titel Hintergrundfarbe";
+$txt[366] = "Titel Textfarbe";
+$txt[367] = "Fenster Hindergrundfarbe";
+$txt[368] = "Fenster Hintergrundfarbe #2";
+$txt[369] = "Kategorie Hintergrundfarbe";
+$txt[370] = "Farbe der Tabellenrahmen";
+$txt[371] = "Zeitverschiebung";
+$txt[372] = "Anzahl der aktivsten Schreiber in Mitgliederliste";
+$txt[373] = "Anzahl pro Seite in der Mitgliederliste - Alle";
+$txt[374] = "Max. Anzahl Themen pro Seite im Message Index";
+$txt[375] = "Max. Anzahl Beitr&auml;ge pro Seite innerhalb eines Themas";
+$txt[376] = "Eintr&auml;ge nach x Tagen aus dem User-Log l&ouml;schen";
+$txt[377] = "oder";
+$txt[378] = "Bulletin Board Code erm&ouml;glichen?";
+$txt[379] = "News erm&ouml;glichen?";
+$txt[380] = "Schreibrecht f&uuml;r G&auml;ste?";
+$txt[381] = "Email Benachrichtigung erlauben?";
+$txt[382] = "Neuestes Mitglied im Forum Index anzeigen?";
+$txt[383] = "&Auml;nderungsdatum in ge&auml;nderten Beitr&auml;gen anzeigen?";
+$txt[384] = "Avatar in der Beitragsanzeige?";
+$txt[385] = "Usertext in der Beitragsanzeige?";
+$txt[386] = "Geschlecht in der Beitragsanzeige?";
+$txt[387] = "News Fader im Foren Index anzeigen?";
+$txt[388] = "News Fader Titel Farbe";
+$txt[389] = "News Fader Text Farbe";
+$txt[390] = "URL zur News Fader Datei (fader.js)";
+$txt[391] = "File-Locking benutzen?";
+$txt[392] = "Lock EX";
+$txt[393] = "Lock UN";
+
+$txt[394] = "Mailprogramm Fehler.";
+$txt[395] = "E-Mail senden an";
+$txt[396] = "um nach dem Passwort zu fragen";
+
+$txt[397] = "Das Suchfeld darf kein  / oder \\ enthalten";
+$txt[398] = "Sorry, keine &Uuml;bereinstimmungen gefunden";
+
+$txt[399] = "Das Feld darf kein / enthalten";
+$txt[400] = "Das Feld darf kein \\ enthalten";
+
+$txt[401] = "kein File-Locking";
+$txt[402] = "Unix/Linux File-Locking";
+$txt[403] = "Windows File-Locking";
+
+$txt[404] = "Mails senden mittels";
+$txt[405] = "sendmail";
+$txt[406] = "SMTP";
+
+$txt[407] = "SMTP-Server";
+
+$txt[408] = "Minimaler Zeitabstand zwischen 2 Postings mit derselben IP";
+$txt[409] = "Das letzte Posting mit ihrer IP war vor weniger als";
+$txt[410] = "Sekunden. Bitte versuchen Sie es sp&auml;ter wieder.";
+
+$txt[411] = "Top";
+
+$txt[412] = "Alles aus der Mailbox l&ouml;schen";
+$txt[413] = "Sind Sie sicher, dass Sie alle Mitteilungen l&ouml;schen wollen?";
+
+$txt[414] = "Es sind keine Themen mit eMail-Benachrichtigung markiert.";
+$txt[415] = "Sie werden benachrichtigt, wenn Antworten zu folgenden Themen eintreffen";
+$txt[416] = "Aktivieren Sie eine Checkbox, so wird damit die Benachrichtigungsfunktion f&uuml;r dieses Thema <b><i>deaktiviert</i></b>.";
+$txt[417] = "Themen mit Benachrichtigung:";
+$txt[418] = "Benachrichtigung";
+$txt[419] = "Alle Themen mit Benachrichtigung anzeigen";
+
+$txt[420] = "Alter";
+$txt[421] = "Bitte Datum/Zeit im Format <b>01/01/01 at 01:01:01<\/b> eingeben.";
+$txt[422] = "(kein Bild)";
+$txt[423] = "Avatars URL";
+$txt[424] = "YaBB Admin Einstellungen";
+$txt[425] = "Ihre Version/Aktuelle Version";
+$txt[426] = "Mitglieder Funktionen";
+$txt[427] = "Forum Funktionen";
+$txt[428] = "Forum Konfiguration";
+$txt[429] = "Detaillierter Versions Check";
+$txt[430] = ", Sie sind verbannt aus diesem Forum";
+$txt[431] = "Erfolgreich! Sie sind nun ein Mitglied des Forums.";
+$txt[432] = "Voreingestellte G&uuml;ltigkeitsdauer des Login Cookies (in Minuten)";
+
+$txt[433] = "Flash einf&uuml;gen";
+$txt[434] = "Ftp Link einf&uuml;gen";
+$txt[435] = "Bild einf&uuml;gen";
+$txt[436] = "Tabelle einf&uuml;gen";
+$txt[437] = "Tabellen-Spalte einf&uuml;gen";
+$txt[438] = "Es sind keine Themen mit Benachrichtigung vorhanden.";
+$txt[439] = "Marquee";
+$txt[440] = "Schreibmaschine";
+$txt[441] = "Durchgestrichen";
+$txt[442] = "Gl&uuml;hen";
+$txt[443] = "Schatten";
+$txt[444] = "Vorformatierter Text";
+$txt[445] = "Linksb&uuml;ndig";
+$txt[446] = "Rechtsb&uuml;ndig";
+$txt[447] = "Superscript";
+$txt[448] = "Subscript";
+$txt[449] = "Tabellen-Zeile einf&uuml;gen";
+
+$txt[450] = "Augen rollen";
+$txt[451] = "Zunge";
+
+$txt[452] = "ALLES als gelesen markieren";
+
+$txt[453] = "Dieser User ist nicht vorhanden. Das Userprofil kann nicht editiert werden.";
+
+$txt[454] = "Heisses Thema (mehr als 15 Antworten)";
+$txt[455] = "Sehr heisses Thema (mehr als 25 Antworten)";
+$txt[456] = "Thema geschlossen";
+$txt[457] = "Normales Thema";
+
+$txt[458] = "Letzter Beitrag: ";
+$txt[459] = "Zus&auml;tzliche Informationen";
+$txt[460] = "Zeige die letzten";
+$txt[461] = "Beitr&auml;ge dieses Teilnehmers";
+$txt[462] = "LOS";
+
+$txt[463] = "Alle Zeitangaben in CST.  Alle Datumsangaben im MM-DD-YY Format.";
+$txt[464] = "Neues+Thema+beginnen"; # + instead of spaces.
+$txt[465] = "Drucken";
+$txt[466] = "Private Mitteilung";
+$txt[467] = "Profil";
+$txt[468] = "Diskussionsthema-Zusammenfassung";
+$txt[469] = "Nachricht";
+$txt[470] = "Nicht verf&uuml;gbar";
+$txt[471] = "Nachricht";
+$txt[472] = "Dieses Thema ist im Forum nicht vorhanden.";
+
+$txt[473] = "Dieser Name ist bereits in Verwendung.";
+
+$txt[474] = "Suchen Sie sich eines der Bilder aus oder w&auml;hlen Sie ein eigenes, indem Sie die komplette URL angeben (Beispiel: <b>http://www.mypage.com/bild.gif</b>) f&uuml;r das eigene Bild.";
+$txt[475] = "Ich habe mein eigenes Bild:";
+$txt[476] = "Avatar Breite (0 = deaktiviert das Limit)";
+$txt[477] = "Avatar H&ouml;he (0 = deaktiviert das Limit)";
+$txt[478] = "Limit Beschreibungstext";
+
+$txt[479] = "Diese Auswahl bestimmt das Datum/Zeit Anzeigeformat im gesamten Forum.";
+$txt[480] = "01/31/01 $txt[107] 13:15:17";
+$txt[481] = "31.01.01 $txt[107] 13:15:17";
+$txt[482] = "31.01.2001 $txt[107] 13:15:17";
+$txt[483] = "January 12th, 2001, 1:15pm";
+$txt[484] = "01/31/01 $txt[107] 1:15pm";
+$txt[485] = "31. January $txt[107] 13:15";
+$txt[486] = "Zeit Format";
+$txt[487] = "Zeitverschiebung muss zwischen -23.5 und 23.5 sein.";
+
+$txt[488] = "Mitglieder insgesamt:";
+$txt[489] = "Beitr&auml;ge insgesamt:";
+$txt[490] = "Themen insgesamt:";
+$txt[491] = "P.S. Ihr Username ist";
+$txt[492] = "und Ihr Passwort ist";
+$txt[493] = "YaBB SE aktuelle Version";
+$txt[494] = "Ihre Version";
+$txt[495] = "YaBB SE Datei";
+$txt[496] = "YaBB SE Paket";
+
+$txt[497] = "Session L&auml;nge in Minuten";
+$txt[498] = "Maximale Zeichenzahl pro Beitrag";
+$txt[499] = "Ihr Beitrag ist zu lang. Bitte gehen Sie zur&uuml;ck und k&uuml;rzen Sie ihn, dann senden Sie ihn nochmals ab.";
+
+$txt[500] = "Bitte geben Sie eine g&uuml;ltige eMail Adresse ein.";
+
+$txt[501] = "Wartungsfunktionen";
+$txt[502] = "Alle Board Totalwerte neu rechnen";
+$txt[503] = "Alle Board Totalwerte wurden neu berechnet.";
+$txt[504] = "Mitglieder Summenzahlen neu rechnen";
+$txt[505] = "Mitglieder Summenzahlen wurden neu berechnet.";
+$txt[506] = "URL der YBBC JavaScript Datei (ubbc.js)";
+$txt[507] = "Vorschau";
+$txt[508] = "Immer eingeloggt bleiben";
+
+$txt[509] = "Balken Neueste Beitr&auml;ge im Forum Index anzeigen?";
+$txt[510] = "Balken Mitgliederliste im Forum Index anzeigen?";
+
+$txt[511] = "Gespeichert";
+$txt[512] = "IP";
+
+$txt[513] = "ICQ";
+$txt[514] = "Pager";
+$txt[515] = "WWW";
+
+$txt[517] = "Notwendige Angaben";
+$txt[518] = "Dies ist der im Forum sichtbar angezeigte Name.";
+$txt[519] = "Anzahl Stunden Zeitdifferenz +/- zwischen Serverzeit und Ihrer lokalen Zeit.";
+$txt[520] = "Wird nur zur internen Identifizierung in der Datenbank verwendet. Spezialzeichen k&ouml;nnen Sie nach dem Login verwenden, indem Sie den Anzeigenamen im Profil &auml;ndern.";
+
+$txt[521] = "Text Men&uuml; statt Buttons?";
+$txt[522] = "Zeige aktuelle Position im Forum als Link anstelle von Text?";
+$txt[523] = "Zeige Profil Anzeigen Button unter Beitrag?";
+$txt[524] = "Auto-Link f&uuml;r URLs erzeugen?";
+
+$txt[525] = "von";
+
+$txt[526] = "Verlegen";
+$txt[527] = "Lippen versiegelt";
+$txt[528] = "Unentschlossen";
+$txt[529] = "K&uuml;sschen";
+$txt[530] = "Weinen";
+$txt[531] = "Horizontale Linie";
+$txt[532] = "Schriftgr&ouml;sse";
+$txt[533] = "Schriftart";
+
+$txt[535] = "Empf&auml;nger";
+
+$txt[560] = "Sie d&uuml;rfen diesem Mitglied keine PM senden.";
+$txt[561] = "Neue $mbname-Mitteilung: (SUBJECT)";
+$txt[562] = "(DATE) SENDER stellt Ihnen folgende private Mitteilung zu:\n\n->*<-\n\nMESSAGE\n\n->*<-";
+
+$txt[563] = "Geburtsdatum";
+$txt[564] = "Monat (MM)";
+$txt[565] = "Tag (TT)";
+$txt[566] = "Jahr (JJJJ)";
+$txt[567] = "Ung&uuml;ltige Eingabe in einem oder mehreren der Geburtsdatum Felder.";
+$txt[568] = "Bitte Name k&uuml;rzen. Er ist zu lang ;)";
+
+$txt[569] = "YaBB Newbie";
+$txt[570] = "YaBB God (&uuml;ber $GodPostNum Beitr&auml;ge)";
+
+$txt[571] = "Credits";
+
+$txt[572] = "Alles suchen- nur G&auml;ste";
+$txt[573] = "Suchfelder";
+$txt[574] = "Zeit seit dem letzten Beitrag";
+$txt[575] = "Min";
+$txt[576] = "Max";
+$txt[577] = "Egal welcher Teilnehmer";
+$txt[578] = "Stunden";
+$txt[579] = "Tage";
+
+$txt[580] = "Ung&uuml;ltige Beitrags Nummer";
+$txt[581] = ", unser neuestes Mitglied.";
+
+$txt[582] = "Suchen nach";
+$txt[583] = "nach Teilnehmer";
+
+$txt[584] = "Nutzungsbedingungen anzeigen und Zustimmung verlangen bei Registrierung?";
+$txt[585] = "Ich bin einverstanden";
+$txt[586] = "Ich bin nicht einverstanden";
+
+$txt[587] = "Voreingestelltes Zeit Format";
+$txt[588] = "# Beitr&auml;ge f&uuml;r \"Junior Member\"";
+$txt[589] = "# Beitr&auml;ge f&uuml;r \"Full Member\"";
+$txt[590] = "# Beitr&auml;ge f&uuml;r \"Senior Member\"";
+$txt[591] = "# Beitr&auml;ge f&uuml;r \"God Member\"";
+
+$txt[592] = "Es befindet sich ein ung&uuml;ltiges Zeichen in Ihrer pers&ouml;nlichen Bild URL oder Bildnamen.";
+
+$txt[593] = "Mitgliederliste neu aufbauen";
+$txt[594] = "Die Mitgliederliste wurde neu aufgebaut.";
+$txt[595] = "Beachten: bewirkt Neusortierung und die neuesten Mitglieder werden nach der Neusortierung am Schluss der Liste sein.";
+
+$txt[596] = "Wir empfehlen, mindestens 6 Zeichen zu verwenden und Buchstaben und Ziffern zu kombinieren.";
+$txt[597] = "Zus&auml;tzliche Information";
+$txt[598] = "Bitte ausf&uuml;llen, wenn Sie unten eine URL eingeben.";
+$txt[599] = "Bitte eine komplette URL eingeben (http://www.meineseite.com).";
+$txt[600] = "Dies ist Ihre ICQ-Nummer.";
+$txt[601] = "Dies ist Ihr AOL Instant Messenger Name.";
+$txt[602] = "Dies ist Ihr Yahoo! Instant Messenger Name.";
+$txt[603] = "AIM";
+$txt[604] = "YIM";
+$txt[605] = "Einstellungen";
+$txt[606] = "Signaturen werden am Schluss jedes Forumbeitrages oder privaten Mitteilung angezeigt. In der Signatur darf YaBBC Code verwendet werden.";
+
+$txt[607] = "Lock SH";
+$txt[608] = "Selektierte Mitglieder L&ouml;schen";
+$txt[609] = "Aus Sicherheitsgr&uuml;nden verlangt YaBB, dass immer absolute Pfade angegeben werden. Das '../' (parent directory) Symbol is illegal. Bitte &auml;ndern Sie Settings.pl auf absolute Pfade anstelle des '../' Symbols.";
+$txt[610] = "Alle Foren und Themen reparieren";
+$txt[611] = "YaBB muss im Wartungsmodus sein bevor Sie dieses Programm benutzen k&ouml;nnen.";
+$txt[612] = "Alle Foren reparieren";
+$txt[613] = "Processing Category";
+$txt[614] = "Forum reparieren";
+$txt[615] = "Tempor&auml;re Dateien verwenden wenn sinnvoll";
+
+$txt[616] = "Nicht vergessen, dieses Forum ist im 'Wartungs-Modus'.";
+
+
+$txt[617] = "Sind Sie sicher, dass Sie dieses Forum l&ouml;schen wollen?";
+$txt[618] = "'Als gelesen markieren' Buttons aktivieren?";
+$txt[619] = "Willkomens E-Mail auch senden, wenn 'Passwort mailen' nicht aktiviert ist?";
+
+$txt[630] = "'Fake' File Truncation benutzen. Diese Option nur aktivieren, falls der Server den Fehler: 'truncate() not supported on this platform.' ausgibt";
+$txt[631] = "Bitte stellen Sie sicher dass 'fake truncation' aktiviert ist in Ihrem Settings.pl File.<br>\$faketruncation = 1;<br>Could not truncate file";
+
+$txt[632] = "G&auml;sten nichts anderes als Login oder Registrierung erlauben?";
+$txt[633] = "Warnung!";
+$txt[634] = "Nur registrierte Mitglieder d&uuml;rfen auf dieses Forum zugreifen.";
+$txt[635] = "Bitte einloggen oder klicken Sie";
+$txt[636] = "-hier-";
+$txt[637] = "um sich bei $mbname zu registrieren.";
+
+$txt[638] = "Sie haben Ihre eMail ge&auml;ndert. Sie werden ein neues Passwort per eMail erhalten.";
+$txt[639] = "Neues Passwort per Email zusenden, falls ein User seine/ihre Email &auml;ndert?";
+
+$txt[640] = "Fenster Hintergrundfarbe #3";
+
+$txt[641] = "Gelesen";
+$txt[642] = "mal";
+
+$txt[643] = "Hier klicken, um die Foren in dieser Kategorie neu zu sortieren";
+$txt[644] = "Dies ist Ihr '$txt[208]'. Sie k&ouml;nnen Settings und Template von hier aus &auml;ndern, und auch Ihr Forum warten.<BR><BR>Bitte lesen Sie das Manual bevor Sie in irgend einer Weise Support beanspruchen, und bitte seien Sie vorsichtig mit diesen Funktionen. Antworten auf Ihre Probleme k&ouml;nnen Sie auch im <a href=\"http://www.yabb.info/community/\" target=\"_blank\">Support Forum</a> oder im Abschnitt 'troubleshooting' des Manuals.<br>Sie k&ouml;nnen auch das <img src=\"$imagesdir/helptopics.gif\" border=\"0\" alt=\"$txt[119]\"> Symbol anklicken um Hilfe zu einigen Funktionen abzufragen.";
+$txt[645] = "YaBB SE Statistiken";
+$txt[656] = "Neuestes Mitglied:";
+$txt[657] = "Verschiedenes";
+$txt[658] = "Kategorien insgesamt:";
+$txt[659] = "Letzter Beitrag:";
+
+$txt[660] = "Sie haben";
+$txt[661] = "Klicken Sie";
+$txt[662] = "hier";
+$txt[663] = "um sie zu sehen.";
+
+$txt[664] = "Max $MaxSigLen; Zeichen &uuml;brig: ";
+
+$txt[665] = "Foren insgesamt:";
+$txt[666] = "Markiere diese Box, wenn du Fehler auf MS IIS Servern feststellst";
+$txt[667] = "Markiere diese Box, wenn die Seite nach dem posten leer bleibt (meistens unter MS IIS Servern)";
+
+$txt[668] = "Seite drucken";
+$txt[669] = "Passwort vergessen?";
+
+$txt[670] = "Pro Zeile 1 News Eintragung platzieren. Einige YaBBC Tags, wie [b], [i] und [u] sowie die Smileys sind in den News erlaubt.";
+$txt[671] = "Diese ID wird intern von YaBB verwendet.";
+$txt[672] = "Dieser Name wird angezeigt.";
+$txt[673] = "Mitgliederkategorien auflisten, welche Zugriff auf diese Kategorie haben (Gross-Kleinschreibung beachten). Mehrere Mitgliederkategorien wie folgt auflisten: gruppe1,gruppe2";
+$txt[674] = "Ein Forum mit der ID";
+$txt[675] = "ist bereits vorhanden.";
+$txt[676] = "Eine Kategorie mit der ID";
+$txt[677] = "Editieren Sie hier die Foren. Listen Sie mehrere Moderatoren wie folgt auf 'mod1s_username,mod2s_username' (m&uuml;ssen Usernamen sein und Gross-Kleinschreibung beachten). Klicken Sie auf den Link hinter dem Kategorie Namen und Sie k&ouml;nnen die zur Kategorie geh&ouml;rigen Foren umsortieren. Die Forum ID wird von YaBB intern verwendet.";
+
+$txt[678] = "Sorry";
+
+$txt[679] = "Dies muss eine g&uuml;ltige E-Mail Adresse sein.";
+$txt[680] = "Der Administrator mit Username 'admin' kann keiner anderen Mitgliederkategorie zugeordnet werden.";
+
+$txt[681] = "Bitte informieren Sie den Forum Administrator, dass er die  \$facesdir Settings korrigieren muss.";
+$txt[682] = "Dies ist das Template Ihres Forums. Hier k&ouml;nnen Sie, HTML-Kenntnisse vorausgesetzt, das ganze Erscheinungsbild Ihres YaBB &auml;ndern. Sie sehen die &Auml;nderung, sobald Sie das Template speichern.";
+
+$txt[683] = "sehr viele";
+$txt[684] = "Forum Administratoren";
+$txt[685] = "$mbname - Infozentrum";
+
+$txt[686] = "online";
+$txt[687] = "offline";
+$txt[688] = "Diesem Mitglied eine private Mitteilung senden";
+
+$txt[689] = "Maximale Zeichenzahl in Signaturen";
+$txt[690] = "Zeit in Minuten f&uuml;r das Klick Log des Forums";
+
+$txt[691] = "Klicks insgesamt";
+$txt[692] = "in den letzten $ClickLogTime Minuten";
+$txt[693] = "Zeige Zugriffsstatistik des Forums";
+$txt[694] = "IP Adresse";
+$txt[695] = "Browser";
+$txt[696] = "Betriebssystem";
+$txt[697] = "Dies ist ein einfaches System, das die Log-Datei analysiert. Es gibt einen groben &Uuml;berblick &uuml;ber Traffic, Browser und Betriebssysteme der Besucher. Die Zahlen in Klammern neben jedem Eintrag geben die Anzahl an, wie oft diese Eintrag in der Log-Datei vorkommt.<P>Die Log-Datei ist im Moment auf $ClickLogTime Minuten eingestellt.";
+
+$txt[698] = "Dies ist Ihr Profil. Sie k&ouml;nnen selbst w&auml;hlen, welche Angaben Sie machen, nur die Angaben unter \"Notwendige Angaben\" sind unbedingt erforderlich. Diese Informationen werden an unterschiedlichen Stellen angezeigt.";
+
+$txt[699] = "Das Reservieren von Namen hindert Teilnehmer daran, sich unter diesem Namen anzumelden oder ihn im angezeigten Namen zu verwenden. W&auml;hlen Sie die ben&ouml;tigten Optionen vor dem Speichern.";
+
+$txt[700] = "Willkommen bei";
+$txt[701] = "Nach dem Login k&ouml;nnen Sie es in Ihrem Profil &auml;ndern, oder indem Sie nach dem Login diesen Link anw&auml;hlen:";
+$txt[702] = "Dem neu angeleldeten Benutzer ein Zufalls-Passwort zumailen?";
+$txt[703] = "Danke f&uuml;r Ihre Registrierung. Sie erhalten demn&auml;chst eine eMail mit Ihrem pers&ouml;nlichen Passwort... Sie k&ouml;nnen das Passwort nach dem erstmaligen Login &auml;ndern.";
+
+##### do not translate these 3 lines except the words 'on', 'wrote', and 'code sample'
+$txt[704] = '<BR><i>am DATE, <a href="QUOTELINK">AUTHOR schrieb</a>:</i><table bgcolor="$color[bordercolor]" class="bordercolor" cellspacing="1" width="90%"><tr><td width="100%"><table cellpadding="2" cellspacing="0" class="quote" width="100%"><tr><td width="100%"><font face="Arial,Helvetica" class="quote" size="1">QUOTE</font></td></tr></table></td></tr></table>';
+$txt[705] = '<BR><i>Quote:</i><table bgcolor="$color[bordercolor]" class="bordercolor" cellspacing="1" width="90%"><tr><td width="100%"><table cellpadding="2" cellspacing="0" class="quote" width="100%"><tr><td width="100%"><font face="Arial,Helvetica" class="quote" size="1">QUOTE</font></td></tr></table></td></tr></table>';
+$txt[706] = '<BR><B>Code:</B><br><table bgcolor="$color[bordercolor]" class="bordercolor" cellspacing="1"><tr><td><table cellpadding="2" cellspacing="0" class="code"><tr><td><font face="Courier New" class="code" size="1">CODE</font></td></tr></table></td></tr></table>';
+#####
+
+$txt[707] = "Senden Sie diesesThema";
+$txt[708] = "einem Freund.";
+$txt[709] = "Dieses Forum ist nicht vorhanden.";
+$txt[710] = "Dieses Thema ist nicht vorhanden.";
+$txt[711] = "Hallo ";
+$txt[712] = "Sehen Sie sich bitte einmal folgenden Beitrag an";
+$txt[713] = "Einfach auf den Link unten klicken";
+$txt[714] = "Danke";
+$txt[715] = "Ihr Name";
+$txt[716] = "Ihre eMail Adresse";
+$txt[717] = "Empf&auml;nger Name";
+$txt[718] = "Empf&auml;nger eMail Adresse";
+
+$txt[719] = "Ihr Username ist: ";
+
+$txt[721] = "E-Mail Adresse nicht anzeigen (empfohlen)?";
+$txt[722] = "nicht verf&uuml;gar";
+$txt[723] = "Usern erlauben, ihre E-Mail-Adresse zu verstecken (ausser vor dem Administrator)\?";
+
+$txt[724] = "IPs bannen (z.B. 192.168.12.213 or 128.0.*.*) - ein Eintrag pro Zeile";
+$txt[725] = "Email Adressen bannen: (z.B. badguy@somewhere.com) - ein Eintrag pro Zeile";
+$txt[7252] = "Usernamen bannen: (z.B. l33tuser) - ein Eintrag pro Zeile";
+
+$txt[726] = "Komplette &Uuml;bereinstimmung. Nicht markieren, wenn auch das Vorkommen im Namen des Teilnehmers verhindert werden soll.";
+$txt[727] = "Gross-Kleinschreibung beachten. Falls nicht aktiviert, ist die Suche unabh&auml;ngig von Gross-Kleinschrift.";
+$txt[728] = "&Uuml;berpr&uuml;fe Username.";
+$txt[729] = "&Uuml;berpr&uuml;fe Anzeigename.";
+
+$txt[730] = "Diese E-Mail Adresse";
+$txt[731] = "wird bereits von einem anderem User verwendet! Wenn Sie Ihr Passwort vergessen haben, k&ouml;nnen Sie es sich &uuml;ber die Funktion auf der Einloggseite zusenden lassen.";
+
+$txt[732] = "Foren-Beschreibung in der Beitragsliste anzeigen?";
+
+$txt[733] = "Ihr Passwort wurde ge&auml;ndert. Es ist nun";
+$txt[734] = "und Ihr Username ist";
+$txt[735] = "Sie k&ouml;nnen von dieser Seite aus jeden anmailen. Ihre gesamte $mbname Mailing-Liste sollte unten zu sehen sein, aber Sie k&ouml;nnen Adressen l&ouml;schen oder hinzuf&uuml;gen. Trennen Sie die Adressen durch Semikolon und Leerzeichen: 'addresse1; addresse2'.";
+
+$txt[736] = "Sind Sie sicher, dass Sie diese Kategorie l&ouml;schen wollen?";
+$txt[737] = "Alle markieren";
+$txt[738] = "Unten sehen Sie eine Liste der Kategorie-IDs. Sie k&ouml;nnen sie verschieben (eine pro Zeile) um sie neu anzuordnen. Wenn Sie aus Versehen eine ID l&ouml;schen, geben Sie sie wieder ein und klicken Sie noch einmal auf \"Reihenfolge &auml;ndern\".";
+
+$txt[739] = "Zeit in Millisekunden, die jeder Eintrag im News-Fader angezeigt wird";
+$txt[740] = "YaBBC Buttons aktivieren?";
+
+$txt[741] = "Aktuelle Board Zeit";
+
+$txt[742] = "Klicks insgesamt";
+$txt[743] = "Identifizierte Besucher insgesamt";
+$txt[744] = "Browser insgesamt";
+$txt[745] = "Betriebssysteme insgesamt";
+
+$txt[746] = "Avatare im Mitglieder-Profil aktivieren?";
+
+$txt[747] = "konnte nicht kontaktiert werden. Dieser Username ist entweder ung&uuml;ltig oder Sie stehen auf der Liste der zu ignorierenden Teilnehmer.";
+$txt[748] = "(mehrere Empf&auml;nger als 'username1, username2')";
+
+$txt[749] = "Die Anzahl Beitr&auml;ge' Box kann nur Zahlen enthalten.";
+$txt[888] = "Am meisten online:";
+
+$txt['yse1'] = "Fehler beim Erstellen der Sicherungskopie der Settings.php";
+$txt['yse2'] = "Einstellungen zu den installierten Mods";
+$txt['yse3'] = "Hier kannst du Einstellungen zu den installierten Mods in deinem Forum vornehmen.";
+$txt['yse4'] = "Top Themen (Sticky Topics) aktivieren";
+$txt['yse5'] = "Serveradresse der Datenbank";
+$txt['yse6'] = "Datenbank Username";
+$txt['yse7'] = "Datenbank Passwort";
+$txt['yse8'] = "Datenbank Name";
+$txt['yse9'] = "\"Heute\" Mod aktivieren";
+$txt['yse10'] = "<b>Heute</b> um ";
+$txt['yse11'] = "Nutzungsbedingungen editieren";
+$txt['yse12'] = "Diese Nutzungsbedingungen werden nur angezeigt, wenn du in den Voreinstellungen angegeben hast, dass sie akzeptiert werden m&uuml;ssen.";
+$txt['yse13'] = "Thema sofort schliessen";
+$txt['yse14'] = "Ausw&auml;hlen falls Sie E-Mail Benachrichtigung &uuml;ber Antworten zu diesem Thema w&uuml;nschen.";
+$txt['yse15'] = "Ausw&auml;hlen falls Sie das Thema nach diesem Beitrag schliessen m&ouml;chten.";
+$txt['yse16'] = "Shortcuts (nur IE6 und NS6): mit alt+s Beitrag senden, alt+p Vorschau, oder alt+r Eingabe l&ouml;schen";
+$txt['yse17'] = "Aktiviere Vorw&auml;rts/R&uuml;ckw&auml;rts bl&auml;ttern von Themen";
+$txt['yse18'] = "\"Voheriges Thema\" Link";
+$txt['yse19'] = "\"N&auml;chstes Thema\" Link";
+$txt['yse20'] = "Neue Umfrage";
+$txt['yse21'] = "Frage";
+$txt['yse22'] = "Option";
+$txt['yse23'] = "Abstimmen";
+$txt['yse24'] = "Stimmen insgesamt";
+$txt['yse25'] = "Shortcuts (nur IE6 and NS6): mit alt+s Eingabe absenden, or alt+r Eingabe annullieren";
+$txt['yse26'] = "keine Umfrage-Option ausgew&auml;hlt.";
+$txt['yse27'] = "Umfrage entweder nicht vorhanden, geschlossen, oder Sie versuchten zwei mal abzustimmen.";
+$txt['yse28'] = "Diese Funktion steht nur registrierten Mitgliedern zur Verf&uuml;gung.";
+$txt['yse29'] = "Ergebnisse.";
+$txt['yse30'] = "Umfrage schliessen";
+$txt['yse30b'] = "Umfrage &ouml;ffnen";
+$txt['yse31'] = "Dies wurde von einem Admin abgeschlossen.  Sie k&ouml;nnen es nicht &ouml;ffnen.";
+$txt['yse32'] = "Umfragen aktivieren";
+$txt['yse33'] = "Umfragen als Thema zeigen";
+$txt['yse34'] = "Umfragen deaktivieren";
+$txt['yse35'] = "Umfragen-Mod? ";
+$txt['yse36'] = "Beschr&auml;nkungen beim Erstellen von Umfragen";
+$txt['yse37'] = "Nur Adminsitratoren";
+$txt['yse38'] = "Jedes registrierte Mitglied";
+$txt['yse39'] = "Umfrage editieren";
+$txt['yse40'] = "Stimmenzahl zur&uuml;cksetzen";
+$txt['yse41'] = "Checkbox ausw&auml;hlen um s&auml;mtliche Stimmen auf 0 zur&uuml;ckzusetzen.";
+$txt['yse42'] = "Stimmen";
+$txt['yse43'] = "Umfrage";
+$txt['yse44'] = "Beschr&auml;nkungen beim Bearbeiten von Umfragen";
+$txt['yse45'] = "Administratoren und Moderatoren";
+$txt['yse46'] = "Administratoren, Moderatoren und Starter der Umfragen";
+$txt['yse47'] = "1 Tag";
+$txt['yse48'] = "1 Woche";
+$txt['yse49'] = "1 Monat";
+$txt['yse50'] = "Immer";
+$txt['yse51'] = "VB Style Login aktivieren";
+$txt['yse52'] = "Login mit Username, Passwort and Session L&auml;nge";
+$txt['yse53'] = "1 Stunde";
+$txt['yse54'] = "Datenbanktabellen Prefix";
+$txt['yse55'] = "W&auml;hlen Sie die Mitgliederkategorien mit Zugriff zu dieser Kategorie. Dr&uuml;cken Sie die Ctrl Taste um mehrere Eintr&auml;ge auszuw&auml;hlen. Klicken Sie den $txt[17] Button wenn Sie fertig sind.";
+$txt['yse56'] = "VERSCHOBEN";
+$txt['yse57'] = "Bitte geben Sie eine kurze Begr&uuml;ndung ein <br>warum dieses Thema verschoben wird.";
+$txt['yse58'] = "Komprimierten Output aktivieren";
+$txt['yse59'] = "Diese Option komprimiert den Output <br> ben&ouml;tigt allerdings eine installierte zlib Bibliothek.";
+$txt['yse60'] = "Sorry, Sie haben noch zu wenig Beitr&auml;ge geschrieben. Karma &auml;ndern darf man erst ab minimaler Beitragszahl ";
+$txt['yse61'] = "Sorry, Sie d&uuml;rfen Ihr eigenes Karma nicht selbst &auml;ndern.";
+$txt['yse62'] = "Sorry, Sie k&ouml;nnen die Aktion nicht innerhalb der Wartezeit wiederholen. Die Wartezeit ist ";
+$txt['yse63'] = "Sorry, diese Funktion ist deaktiviert.";
+$txt['yse64'] = "Karma deaktivieren|Karma Total aktivieren|Karma Positiv/Negativ aktivieren";
+$txt['yse65'] = "Admins auf Wartezeit beschr&auml;nken";
+$txt['yse66'] = "Wartezeit in Stunden";
+$txt['yse67'] = "Minimale # Posts um Karma &auml;ndern zu d&uuml;rfen";
+$txt['yse68'] = "F&uuml;r Membergruppen (leer f&uuml;r alle)";
+$txt['yse69'] = "Karma Label|Karma Smite Label|Karma Applaud Label";
+$txt['yse70'] = "Karma Modus";
+$txt['yse71'] = "Inaktive Mitglieder f&uuml;r mindestens";
+$txt['yse72'] = "Tage";
+$txt['yse73'] = "Auflistung der Board-Fehler";
+$txt['yse74'] = "Folgende Fehler sind auf dem Board aufgetreten (leer wenn keine)";
+$txt['yse75'] = "hat einen defekten ersten Beitrag";
+$txt['yse76'] = "hat einen defekten letzten Beitrag";
+$txt['yse78'] = "Schwerer Fehler";
+$txt['yse79'] = "'s Board ID ist";
+$txt['yse80'] = "Es, und alle Posts darin, werden gel&ouml;scht.";
+$txt['yse81'] = "hat kein passendes Forum";
+$txt['yse82'] = "Forum";
+$txt['yse83'] = "hat keine passende Kategorie";
+$txt['yse84'] = "Kategorie";
+$txt['yse85'] = "M&ouml;chtest Du diese Fehler reparieren?";
+$txt['yse86'] = "Repariere Board Fehler";
+$txt['yse87'] = "Error beim Updaten";
+$txt['yse88'] = "in";
+$txt['yse89'] = "Error beim Erzeugen von";
+$txt['yse90'] = "Anzahl Themen in ";
+$txt['yse91'] = "Anzahl Posts in ";
+$txt['yse92'] = "Alle Fehler gefixed! Sie sollten alle generierten Kategorien, Boards oder Themen checken, um zu entscheiden, was zu tun damit.";
+$txt['yse93'] = "Recent Post deaktivieren";
+$txt['yse94'] = "Single Post aktivieren";
+$txt['yse95'] = "Multiple Posts aktivieren";
+$txt['yse96'] = "Top Thema";
+$txt['yse97'] = "Top Thema geschlossen";
+$txt['yse98'] = "Umfrage geschlossen";
+$txt['yse99'] = "Alle nicht aktiven Mitglieder ansehen";
+$txt['yse100'] = "Username/Email";
+$txt['yse101'] = "nach Username:";
+$txt['yse102'] = "nach Email:";
+$txt['yse103'] = "Cachen des Outputs deaktivieren";
+$txt['yse104'] = "Wenn sie diese Box aktivieren, machen sie ihr Board sicherer.";
+$txt['yse105'] = "Inline Links aktivieren";
+$txt['yse106'] = "Diese Aktivierung bewirkt Anzeige der aktuellen Position in einer einzigen Zeile, im Gegensatz zu einer baumartigen Anzeige.";
+
+$txt['yse110'] = "Einstellungen f&uuml;r Dateianh&auml;nge";
+$txt['yse111'] = "Dateianh&auml;nge deaktivieren|Alle Dateianh&auml;nge aktivieren|Neue Dateanh&auml;nge deaktivieren";
+$txt['yse112'] = "Dateianhang als Bild im Post anzeigen";
+$txt['yse113'] = "Dateianhang-Erweiterung pr&uuml;fen";
+$txt['yse114'] = "Erlaubte Dateianhang-Erweiterungen";
+$txt['yse115'] = "Dateianhang Upload-Pfad";
+$txt['yse116'] = "Dateianhang URL";
+$txt['yse117'] = "Maximale Gr&ouml;sse (in KB)";
+$txt['yse118'] = "Maximale Gr&ouml;sse des Upload-Verzeichnisses (in KB)";
+$txt['yse119'] = "Datei anh&auml;ngen";
+$txt['yse120'] = "Erlaubte Dateitypen";
+$txt['yse121'] = "Maximale Dateigr&ouml;sse";
+$txt['yse122'] = "Die Datei ist zu gross. Die maximal zul&auml;ssige Gr&ouml;sse ist (in KB): ";
+$txt['yse123'] = "Dieser Dateityp kann nicht hochgeladen werden. Die zul&auml;ssigen Extensions sind";
+$txt['yse124'] = "Fehler beim Speichern des Anhangs, bitte nochmals versuchen.";
+$txt['yse125'] = "Sorry! Dieser Dateiname ist bereits in Verwendung. Bitte Datei umbenennen und nochmals versuchen.";
+$txt['yse126'] = "Serverplatz voll. Bitte nochmals mit einer kleineren Datei versuchen und den <a href=mailto:$webmaster_email>Administrator</a> kontaktieren.";
+$txt['yse127'] = "G&auml;sten das posten von Dateianh&auml;ngen erlauben?";
+$txt['yse128'] = "Dateianh&auml;nge auf bestimmte Mitgliedergruppen beschr&auml;nken";
+$txt['yse129'] = "Um den Anhang zu l&ouml;schen, hier leer lassen.";
+$txt['yse130'] = "Hier klicken um das Attachment zu l&ouml;schen.";
+$txt['yse130b'] = "Dieser Dateiname ist gesperrt. Bitte versuchen Sie einen anderen Dateinamen.";
+
+$txt['yse138'] = "L&ouml;schen";
+$txt['yse199'] = "Private Mitteilungen";
+$txt['yse200'] = "Aktiviere SP1 Stil Statistiken auf dem Board";
+
+// attachment admin stuff
+$txt['yse201'] = "Dateimanager f&uuml;r Anh&auml;nge";
+$txt['yse202'] = "Von hier aus kannst du Einstellungen zu den Dateianh&auml;ngen machen. Du kannst sie nach Datum und nach Gr&ouml;sse l&ouml;schen. Auch die Statistiken dazu werden hier angezeigt.";
+$txt['yse203'] = "Dateianhangs-Statistik";
+$txt['yse204'] = "Dateianh&aumlnge insgesamt";
+$txt['yse205'] = "Benutzte Gr&ouml;sse des Dateianhang Verzeichnisses";
+$txt['yse206'] = "Verf&uuml;gbarer Speicherplatz im Dateianhang Verzeichnis";
+$txt['yse207'] = "Optionen zum Dateianhang";
+$txt['yse208'] = "Dateianhangs Log";
+$txt['yse209'] = "Entferne Anh&auml;nge &auml;lter als";
+$txt['yse210'] = "Entferne Anh&auml;nge gr&ouml;sser als";
+$txt['yse211'] = "KB";
+$txt['yse212'] = "Deine momentanen Uploads";
+$txt['yse213'] = "Name des Anhangs";
+$txt['yse214'] = "Dateigr&ouml;sse";
+$txt['yse215'] = "Momentan keine maximale Verzeichnissgr&ouml;sse gesetzt";
+$txt['yse216'] = "[Dateianhang durch Admin gel&ouml;scht]";
+
+$txt['yse217'] = "Aktuelles von www.yabb.info...";
+
+$txt['yse218'] = "User d&uuml;rfen eigenes Thema schliessen";
+$txt['yse219'] = "Alle L&ouml;schen";
+$txt['yse220'] = "Neueste Posts zuerst anzeigen";
+$txt['yse221'] = "Statistik-Tracker f&uuml;hren";
+$txt['yse222'] = "Hits-Tracker f&uuml;hren (setzt Statistik-Tracker voraus)";
+$txt['yse223'] = "[Weitere Statistiken]";
+$txt['yse224'] = "Individuelle User-Sprache erlauben";
+$txt['yse225'] = "Sprache";
+
+$txt['yse226'] = "Bitte spezifizieren Sie die URL Ihres Avatar Bildes";
+$txt['yse227'] = "Avatar Bild ist zu gross, bitte verkleinern und nochmals versuchen (máx";
+$txt['yse228'] = "In der spezifizierten URL konnte kein Bild geladen werden, bitte verifizieren Sie die URL";
+$txt['yse229'] = "Bitte klicken Sie den [Profil &auml;ndern] Button um das Avatar zu validieren";
+$txt['yse230'] = "Bitte w&auml;hlen Sie ein Forum aus f&uuml;r die Suche.";
+$txt['yse231'] = "Nur ganze W&ouml;rter zensieren";
+$txt['yse232'] = "Das angegebene Forum existiert nicht";
+$txt['yse233'] = "Ung&uuml;ltiges Registrierungsdatum, g&uuml;ltiges Beispiel:";
+$txt['yse234'] = "Kompakte Seitenanzeige aktivieren";
+$txt['yse235'] = "Anzahl benachbarte Seiten anzeigen:";
+$txt['yse236'] = "bewirkt diese Anzeige";
+
+$txt['forumview1'] = "Forum Layout (Default)";
+$txt['forumview2'] = "D&uuml;rfen User das Default Forum Layout &auml;ndern?";
+$txt['forumview3'] = "YaBB Klassisch";
+$txt['forumview4'] = "YaBB SE Standard";
+$txt['forumview5'] = "YaBB SE Kompakt";
+
+$txt['title1'] = "Individueller Titel";
+$txt['title2'] = "Titel";
+$txt['title3'] = "Individuelle Titel aktivieren";
+
+$txt['online1'] = "Zeige Online/Offline Status in Posts und Privaten Mitteilungen";
+$txt['online2'] = "<img src=\"$imagesdir/useron.gif\" alt=\"\" border=\"0\" align=\"absmiddle\"></a><font size=1> Online</font>";
+$txt['online3'] = "<img src=\"$imagesdir/useroff.gif\" alt=\"\" border=\"0\" align=\"absmiddle\"></a><font size=1> Offline</font>";
+$txt['online4'] = "Private Mitteilung (Online)";
+$txt['online5'] = "Private Mitteilung (Offline)";
+$txt['online6'] = "<img src=\"$imagesdir/useron.gif\" alt=\"Instant Message (Online)\" border=\"0\" align=\"absmiddle\"></a>";
+$txt['online7'] = "<img src=\"$imagesdir/useroff.gif\" alt=\"Instant Message (Offline)\" border=\"0\" align=\"absmiddle\"></a>";
+$txt['online8'] = "Status";
+$txt['count'] = "Posts hier nicht z&auml;hlen";
+
+$txt['rtm1'] = "Moderator benachrichtigen";
+$txt['rtm2'] = "Kommentar eingeben:";
+$txt['rtm3'] = "Gemeldeter Post";
+$txt['rtm4'] = "von";
+$txt['rtm5'] = "Der folgende Post wurde durch einen User gemeldet:";
+$txt['rtm6'] = "Kommentar des anzeigenden Users";
+$txt['rtm7'] = "Betreff";
+$txt['rtm8'] = "Poster";
+$txt['rtm9'] = "Antwort # im Thread";
+$txt['rtm10'] = "Senden";
+$txt['rtm11'] = "Keine Moderatoren gefunden!";
+$txt['rtm12'] = "Moderatoren Benachrichtigung aktivieren";
+
+$txt['errlog1'] = "Forum Error Log anzeigen";
+$txt['errlog2'] = "Das Error Log zeigt jeden im Board aufgetretenen Error. Die Auflistung ist chronologisch. Um Errors aus der Datenbank zu l&ouml;schen, markieren Sie die Checkbox, und klicken den $txt[31] Button unten auf der Seite.";
+$txt['errlog3'] = "Error Logging aktivieren";
+
+$txt['dvc1'] = "Diese Function sendet einen Query an ein PHP Script auf yabb.info welches die Versions Information Ihrer Installation enth&auml;lt.  Das Script auf yabb.info wird Ihre Version mit den letzten Versionen vergleichen.  Falls eine Ihrer Dateien  veraltet ist, wird das Script Ihnen eine URL zeigen, wo Sie die aktuelle Version downloaden k&ouml;nnen. Die Details welche &uuml;bermittelt werden sind unten aufgelistet.";
+$txt['dvc2'] = "Versions Check starten";
+
+$txt['lfyi'] = "Die Verbindung mit dem yabb.info XML File ist nicht m&ouml;glich.<br>Um zu sehen, was neu ist: Bitte <a href=\"javascript:reqWin('http://www.yabb.info/yabbxml.php')\">hier klicken</a>.";
+
+$txt['announcement1'] = "Sie k&ouml;nnen hier kein neues Thema er&ouml;ffnen - dieses Board ist nur f&uuml;r Ank&uuml;ndigungen.";
+$txt['announcement2'] = "Dieses Forum zum Ank&uuml;ndigungs-Board machen";
+
+$txt['yse_im_1'] = "Fehler! Diese Mitteilung ist nicht vorhanden!";
+$txt['yse_im_2'] = "Mitteilungs-Text";
+$txt['yse_im_3'] = "Gesendet";
+$txt['yse_im_4'] = "eMail schreiben";
+$txt['yse_im_5'] = "Mitteilung anzeigen";
+$txt['yse_im_6'] = "Speichern";
+
+$txt['yse_maxwidth'] = "Max Weite geposteter Bilder (0 = deaktiviert das Limit)";
+$txt['yse_maxheight'] = "Max H&ouml;he geposteter Bilder (0 = deaktiviert das Limit)";
+
+$txt['yse_news_1'] = "Kommentar";
+$txt['yse_news_2'] = "Kommentare";
+$txt['yse_news_3'] = "Kommentar schreiben";
+
+$txt['yse_stats_1'] = "Statistikzentrum";
+$txt['yse_stats_2'] = "Allgemeine Statistiken";
+$txt['yse_stats_3'] = "Top 10 Poster";
+$txt['yse_stats_4'] = "Top 10 Foren";
+$txt['yse_stats_5'] = "Forum History";
+$txt['yse_stats_6'] = "Datum (dd/mm/yyyy)";
+$txt['yse_stats_7'] = "Neue Themen";
+$txt['yse_stats_8'] = "Neue Posts";
+$txt['yse_stats_9'] = "Neue Mitglieder";
+$txt['yse_stats_10'] = "Hits";
+$txt['yse_stats_11'] = "Top 10 Themen (nach Antworten)";
+$txt['yse_stats_12'] = "Top 10 Themen (nach Views)";
+$txt['yse_stats_13'] = "Monatlicher Zusammenzug";
+$txt['yse_stats_14'] = "Am meisten online";
+
+// YaBBpak Center
+$txt['package1'] = "YaBBpak Center";
+$txt['package2'] = "Hauptmenu";
+$txt['package3'] = "YaBBpaks anzeigen";
+$txt['package4'] = "Erstelle neues YaBBpak";
+$txt['package5'] = "Downloade neue YaBBpaks";
+$txt['package6'] = "Installierte YaBBpaks anzeigen / YaBBpaks deinstallieren";
+$txt['package7'] = "Modifikations YaBBpaks";
+$txt['package8'] = "Avatar YaBBpaks";
+$txt['package9'] = "Sprachdatei YaBBpaks";
+$txt['package10'] = "Unbekannte YaBBpaks";
+$txt['package11'] = "Mod anwenden";
+$txt['package12'] = "Avatars benutzen";
+$txt['package13'] = "Sprache hinzuf&uuml;gen";
+$txt['package14'] = "Dateien auflisten";
+$txt['package15'] = "Entfernen";
+$txt['package16'] = "YaBBpak Creator";
+$txt['package17'] = "Erzeuge YaBBpak";
+$txt['package18'] = "Directory Pfad zum Paket";
+$txt['package19'] = "relativ zum YaBB Stammverzeichnis";
+$txt['package20'] = "Stammverzeichnis";
+$txt['package21'] = "das Stammverzeichnis, kann normalerweise leer gelassen werden";
+$txt['package22'] = "YaBBpak Dateiname";
+$txt['package23'] = "ohne Extension";
+$txt['package24'] = "YaBBpak Typ";
+$txt['package25'] = "Modifikations YaBBpak";
+$txt['package26'] = "Avatar YaBBpak";
+$txt['package27'] = "Language YaBBpak";
+$txt['package28'] = "Generisches YaBBpak";
+$txt['package29'] = "Los!";
+$txt['package30'] = "Packing";
+$txt['package31'] = "Geschrieben ";
+$txt['package32'] = "Sie k&ouml;nnen dieses Paket nun von hier downloaden";
+$txt['package33'] = "Download";
+$txt['package34'] = "Archiviere";
+$txt['package35'] = "Ueberspringe ";
+$txt['package36'] = " da es eine neuere Version ist oder eine Version desselben Alters";
+$txt['package37'] = "Extrahiere";
+$txt['package38'] = "Extrahiere Avatars";
+$txt['package39'] = "Die Avatars wurden extrahiert, Sie k&ouml;nnen Sie nun benutzen.";
+$txt['package40'] = "Extrahiere Sprachen Paket";
+$txt['package41'] = "Das Sprachen Paket wurde extrahiert, Sie k&ouml;nnen es nun benutzen (indem Sie es in den Settings aktivieren).";
+
+// Package manager
+$txt['yse131'] = "Paket-Manager";
+$txt['yse132'] = "Diese Dateien sind momentan in deinem Paket-Verzeichnis";
+$txt['yse133'] = "Anmerkung: Der Paket-Manager befindet sich in einem fr&uuml;hen Beta-Stadium. Bitte mach ein Backup deiner Dateien, bevor du ihn einsetzt.";
+$txt['yse134'] = "Mod hinzuf&uuml;gen";
+$txt['yse135'] = "Avatars benutzen";
+$txt['yse136'] = "Sprache hinzuf&uuml;gen";
+$txt['yse137'] = "Dateien auflisten";
+$txt['yse138'] = "Entferne";
+$txt['yse139'] = "Neues Paket erstellen";
+$txt['yse140'] = "Paket downloaden";
+$txt['yse141'] = "Package creator";
+$txt['yse142'] = "Paket erstellen";
+$txt['yse143'] = "Verzeichniss zum packen";
+$txt['yse144'] = "relativ zu deinem YaBB SE Stammverzeichniss";
+$txt['yse145'] = "Stammverzeichniss";
+$txt['yse146'] = "das Stammverzeichniss kann normalerweise leer bleiben";
+$txt['yse147'] = "Dateiname des Pakets";
+$txt['yse148'] = "Start!";
+$txt['yse149'] = "Komprimieren";
+$txt['yse150'] = "Du kast dieses Paket nun von hier downloaden";
+$txt['yse151'] = "Download";
+$txt['yse152'] = <<<EOT
+WARNUNG: Sind Sie wirklich ganz sicher, dass Sie weiterfahren wollen? Diese Mods kommen ohne
+Garantie, und <b>k&ouml;nnten</b> Ihr Forum zerst&ouml;ren. Bevor Sie fortfahren, stellen Sie sicher dass:
+<ul>
+   <li>Der Mod kompatibel ist mit Ihrer aktuellen YaBB Version
+   <li>Sie den aktuellen YaBB Sourcecode sichergestellt haben
+   <li>Sie die aktuellen Datenbank Struktur/Daten sichergestellt haben
+   <li>Sie nur Mods aus vertrauensw&uuml;rdigen Quellen installieren
+   </ul>
+EOT;
+$txt['yse153'] = "Mod aktivieren";
+$txt['yse154'] = "Fortsetzen";
+$txt['yse155'] = "Der Mod wird aktiviert";
+$txt['yse156'] = "Archiv entpacken";
+$txt['yse157'] = "Der Mod wurde entpackt, nun sollte der Mod aktiviert werden.";
+$txt['yse158'] = "Test (empfohlen)";
+$txt['yse159'] = "Aktivieren";
+$txt['yse160'] = "Mod wurde entpackt, aber dieser Mod kommt mit einem PHP Script, dass gestartet werden muss, bevor der Mod funktioniert";
+$txt['yse161'] = "Starten";
+$txt['yse162'] = "Modification file was extracted, this modification also comes with a textfile with additional instructions/information, it's recommended that you read it.";
+$txt['yse163'] = "Lesen";
+$txt['yse164'] = "Modding war erfolgreich. Alles sollte nun funktionieren.";
+$txt['yse165'] = "Schreiben ";
+$txt['yse166'] = "Backup wird aufgerufen ";
+$txt['yse167'] = "Wir suchen nun nach:";
+$txt['yse168'] = "String <b>gefunden</b>, Ich werde nun hinzuf&uuml;gen:";
+$txt['yse169'] = "String <b>nicht gefunden</b>, in Ihrem Mod ist wahrscheinlich ein Error.";
+$txt['yse170'] = "String <b>gefunden</b>, Ich werde es nun ersetzen mit:";
+$txt['yse171'] = "Modification would have completed if this weren't a test, so if there were no errors, the mod could be applied, hit the back button in your browser.";
+$txt['yse172'] = "Modification file was applied, ";
+$txt['yse173'] = "Script Output:";
+$txt['yse174'] = "Zus&auml;tzliche Informationen";
+$txt['yse175'] = "Datei mit Instruktionen/zus&auml;tzlichen Notizen";
+$txt['yse176'] = "Avatare entpacken";
+$txt['yse177'] = "Die Avatare wurde entpackt und k&ouml;nnen nun benutzt werden";
+$txt['yse178'] = "Sprachpaket entpacken";
+$txt['yse179'] = "Das Sprachen Paket wurde extrahiert, Sie k&ouml;nnen es nun benutzen (indem Sie es in den allgemeinen Einstellungen setzen).";
+$txt['yse180'] = "Dateien im Archiv auflisten";
+$txt['yse181'] = "Dateien im Archiv";
+$txt['yse182'] = "Paket downloaden";
+$txt['yse183'] = "Paket - Server";
+$txt['yse184'] = "Durchsuchen";
+$txt['yse185'] = "Server hinzuf&uuml;gen";
+$txt['yse186'] = "Name des Servers";
+$txt['yse187'] = "URL";
+$txt['yse188'] = "Browse durch die Pakete";
+$txt['yse189'] = "Keine Pakete verf&uuml;gbar";
+$txt['yse190'] = "Download";
+$txt['yse191'] = "Kann keine Verbindung zum Server herstellen oder finde Datei nicht";
+$txt['yse192'] = "Download des Pakets erfolgreich";
+$txt['yse193'] = "Download des Pakets erfolgreich";
+$txt['yse194'] = "Archivieren";
+$txt['yse195'] = "&Uuml;berspringen ";
+$txt['yse196'] = " weil es eine neuere Version ist oder eine Version desselben Alters";
+$txt['yse197'] = "Schreib ";
+$txt['yse198'] = "Paket-Manager";
+
+//Text for PacMan updates
+$txt['yse168b'] = "String <b>gefunden</b>, ich werde nun davor hinzuf&uuml;gen:";
+$txt['yse159b'] = "Mod Aktivieren";
+$txt['yse162b'] = "Modifikations Datei wurde extrahiert, diese Modifikation kommt zus&auml;tzlich mit einer SQL Datei mit den Modifikations welche die Databank ben&ouml;tigt.  Es ist eine gute Idee die SQL Datei auszuf&uuml;hren.";
+$txt['yse163b'] = "Ausf&uuml;hren";
+$txt['yse174b'] = "SQL Queries";
+$txt['yse175b'] = "Die folgenden SQL Instruktionen wurden ausgef&uuml;hrt:";
+$txt['yse175c'] = "Die MySQL Database meldete folgendes zur&uuml;ck:";
+$txt['yse175d'] = "ERROR: MySQL queries fehlgeschlagen!  Bitte versuchen Sie die MySQL queries manuell auszuf&uuml;hren oder der Mod funktioniert m&ouml;glicherweise nicht.<br>\nMySQL meldete dieses zur&uuml;ck:<br>\n";
+$txt['yse175e'] = "Erfolgreich!";
+$txt['yse171b'] = "Deinstallation w&auml;re abgeschlossen wenn das kein Test w&auml;re, also falls keine Fehler angezeigt wurden, k&ouml;nnte der Mod aktiviert werden, bet&auml;tigen Sie den Zur&uuml;ck Button in Ihrem Browser.";
+$txt['yse172b'] = "Deinstallation abgeschlossen, ";
+$txt['yse189b'] = "Momentan sind keine Mods installiert";
+$txt['yse188b'] = "Installierte Mods browsen";
+$txt['yse198b'] = "Deinstallieren";
+$txt['yse198c'] = "Der Mod wird deinstalliert";
+$txt['yse198d'] = "Mod L&ouml;schen Liste";
+$txt['yse198e'] = "Deinstallation Test";
+$txt['yse198f'] = "Dieser Mod ist bereits installiert!";
+$txt['yse198g'] = "Ich weiss es ist nicht installiert, so installe es trotzdem";
+$txt['yse198h'] = "Sorry, Ihr Server hat PHP auf SAFE MODE gesetzt. Dieses Feature ist nicht kompatibel mit SAFE MODE.  Sorry.";
+$txt['yse198i'] = "Lass es mich trotzdem versuchen.";
+$txt['pacman1'] = "<br><br><font color=red size=\"+1\"><b>WARNUNG</b></font><br>Dieser Mod wurde nicht vom offiziellen YaBBSE Mod Rat zugelassen.<br><br>";
+$txt['pacman2'] = "Mod Name";
+$txt['pacman3'] = "Mod Version";
+$txt['pacman4'] = "Mod Autor";
+$txt['pacman5'] = "Autor Email Adresse";
+$txt['pacman6'] = "Autor Homepage";
+$txt['pacman7'] = "Mod Information";
+$txt['pacman8'] = "Keine Beschreibung vorhanden";
+$txt['pacman9'] = "Beschreibung";
+$txt['pacman10'] = "Lokalisierung der Datei";
+$txt['pacman11'] = "Originaler String:";
+$txt['pacman12'] = "String <b>gefunden</b>, nun wird dies gel&ouml;scht (war nach dem originalen String):";
+$txt['pacman13'] = "String <b>gefunden</b>, nun wird dies gel&ouml;scht (war vor dem originalen String):";
+$txt['pacman14'] = "String <b>nicht gefunden</b>, in Ihrem Mod ist wahrscheinlich ein Error, oder, Sie haben die Datei seit der Installation modifiziert.";
+$txt['pacman15'] = "String <b>gefunden</b>, er ersetzt dieses (welches den originalen String ersetzte):";
+$txt['pacman16'] = "Ohne Extension";
+$txt['pacman17'] = "File Typ";
+$txt['pacman18'] = "Mod Paket";
+$txt['pacman19'] = "Avatar Paket";
+$txt['pacman20'] = "Sprachen Paket";
+$txt['pacman21'] = "Allgemeines Paket";
+$txt['pacman22'] = "Modifikation Pakete";
+$txt['pacman23'] = "Avatar Pakete";
+$txt['pacman24'] = "Sprachen Pakete";
+$txt['pacman25'] = "Unbekanntes Paket";
+$txt['pacman26'] = "Installierte Pakete abfragen  / Pakete deinstallieren";
+$txt['pacman27'] = "Deinstallieren:";
+// End YaBBpak Center
+
+$txt['notifyX'] = "Benachrichtigungs Einstellungen:";
+$txt['notifyX1'] = "Einstellungen speichern";
+$txt['notifyXAnn1'] = "D&uuml;rfen User die E-Mail Benachrichtigung zu Announcements Boards deaktivieren?";
+$txt['notifyXAnn2'] = "Neue Mitteilung";
+$txt['notifyXAnn3'] = "Lesen Sie bitte hier";
+$txt['notifyXAnn4'] = "Ich w&uuml;nsche E-Mail Benachrichtigung &uuml;ber neue Ank&uuml;ndigungen.";
+$txt['notifyXAnn5'] = "Sende E-Mail Benachrichtigung &uuml;ber neue Ank&uuml;ndigungen.";
+$txt['notifyXOnce1'] = "Ich w&uuml;nsche jeweils NUR zur 1. ungelesenen Antwort eine E-Mail Benachrichtigung.";
+$txt['notifyXOnce2'] = "Es k&ouml;nnten mehr Antworten eingegangen sein, aber Sie erhalten keine weiteren Benachrichtigungs E-Mails bis die Antworten gelesen sind.";
+
+// Profile enhancements
+$txt['pswd0'] = "Geheime Frage definieren";
+$txt['pswd1'] = "Geheime Frage";
+$txt['pswd2'] = "Antwort";
+$txt['pswd3'] = "Stelle mir meine geheime Frage";
+$txt['pswd4'] = "Standardm&auml;ssig helfen wir Ihnen Ihr Passwort zu erlangen, indem wir ein neues Zufallspasswort generieren und Ihnen per E-Mail zustellen. Sie k&ouml;nnen jedoch auch versuchen, Ihre geheime Frage zu beantworten (die Sie im Ben&uuml;tzerprofil eingegeben haben). Wenn Sie die richtige Antwort eingeben, k&ouml;nnen Sie sofort ein neues Passwort eingeben.";
+$txt['pswd5'] = "Sorry, aber Sie haben keine g&uuml;ltige Kombination von Geheimfrage und Antwort im Userprofil eingegeben. Bitte klicken sie auf den [Zur&uuml;ck] Button, und benutzen Sie die Standardmethode, um Ihr Passwort zu erlangen.";
+$txt['pswd6'] = "Bitte geben Sie die Antwort auf Ihre geheime Frage ein, und das Passwort das Sie ben&uuml;tzen m&ouml;chten. Ihr Passwort wird auf die neue Eingabe ge&auml;ndert, vorausgesetzt, die beantworten die Frage richtig.";
+$txt['pswd7'] = "Sorry, aber Sie haben Ihre Frage nicht richtig beantwortet. Bitte gehen Sie zur&uuml;ck und versuchen es nochmals, oder Sie gehen zwei Schritte zur&uuml;ck und lassen sich ein neues Passwort zumailen.";
+$txt['pswd8'] = "Ihr Password wurde erfolgreich ge&auml;ndert.<br>Klicken Sie <a href=\"$boardurl?action=login\">hier</a> zum Login.";
+
+$yycopyright = "<font face=\"Verdana, Arial\" size=\"1\"> $mbname | Powered by <a href=\"http://www.yabb.info/index.php?affiliate=$mbname;l=$boardurl;v=$YaBBversion\" target=\"_blank\">YaBB SE</a><BR>\n&copy; 2001-2002, YaBB SE Dev Team. All Rights Reserved.</font>";
+
+$img[im_config_small] = "<img src=\"$imagesdir/im_sm_prefs.gif\" alt=\"$txt[323]\" border=\"0\">";
+$img[im_new_small] = "<img src=\"$imagesdir/im_sm_newmsg.gif\" alt=\"$txt[321]\" border=\"0\">";
+
+$txt['profileConfirm'] = "Sind Sie sicher, dass Sie diesen  User l&ouml;schen wollen?";
+$txt['catConfirm'] = "Sind Sie sicher, dass Sie diese Kategorie l&ouml;schen wollen?";
+$txt['boardConfirm'] = "Sind Sie sicher, dass Sie dieses Forum l&ouml;schen wollen?";
+
+$txt['delFirstPost'] = "Der erste Beitrag eines Diskussionsfadens darf nicht gel&ouml;scht werden.<p>Wenn Sie diesen Beitrag l&ouml;schen wollen, dann klicken Sie auf den \"Thema l&ouml;schen\" Link, oder fragen Sie einen Moderator/Administrator das f&uuml;r Sie zu tun.";
+
+if( $MenuType == 1 ) {
+	$menusep = ' | ';
+	$img['admin'] = $txt[2];
+	$img['delete'] = $txt[31];
+	$img['email'] = $txt[69];
+	$img['email_sm'] = $txt[69];
+	$img['help'] = $txt[119];
+	$img['home'] = $txt[103];
+	$img['im_config'] = $txt[323];
+	$img['im_delete'] = $txt[412];
+	$img['im_inbox'] = $txt[316];
+	$img['im_new'] = $txt[321];
+	$img['im_outbox'] = $txt[320];
+	$img['im_reload'] = $txt[322];
+	$img['im_remove'] = $txt[154];
+	$img['im_reply'] = $txt[146];
+	$img['im_website'] = $txt[515];
+	$img['lock'] = $txt[104];
+	$img['login'] = $txt[34];
+	$img['logout'] = $txt[108];
+	$img['markallread'] = $txt[452];
+	$img['markboardread'] = $txt[300];
+	$img['message'] = $txt[144];
+	$img['message_sm'] = $txt[144];
+	$img['message_sm_on'] = $txt['online4'];
+	$img['message_sm_off'] = $txt['online5'];
+	$img['modify'] = $txt[17];
+	$img['newthread'] = $txt[33];
+	$img['newpoll'] = $txt[yse20];
+	$img['notification'] = $txt[418];
+	$img['notify'] = $txt[131];
+	$img['notify_sm'] = $txt[131];
+	$img['printt'] = $txt[465];
+	$img['profile'] = $txt[467];
+	$img['register'] = $txt[97];
+	$img['removetopic'] = $txt[63];
+	$img['reply'] = $txt[146];
+	$img['replyquote'] = $txt[145];
+	$img['reply_sm'] = $txt[146];
+	$img['search'] = $txt[182];
+	$img['sendtopic'] = $txt[707];
+	$img['viewprofile'] = $txt[27];
+	$img['viewprofile_sm'] = $txt[27];
+	$img['website'] = $txt[515];
+	$img['website_sm'] = $txt[515];
+	$img['boardmod'] = $txt[boardmod1]; #BoardMod Center Logo
+}
+else {
+	$menusep = ' ';
+	$img['admin'] = "<img src=\"$imagesdir/admin.gif\" alt=\"$txt[2]\" border=\"0\">";
+	$img['delete'] = "<img src=\"$imagesdir/delete.gif\" alt=\"$txt[121]\" border=\"0\">";
+	$img['email'] = "<img src=\"$imagesdir/email.gif\" alt=\"$txt[69]\" border=\"0\">";
+	$img['email_sm'] = "<img src=\"$imagesdir/email_sm.gif\" alt=\"$txt[69]\" border=\"0\">";
+	$img['help'] = "<img src=\"$imagesdir/help.gif\" alt=\"$txt[119]\" border=\"0\">";
+	$img['home'] = "<img src=\"$imagesdir/home.gif\" alt=\"$txt[103]\" border=\"0\">";
+	$img['im_config'] = "<img src=\"$imagesdir/im_config.gif\" alt=\"$txt[323]\" border=\"0\">";
+	$img['im_delete'] = "<img src=\"$imagesdir/im_delete.gif\" alt=\"$txt[412]\" border=\"0\">";
+	$img['im_inbox'] = "<img src=\"$imagesdir/im_inbox.gif\" alt=\"$txt[316]\" border=\"0\">";
+	$img['im_new'] = "<img src=\"$imagesdir/im_new.gif\" alt=\"$txt[321]\" border=\"0\">";
+	$img['im_outbox'] = "<img src=\"$imagesdir/im_outbox.gif\" alt=\"$txt[320]\" border=\"0\">";
+	$img['im_remove'] = "<img src=\"$imagesdir/delete.gif\" alt=\"$txt[154]\" border=\"0\">";
+	$img['im_reload'] = "<img src=\"$imagesdir/im_reload.gif\" alt=\"$txt[322]\" border=\"0\">";
+	$img['im_reply'] = "<img src=\"$imagesdir/im_reply.gif\" alt=\"$txt[146]\" border=\"0\">";
+	$img['im_website'] = "<img src=\"$imagesdir/im_www.gif\" alt=\"$txt[515]\" border=\"0\">";
+	$img['lock'] = "<img src=\"$imagesdir/lock.gif\" alt=\"$txt[104]\" border=\"0\">";
+	$img['login'] = "<img src=\"$imagesdir/login.gif\" alt=\"$txt[34]\" border=\"0\">";
+	$img['logout'] = "<img src=\"$imagesdir/logout.gif\" alt=\"$txt[108]\" border=\"0\">";
+	$img['markallread'] = "<img src=\"$imagesdir/markread.gif\" alt=\"$txt[452]\" border=\"0\">";
+	$img['markboardread'] = "<img src=\"$imagesdir/markread.gif\" alt=\"$txt[300]\" border=\"0\">";
+	$img['message'] = "<img src=\"$imagesdir/message.gif\" alt=\"$txt[144]\" border=\"0\">";
+	$img['message_sm'] = "<img src=\"$imagesdir/message_sm.gif\" alt=\"$txt[144]\" border=\"0\">";
+	$img['message_sm_on'] = "<img src=\"$imagesdir/im_on.gif\" alt=\"$txt[online4]\" border=\"0\">";
+	$img['message_sm_off'] = "<img src=\"$imagesdir/im_off.gif\" alt=\"$txt[online5]\" border=\"0\">";
+	$img['modify'] = "<img src=\"$imagesdir/modify.gif\" alt=\"$txt[66]\" border=\"0\">";
+	$img['newthread'] = "<img src=\"$imagesdir/new_thread.gif\" alt=\"$txt[33]\" border=\"0\">";
+	$img['newpoll'] = "<img src=\"$imagesdir/new_poll.gif\" alt=\"$txt[yse20]\" border=\"0\">";
+	$img['notification'] = "<img src=\"$imagesdir/notification.gif\" alt=\"$txt[419]\" border=\"0\">";
+	$img['notify'] = "<img src=\"$imagesdir/notify.gif\" alt=\"$txt[131]\" border=\"0\">";
+	$img['notify_sm'] = "<img src=\"$imagesdir/notify_sm.gif\" alt=\"$txt[131]\" border=\"0\">";
+	$img['printt'] = "<img src=\"$imagesdir/print.gif\" alt=\"$txt[465]\" border=\"0\">";
+	$img['profile'] = "<img src=\"$imagesdir/profile.gif\" alt=\"$txt[79]\" border=\"0\">";
+	$img['register'] = "<img src=\"$imagesdir/register.gif\" alt=\"$txt[97]\" border=\"0\">";
+	$img['removetopic'] = "<img src=\"$imagesdir/remove.gif\" alt=\"$txt[63]\" border=\"0\">";
+	$img['reply'] = "<img src=\"$imagesdir/reply.gif\" alt=\"$txt[146]\" border=\"0\">";
+	$img['replyquote'] = "<img src=\"$imagesdir/quote.gif\" alt=\"$txt[145]\" border=\"0\">";
+	$img['reply_sm'] = "<img src=\"$imagesdir/reply_sm.gif\" alt=\"$txt[146]\" border=\"0\">";
+	$img['search'] = "<img src=\"$imagesdir/search.gif\" alt=\"$txt[182]\" border=\"0\">";
+	$img['sendtopic'] = "<img src=\"$imagesdir/sendtopic.gif\" alt=\"$txt[707]\" border=\"0\">";
+	$img['viewprofile'] = "<img src=\"$imagesdir/profile.gif\" alt=\"$txt[27]\" border=\"0\">";
+	$img['viewprofile_sm'] = "<img src=\"$imagesdir/profile_sm.gif\" alt=\"$txt[27]\" border=\"0\">";
+	$img['website'] = "<img src=\"$imagesdir/www.gif\" alt=\"$txt[515]\" border=\"0\">";
+	$img['website_sm'] = "<img src=\"$imagesdir/www_sm.gif\" alt=\"$txt[515]\" border=\"0\">";
+	$img['boardmod'] = "<img src=\"$imagesdir/boardmodlogo.gif\" alt=\"$txt[boardmod1]\" border=\"0\">"; #BoardMod Center Logo
+}
+
+?>

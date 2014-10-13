@@ -1,0 +1,270 @@
+The latest version of this text can be found at
+http://www.lucifer.com/~sasha/articles/Cyborgs.html
+
+    The  following  is  a draft  of  my  new  essay  suggesting
+parallels  between  technological enhancements  of  humans  and
+current  work  on "legacy" information systems.  The  essay  is
+aimed  at a [relatively] wide audience.  When I have more time,
+I will turn it into a more serious work on general evolution of
+functional structures, exosomatic personality architectures and
+other such things.
+   I would be happy to get any feedback that may help me improve
+the text and develop these ideas.
+   If you want to share this text with somebody,  please ask me
+for the latest version.
+---------------------------------------------------------------
+
+                       ARE  YOU  A  CYBORG ?
+                               
+    Legacy Systems  and  Functional Cyborgization of Humans.
+
+                             [ draft 0.85 -- 23 November 1995 ]
+
+
+
+   The  proverbial problem of teaching an old  dog  new  tricks
+recently  became  the  focus of a new  discipline  in  computer
+systems  design  -- the theory of upgrading  old,  or  "legacy"
+systems.  The  problems of enhancing outdated  systems  of  all
+kinds have faced the evolutionary process for a long time. Many
+techniques  used now for improving computer systems  have  been
+employed   to  improve  various  technological  and  biological
+structures, including our own bodies.  We do not have  to  wait
+for  some  future society to generate "cyborgs", for  instance.
+In a sense, they are already among us.
+
+   And you might be one of them.
+
+
+              LEGACY COMPUTER SYSTEMS
+
+
+   Many  of  today's  computer systems,  used  in  applications
+ranging from corporate accounting to air traffic control,  were
+created  long  ago, and over the years were patched  and  fine-
+tuned   to  perform  their  jobs.  Now  they  seem   too  slow,
+unreliable  and inflexible for handling new, more  diverse  and
+demanding tasks.  Unfortunately, the functions of these systems
+are  very  difficult to understand, and their replacement  with
+new and efficient designs seems virtually impossible.
+
+   In  such  cases, systems architects may use new elements  to
+enhance   the   old  "legacy"  systems,  using  the   following
+techniques:
+
+ Parallelism and Specialization:
+
+   -  Dividing the increased responsibilities among a number of
+old systems. The work  is substantially improved as  individual
+systems  are  optimized  for performing  particular  tasks  and
+relieved  from other duties. For example, a faster machine  may
+sort  records,  and  the one with a working printer  may  print
+them.
+
+ Redundancy:
+
+  Let several systems work on the same problem  and compare the
+results, to make the output more reliable.
+
+
+  Wrapping:
+
+  -  Leave  the layers of the system that you cannot understand
+alone,  and replace the others. For example, database  wrapping
+would  leave the old database intact and replace the processing
+code;   code  wrapping  would leave  the  old   decision-making
+algorithms,  but  replace  the  database  engine;   application
+wrapping  would  preserve  the entire  application,  but  would
+replace  its  environment - e.g., emulate an  operator's  input
+with a programming interface.
+
+  External aids:
+
+   The  novel  parts of the system can assist the old  core  in
+performing its functions.
+This  may  include providing the legacy system  with  necessary
+resources,  pre-processing them for the input, performing  some
+tasks the old system is not good at,  storing some intermediate
+products, troubleshooting and repair, etc.
+
+  Replacement of parts:
+
+    In those cases when the structure and function of some part
+of  the  system  is well understood, the part can  be  directly
+replaced   with  its  improved  equivalent.  If  the  original
+mechanism  is  convoluted, intertwined, and undocumented,  this
+method  should  be  applied with caution, and  only  to  simple
+isolatable parts of the system.
+             
+
+                  CYBORGIZATION OF HUMANS
+
+     The  above  approaches  proved  useful  in  updating  many
+computer systems.
+This  experience should be taken into account  by  the  Science
+Fiction    writers    and    futurists    envisioning    future
+technologically enhanced humans as "cyborgs" -- creatures  that
+will  have  human biological bodies as their legacy  core,  but
+will  hopefully  have  many important [and complex]  biological
+parts directly replaced with improved technological equivalents
+(and a variety of new ones added).
+
+   Of course, images of mechanical parts sticking in and out of
+our  bodies  seem  impressive enough to be worth  putting  into
+SciFi plots.
+
+   However, the cyborgization of the humankind -- the merger of
+biological  and  technological elements -- has been,  and  most
+likely will be,  proceeding according to the usual scenario  of
+the evolution of legacy systems.
+
+    Parallelism  and  integration of efforts  were  implemented
+before  we  became  humans -- and actually  were  an  important
+prerequisite for our existence.
+
+   As humans developed sufficient intelligence to embark on the
+long  journey  of supplementing their convoluted,  undocumented
+and    structurally   inflexible    biological   bodies    with
+intentionally  designed extensions, they  started  with  simple
+methods  and  simple   physical   parts.   At  this  stage   of
+development,   wrapping  and  external  aids  were  used,  from
+wrapping  the body with clothing to providing it with  external
+implements serving both as extensions to biological organs  and
+as parts of increasingly friendly environments -- this includes
+tools, houses, transportation, heating, cooking, etc.
+
+    Also,  at this stage new systems began to be used not  only
+for supporting, but for "troubleshooting" the body (medicine) -
+still without interference in the original design.
+
+     As   things  get  more  sophisticated,  the  technological
+supplementation of the biological body repeats the  same  steps
+with  the  information processing. It is the  human  functional
+body  that  is  now  being wrapped and augmented,  as  the  new
+systems  consequently  accept important tasks  of   information
+acquisition, storage, transmission and processing.
+
+
+     Even  at this stage, the direct replacement  of biological
+organs,  in accordance with the legacy systems theory, is  rare
+and confined to simple physical parts.
+
+     However,  there  are  ways  of  introducing  implants  and
+shortcuts without violating the structural integrity of the old
+kludge.   For  example, if your brain does not have  sufficient
+memory  for  carrying  some operations, it  may   use  external
+memory  (e.g.,  a scratch pad)  for storing intermediate  data,
+and then read the results back into the brain's "wetware". This
+neat  trick  allows  the  new elements  to  play  the  role  of
+functional implants, representing at the same time an  internal
+structural  part of your extended intelligence and an  external
+part of the body.
+
+    So while people have been playing with the images of cyborg
+future  of  their  bodies,  they have  overlooked  the  ongoing
+process  of  functional cyborgization they were already  taking
+part in.
+
+    In  the scenario of physical integration of biological  and
+technological  structures, a cyborg can (and has been)  defined
+as a physically mixed system -- an organism with a sufficiently
+large infusion of technological parts.
+
+   A functional cyborg ( should we call it a fyborg?  fuborg? )
+may   be   defined   as  a  biological  organism   functionally
+supplemented with technological extensions.
+
+    If  you  do not pay attention,  the stream of technological
+supplements may turn you into a functional cyborg   before  you
+notice  it.   To  prevent  this, I  would  recommend  that  you
+periodically submit yourself to the cyborgization check-up   by
+answering the questions of the following
+
+
+                        FYBORG  SELF-TEST
+                              
+
+*   Are you dependent on technology to the extent that you could
+  not survive without it?
+
+*   Would you reject a lifestyle free of any technology even if
+  you could endure it?
+
+*   Would  you  feel embarrassed and "dehumanized" if  somebody
+  removed your artificial covers (clothing)  and  exposed  your
+  natural biological body in public?
+
+*    Do  you  consider  your  bank deposits  a  more  important
+  personal resource storage system  than your fat deposits?
+
+*    Do you receive most of your knowledge about the world
+   through artificial symbolic language, rather than natural sensory
+   experience?
+
+*    Do  you identify yourself and judge other people  more  by
+  possessions, ability to manipulate tools and positions in the
+  technological  and  social  systems  than  primary biological
+  features?
+
+*    Do you spend more time thinking about -- and discussing --
+  your  external  "possessions"  and  "accessories"  than  your
+  internal "parts" ?
+
+
+     If  you answered "yes" to most of these questions,  please
+accept  my  congratulations  (and/or  condolences):   you   are
+already a cyborg!
+
+                       FATE OF CYBORGS
+
+                               
+      This  may  be  a  good point to end the  essay.  However,
+whether  your  current  degree of integration  with  technology
+already  qualifies you as a balanced cyborg,  or  not   --  and
+especially  if  you  are  already over-qualified,  you  may  be
+interested in knowing the ultimate fate of any legacy system.
+
+    Regardless  of the intelligence of the developing  process,
+there  are  only a few basic options here. Endless patching  of
+aging  systems  is  not  the ultimate engineering  method.  The
+evolutionary  role  of  a  legacy system  is  to  perform  some
+necessary  functions and test novel design ideas while   better
+systems  are being built from scratch elsewhere. After the  new
+designs   become  fully  operational,  the  legacy  system   is
+invariably  placed into a trashbin. Or, if it  is  particularly
+good, healthy and lucky -- into a historical museum.
+     Surprisingly, this last journey may not be easy to notice.
+You may observe it by the following signs: you feel overwhelmed
+by the complexity and fluidity of the environment and lose both
+understanding and interest in what is really going on. Instead,
+you  concentrate on your local old-fashioned interests and keep
+playing  with  the  old  toys as if they  still  mattered.  The
+advantage of a museum over a trashbin here is that  the  museum
+feels  better, your needs are met  there, and ailments treated.
+You   may  be  offered  simple,  convenient  and  wrong   token
+"explanations"  on how this is done, yet have  no  capacity  or
+desire to really understand it. You are even provided with some
+entertainment  and  support for your  atavistic  and  resource-
+wasting  activities,  together with assurances  that  they  are
+still  quite  valuable.   In  a  trashbin,  without  all  these
+luxuries,  you  feel lost, sick and useless;  new  things  look
+weird  and alien, old are gone or broken; whatever remains  "of
+value"  seems  rotting around you...  The only advantage  of  a
+trashbin  is  that  it doesn't attempt to  disguise  itself  as
+normal life, so you are at least granted a chance to understand
+where you really are.   But is it worth it?
+
+    Believe  it  or not, this is an optimistic  scenario.   The
+world  moves  ahead.  It just gets too good  for *you* after  a
+while.
+
+              _______________________________________
+      
+     If  you  are  interested  in  my  more  general  views  on
+functional evolution of the world,  I will be happy  to  e-mail
+you  my essays on  Mind Age, Enhanced Reality, identity, Living
+Systems and other topics.   You can also access them via my Web
+home  page: http://www.lucifer.com/~sasha/home.html. Please send
+your comments to sasha1@netcom.com.
+
+                           - Alexander Chislenko

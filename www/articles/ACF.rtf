@@ -1,0 +1,535 @@
+{\rtf1\ansi \deff7\deflang1033{\fonttbl{\f1\froman\fcharset2\fprq2 Symbol;}{\f4\froman\fcharset0\fprq2 Times New Roman;}{\f7\fswiss\fcharset0\fprq2 MS Sans Serif;}{\f11\fmodern\fcharset0\fprq1 Courier New;}
+{\f16\fswiss\fcharset0\fprq2 Univers{\*\falt Arial};}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;
+\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\widctlpar \f7\fs20 \snext0 Normal;}{\*\cs10 \additive 
+Default Paragraph Font;}{\s15\widctlpar\tqc\tx4320\tqr\tx8640 \f7\fs20 \sbasedon0\snext15 header;}{\s16\widctlpar\tqc\tx4320\tqr\tx8640 \f7\fs20 \sbasedon0\snext16 footer;}{\*\cs17 \additive\sbasedon10 page number;}}{\info
+{\title Automated Collaborative Filtering and Semantic Transports  - v}{\author Jim Cullison <jhc@mit>}{\operator Jim Cullison <jhc@mit>}{\creatim\yr1997\mo4\dy26\hr17\min49}{\revtim\yr1997\mo10\dy16\hr2\min51}{\printim\yr1997\mo7\dy22\hr19\min28}
+{\version4}{\edmins2}{\nofpages14}{\nofwords8835}{\nofchars50365}{\*\company Agents, Inc.}{\vern57443}}\margl720\margr720\margt720\margb792 \widowctrl\ftnbj\aendnotes\aftnstart0\hyphhotz0\aftnnar\hyphcaps0 \fet0\sectd 
+\psz1\linex0\headery288\footery432\endnhere\titlepg {\header \pard\plain \s15\qr\widctlpar\tqc\tx4320\tqr\tx8640 \f7\fs20 {\i\f11\fs16 Alexander Chislenko  \endash   Collaborative Information Filtering and Semantic Transports  \endash   draft  0.71 }{
+\f11\fs16     }{\field{\*\fldinst {\f11\fs16  DATE }}{\fldrslt {\f11\fs16\lang1024 10/16/97}}}{\f11 
+\par }}{\footer \pard\plain \s16\qc\widctlpar\tqc\tx4320\tqr\tx8640\pvpara\phmrg\posxc\posy0 \f7\fs20 {\field{\*\fldinst {\cs17\fs18 PAGE  }}{\fldrslt {\cs17\fs18\lang1024 14}}}{\cs17\fs18 
+\par }\pard \s16\qc\fi360\ri360\widctlpar\tqc\tx4320\tqr\tx8640 {\fs18  -       -}
+\par }{\headerf \pard\plain \s15\qr\widctlpar\tqc\tx4320\tqr\tx8640 \f7\fs20 {\i\f11\fs16 draft  0.71      }{\field{\*\fldinst {\i\f11\fs16  DATE }}{\fldrslt {\i\f11\fs16\lang1024 10/16/97}}}{\f11\fs16 
+\par }}{\footerf \pard\plain \s16\qc\widctlpar\tqc\tx4320\tqr\tx8640 \f7\fs20 {\fs18  }{\f11\fs18 \endash  1 \endash }{\f11 
+\par }}{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}
+{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8
+\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \qc\widctlpar \f7\fs20 {\b\f16\fs56 Collaborative Information Filtering}{\b\f16\fs40 
+\par  }{\b\f16\fs48 and }{\b\f16\fs40  \tab 
+\par  }{\b\f16\fs56 Semantic Transports}{\b\f4\fs28   
+\par 
+\par }{\b\f4\fs24       }{\b\f4\fs28 \'a9 }{\b\f4\fs24 1997}{\f4\fs24    }{\b\f4\fs24 Alexander Chislenko}{\f4\fs24  }{\b\f4\fs24 
+\par }{\f4\fs24 
+\par }\pard \qj\widctlpar {\f4\fs24 
+\par 
+\par 
+\par }{\b\f4\fs28     }{\b\f4\fs32 Preamble for draft readers
+\par }{\f4\fs24 
+\par 
+\par    This is an expanded version of the essay I am submitting to the upcoming book of the American Library Association,  \ldblquote Information Institutions: The Technological Imperative\rdblquote 
+.  I am still working on it, and would be happy to receive your comments on all aspects of the text, from general ideas to presentation (any ideas on illustrations?).  If you have any relevant publications, I would be glad to read and reference them. 
+
+\par 
+\par   This essay focuses on the conceptualization of the issues, comparisons of current 
+technological developments to other historical/evolutionary processes, future of automated collaboration and its implications for economic and social development of the world, and suggestions of what we may want to pursue and avoid.  Explanations of the w
+orkings of the technology and analysis of the current market are not my purpose here, although some explanations and examples may be appropriate.  Please send your suggestions to }{\i\f4\fs24 sasha1@netcom.com.
+\par }{\f4\fs24 
+\par    You can find an up-to-date version of the essay at  }{\i\f4\fs24 http://www.lucifer.com/~sasha/articles/ACF.html
+\par }{\f4\fs24 
+\par 
+\par }{\b\f4\fs32   Abstract}{\b\f4\fs28 
+\par }{\b\f4\fs24 
+\par }{\f4\fs24 
+  Automated Collaborative Filtering of information (ACF) is an unprecedented technology for distribution of opinions and ideas in society and facilitating contacts between people with similar interests.  It automates and enhances existing mechanisms of kn
+owledge distribution and dramatically increases their speed and efficiency.  This allows to optimize knowledge flow in the society and accelerate the evolution of ideas in practically all subject ar
+eas.  ACF also provides a superior tool for information retrieval systems that facilitates users\rquote  navigation in the sea of information in a meaningful and personalized way.  This technology can be viewed as a }{\i\f4\fs24 semantic transport}{
+\f4\fs24  \endash 
+ a social utility that, after physical and data transports, transfers increasingly abstract and intelligent objects between previously isolated fragments of the social organism.  As an artificial system that integrates and processes knowledge of multipl
+e human participants, ACF repr
+esents an intermediate stage between  human and purely artificial intelligence and lays the foundation for the future knowledge processing industry.  This article discusses the premises and the historical analogs of  ACF technology and suggests its possib
+le uses as well as long-term economic and social implications.}{\b\f4\fs24 
+\par }{\b\f4\fs28 \page }{\b\f4\fs32  
+\par   Premises of Automated Collaborative Filtering}{\f4\fs24   
+\par 
+\par 
+\par   }{\b\f4\fs28  }{\b\f4\fs24 Information flows in the society}{\f4\fs24 
+\par 
+\par }{\f4\fs22    Social mechanisms of knowledge distribution represent a formative factor for all spheres of social 
+life. It is the advantages of sharing knowledge among individuals that, together with benefits of group work, led to the development of language, symbolic thinking, and specialization of labor.  The rate of social progress is to a large degree determined 
+by the availability of standardized and affordable communication tools. The transaction costs of the social communication infrastructure define the scales and interrelations of social institutions. Effective mechanisms for collecting and publishing aggreg
+ate opinions of the population are a crucial factor for democratic governance; similar mechanisms for establishing balanced product and share prices form a signaling foundation of a market economy. 
+\par 
+\par }{\b\f4\fs22   }{\b\f4\fs24 Collaborative filtering of information}{\f4\fs22 
+\par 
+\par   While generalized, or aggregate, information is essential for balancing social processes on the macro-scale, it is usually not sufficient for suggesting optimal behavior to any particular person.  For making efficient personal selections, people have to
+ possess both nec
+essary general knowledge and special information relevant to their particular situation.  For collecting necessary information, one has to choose what objects to pay attention to.   In early human history, each person was familiar with the whole environme
+nt and, after gaining experience with most available things and people, could decide what to explore further. However, this strategy cannot work in a more complex society, when one is faced with more objects and people than he can even sample.  This situa
+tion requires exchange of personal experience among individuals and sharing personal advice on many particular issues. If a person needs to make a decision in an unknown situation, he can talk to his friends, and follow their suggestions.  Here, one
+\rquote s circle of acquaintances effectively plays the role of an information filter, suggesting most relevant options and leads for further exploration.
+\par 
+\par   With increasing variety of areas of expertise and value judgments, the opinions of a few chosen individuals and th
+e averaged opinion of the society become insufficient for providing advice for all of one's decisions.   In this situation, larger-scale collaboration in information filtering becomes increasingly important. Individuals seeking advice query people with si
+milar interests whom they trust, collect their opinions and choose the options selected by the majority of the most knowledgeable people. This is very often the way we select places for vacation, books, movies, or restaurants.  If none of the people we as
+k 
+have any experience with a specific item, some of them may still know something about it, if they have heard about it from others. If someone cannot recommend an item of interest, they may still be able to refer us to another person who we may ask about i
+t. This is the "word of mouth" method of information distribution in a society.
+\par 
+\par }\pard \qj\fi-360\li360\widctlpar {\b\f4\fs22   }{\b\f4\fs24 Active Collaborative Filtering}{\b\f4\fs22 
+\par }\pard \qj\widctlpar {\f4\fs22 
+\par   Querying people is a useful method for finding information when you know you need it, or when you think something new might have appeared. This method may be called \ldblquote user pull\rdblquote 
+, as you have to expend an effort to pull the knowledge out of the passive en
+vironment. However, it is not always sufficient, especially in cases when you do not know what questions to ask, or something totally new has happened, or your contacts find out something they couldn't have told you about before.
+\par 
+\par  }{\i\f4\fs22   Active collaborative }{\f4\fs22 he
+lps you in such cases, by bringing you information you need when someone in your community discovers it. Information can "find" you in two ways.  First, you can ask people to let you know whenever they learn something exciting, new, or relevant in some ar
+ea.  Second, people who know you can share information if they decide you can benefit from it.  In both cases, after learning about your  needs or preferences, members of the community take an active role in supplying you with important knowledge. We can 
+say that the community actively \ldblquote pushes\rdblquote  the information towards you.
+\par }{\f4\fs24 \page 
+\par 
+\par    }{\b\f4\fs28 Limitations of existing filtering methods
+\par }{\f4\fs24 
+\par }{\f4\fs22 
+\par    Traditional methods of knowledge distribution become very inefficient when the size and complexity of a society far outpace the ability of anyone's circle of acquaintances to monitor events.  The modern communication system transmits billions of messag
+es daily, and many of them may be of great interest to you.  You can also easily access any of the millions of available books, magazines, 
+songs, movies or Internet resources.  However, finding people who have looked at the things you may like and whose opinions you might trust can be very difficult.  You do not know most of these people, so you can not hope that they will know \endash 
+ or care \endash   to tell you when they find something of interest to you.  Even if you could overcome these difficulties, it would still be impossible to retain opinions of thousands of people in your mind and decide which of them to follow.
+\par 
+\par   The hope here rests on machin
+es.  In their evolution as knowledge carriers machines have repeated  the early stages of the development of human information sharing techniques.  They have been taking an increasing role in storage, transmission and averaging of opinions.  Now it is tim
+e for machines to take on the more sophisticated tasks of automated information filtering.
+\par 
+\par 
+\par }{\b\f4\fs24   }{\b\f4\fs32 Introduction to Automated Filtering}{\f4\fs24 
+\par }{\f4\fs22 
+\par 
+\par   When too much information exists, reliance on human connections for finding exactly what you want becomes inefficient, because people, smart as they are, have limited capacity to store and share information. 
+\par 
+\par   The traditional solution to this problem has been to store data outside the human mind, and let people search through it. Recently, with the advent of computer systems, machines also began performing searches for information. So now information seekers 
+have two kinds of helpers:   people who can understand your interests, but are slow and inefficient in handling data; and computers that are fast and cheap, but still to
+o stupid to understand the meaning of the material and judge what is good and relevant.  Still, we want help that is both fast and intelligent.
+\par 
+\par   Attempts to speed up humans or smarten machines have not been too successful thus far.  The solution that allows us to perform information searches with human intelligence and at machine speeds, however, is relatively simple: record people's opinions on
+ the importance and quality of the material, and use these records to improve the results of computer searches.  This technology is called Automated Collaborative Filtering (ACF). It can also be viewed as an example of Synthetic Intelligence (SI) \endash 
+ a system combining human and machine knowledge processing strengths.  ACF allows people to find others with similar op
+inions, discover experts in a field, analyze the structure of people's interests in various subject domains, facilitate creation of interest groups, decentralize communication media, improve targeting of announcements and advertisements, and do many other
+ u
+seful things that, together with other intelligent technologies, promise to bring the information economy to new levels.  As distribution of opinions does not require knowing the physical identity of the persons sharing and receiving advice, the automated
+ filtering systems (with appropriate software tools) may become the most secure channel of knowledge sharing in history.
+\par }{\f4\fs24 \page     }{\b\f4\fs32\cf1 Historical Musings: Physical, data, and semantic transports}{\b\f4\fs24 
+\par }{\b\f4\fs22 
+\par }{\b\f4\fs24 Ancient history: Physical transports.}{\f4\fs22 
+\par 
+\par   The creation of the physical 
+transport system was, in a sense, analogous to the development of mobile organisms.  The difference is that in an ecology, organisms move around looking for resources; in an economy, resources usually get delivered to organisms, which is a smarter way to 
+connect them in complex systems. The important point here is that ultimately, the transport function shifts from the organisms to synthetic (technological) systems.
+\par 
+\par   Transport systems modify the effective geometry  of the environment.  The important metri
+c in the social space is how much time and resources it takes to move things from one place to another. We could create a map of a territory, "distorted" so that the distance between two points is proportional to the time (or cost) of traveling between th
+ese points. If we use such a map to track the evolution of the transportation system, we will see that with time, distances contract in all directions, most rapidly along the most important connections.  Small improvements in the quality of vehicles and i
+nf
+rastructure reflect the general contraction of the space metrics; new roads and transport methods represent structural changes in geometry and even topology of the social space. We can visualize this impact as new dimensions added to the space or new shor
+tcuts opened between various objects. Advanced transportation infrastructure creates a social circulatory system that helps transform a set of isolated production locales into an integrated economic environment.
+\par 
+\par }{\b\f4\fs24 Modern history: data/signal transports}{\f4\fs22 
+\par 
+\par    Since there is a great variety of resources to move and travel to, a new problem arises \endash  }{\i\f4\fs22 knowing }{\f4\fs22 
+what to get and how to handle it.  Some of this knowledge is embedded in our bodies. In other cases, organisms' generic biological skills can be utilized by the social system.  So humans spend a good part of their history memorizing and sharing ways to ha
+ndle things \endash  eventually overloading their ability to exchange information. People may be near the objects they need, but they can not see them directly, or get advice from others \endash 
+ and so they cannot utilize important resources.  People may be able to create necessary artifacts and transport them to places where they are needed, but often they  cannot do so, as they do not know what to create and where they sho
+uld deliver the products. As a result, the social space is divided into a set of functional fragments reflecting  existing information pools, even though good transportation systems make the physical environment relatively liquid.
+\par 
+\par    To ameliorate this sit
+uation, people improve their artificial ways of storing and transmitting data.  Efficient information exchange mechanisms re-integrate the economic space, and accelerate economic progress beyond what physical transport could do alone. These mechanisms als
+o allow further leaps in complexity. Now, with today's sophisticated information technology that can transport data electronically as well as physically, people just have to decide who and what to contact; the technological tools allow people to maintain 
+relationships with distant objects, organizations and friends as if they were located next to them.
+\par 
+\par   Consequential benefits of this stage include greater economic efficiency, faster growth, demise of territorial sovereignty, and shift of importance to functional power centers.  As conflicts migrate from territorial to functional structures, weapons cha
+nge from guns to words and bank accounts.  Informational entities are torn apart daily in intense economic and cultural competition, while physical bodies fee
+l less pain. Deterritorialization of power structures and obsolescence of the territorial/physical warfare between advanced economies are among the benefits of the information revolution.
+\par 
+\par   Topologically, the effect of fast signal transports is equivalent to the collapse of the social space metric along established social connections.
+\par 
+\par   In the distant future, we may learn how to cost-effectively synthesize any physical artifact on the spot (e.g., by nanoassembly or manipulation of vacuum microstructure), 
+and send high-bandwidth signals at light speed between any two points. Then, the physical space will effectively collapse, and its intrinsic topology will be of as little interest to system designers as details of physical representation of bits are to to
+day's software engineers. The 15-billion-year struggle of functional structures for independence from physical substrate that is now experiencing such a magnificent growth spurt, will be mostly complete, allowing the world to finally concentrate on its re
+al tasks \endash  development  of complex, balanced, flexible systems not limited by the shortcomings of any particular substrate.
+\par }{\b\f4\fs24 
+\par  Further development: Semantic transports}{\f4\fs24 
+\par }{\f4\fs22 
+\par    Now we encounter the next obstacle:  so much data, so many signals. Even the powerful machines are overloaded with data.  Information traffic, partly due to its relatively low cost, becomes horribly inefficient. Many media, from newspapers to USENET, t
+ry to send everything to everybody.  As a result, while people already read as much as they possibly can, most of the increase in information traffic is never read. A typical reader of }{\i\f4\fs22 New York Times}{\f4\fs22 
+ may read 5% of the paper, and a typical reader of USENET may consume 0.01% of the daily news traffic coming to his server. (Multimedia gives a one-time increase in bandwidth demand, but the main tendency is still the same). The "Internet visionaries" deb
+ate whether increased capacities of physical cables may pr
+ovide the projected increase in data  transfer, and billions of dollars are spent on attempting to fix information problems using physical methods.  That's a  step back by a level!  Instead, we should move a level forward and look at the message semantics
+.  Then, we could transmit only the messages that are actually going to be read. 
+\par 
+\par    The problem here is that while machines store and pass messages, they do not know what to store and where to pass it.  So, they  process everything.  Humans understand wha
+t to handle, and how to handle it. But people's semantic abilities are at least as limited as their skills in handling material objects and storing and transmitting data, so each person has to specialize in a few isolated areas of opinions and expertise. 
+Communication between these areas is imperfect because of semantic barriers \endash 
+ most people do not know each other, the organizational mechanisms of knowledge transfer between domains are relatively weak, and terminology and interests differ (conditions of "reproductive isolation" in the memetic ecology).
+\par 
+\par    The }{\i\f4\fs22 semantic}{\f4\fs22 
+ space is fragmented, though the information environment is liquid.  So here we face a task similar to the one that led to the creation of the [signal] communication industry:  to build a semantic transport system that would take an increasing role in det
+ermining what data should be stored and where, who should get signals and from which sources, and how to structure social mechanisms.
+\par 
+\par    In this scenario, machines begin by collecting data fro
+m people about what they know, have, like and want, and assist in figuring out what kinds of connections should be made. Then, the machines can suggest these connections to humans ("check out X!") or partly execute selected transactions ("Here is somethin
+g you may want to know/do" \endash 
+ that is, machine chooses the source, and you decide whether you want to be the recipient, or vice versa).  Machines can even act independently for your benefit, e.g., perform market transactions on your behalf, or upgrade your c
+omputer with a program liked by similar users \endash  according, of course, to your preferences and instructions.
+\par 
+\par   Consequences here are similar to those of the data revolution, but on another level: growing semantic liquidity and integration, higher effective complexity of the social environment, and even faster growth.  At the advanced stage of this process, human
+s may play the role of "semantic sensors", assessing the meaning and value of objects in their vicinity, and letting machines organize the global architecture of value flows.
+\par 
+\par   This is virtually opposite to the human role in a primitive physical economy: then, measuring and sensing devices (thermometers, clocks, watchdogs) played specialized roles in monitoring and enhancing the environment, while humans determined the system 
+architecture and provided general support and coordination.  But now, humans specialize in creating particular artifacts and assessing their quality, and the machine economy provides the general structure. (At this point, most of
+ the architectural structure of the economy is non-biological, so its further de-humanization should be relatively painless.)
+\par 
+\par    It is likely that semantic transport will play as important a role in the advanced information economy as signal and physical transports played in the industrial age.  Twenty percent of the global economy by the year 2030? This may sound like an exagge
+ration.  However, people already spend at least as large a share of their time and effort on collecting and sharing expertise. Wha
+t is needed here is automation of this process.  If we look at the acceleration of automation and data processing and extrapolate the trend, 30 years may seem sufficient for development of a knowledge processing industry.  We can hardly expect that collec
+tion, distribution and sharing of expertise \endash  the most valuable social resource in the coming era \endash 
+ would be done by unpaid and unorganized enthusiasts in their spare from other tasks time, without assessing costs and benefits.  Most likely, effective coope
+ration among contributors and beneficiaries of knowledge flows will call for more wide-spread usage of value accounting, and ultimately build the }{\i\f4\fs22 wisdom economy }{\f4\fs22 of the future.
+\par }{\b\f4\fs24 
+\par 
+\par   Trends in the evolution of transports}{\f4\fs24 
+\par }{\f4\fs22 
+\par    The distinctions of physical, data and semantic transports may seem somewhat forced, as would any other simple subdivision of a complex process. The fact remains that exo-biological systems take an ever increasing role in storing, transporting and proc
+essing structures valuable for biologi
+cal individuals, and the involvement of the technology  in these functions is ever more active and intelligent.  A wheelbarrow filled with stone tablets already represents an external mobile transport of abstract references, although the message is still 
+too deeply engraved in the medium, and the whole transport is passive and unaware of its function. During the course of history, value transports become increasingly abstract, changing physical carriers without human involvement, testing their own integri
+ty
+ and assuring delivery, processing the entrusted values, and ultimately, accepting a greater role in deciding what should be shared, where it should be sent, and how it should be processed.  To build this new semantic transport, we need to create the glob
+al information infrastructure, with open standards for semantically rich descriptions of objects and their relations allowing for diversity of opinions on the same subjects and access control for different parties. We also need comprehensive feature and i
+nterest ontologies, to describe the structure of the environment, a variety of algorithms that would form the brain of this system, and an extensive amount of knowledge loaded into it by multiple participants.
+\par 
+\par   The development of technology in any area goes through a similar set of stages. At each stage a new level of human abilities first becomes explicitly expressed in non-biological constructs, then independently carried, then carried out (all things that a
+re started by humans and continue functioning on
+ their behalf, from campfires to mousetraps to stock trading programs), then combined and processed, then get taken over. This has already happened, consecutively, with the handling of physical materials, energy, and raw information.  Pursuit of AI, thoug
+h a worthy goal, may have been an attempt to leapfrog the natural cooperative/mixed/synthetic stage in the area of object semantics. Now we are filling this gap. Human judgments have been expressed in artificial media for a long time, communication indust
+ry
+ gave us efficient tools for transporting them. Automated processing of opinions is still in a very primitive stage (e.g., ballot counting systems), but ACF technology promises to significantly raise its level. After this is accomplished, the next  layer 
+of human functionality  to be taken over will probably be semantic analysis of objects.  The work here has already begun, with pattern recognition and signal processing techniques, and commonsense information analysis tools on the higher end. Existence of
+ s
+emantic transport infrastructure will allow immediate utilization of advances in automated semantic analysis, which should greatly accelerate its development.  An analog here is text analysis tools that after the emergence of the World Wide Web became cru
+cial for daily information searches of millions of people, and turned information retrieval from an area of orderly academic activity into an arena of intense commercial competition.
+\par 
+\par }{\f4\fs24   }{\b\f4\fs24 Economic promises of semantic transport}{\f4\fs24 
+\par }{\f4\fs22 
+\par   }{\f4\fs24  }{\f4\fs22  Strictly speaking, ACF, as well as data communications, starts with transporting }{\i\f4\fs22 references}{\f4\fs22 
+ to existing values, rather than the values themselves. Reference transport optimizes the flows of underlying values. This allows references themselves to be recognized as values, and then the new mechanism turns into a value transport in the full sense. 
+In the current society, though money can be easily passed from one agency to another, many crucial areas of economic and social activity are under-funded,  as their importance is not recognize
+d (though all necessary information may be available somewhere, it can remain unknown or ignored by people with money).  In many cases, people have no incentive to share their knowledge with others, as in many areas there are no mechanisms to compensate t
+hem for sharing the knowledge.  So instead of just telling other people what they know, which would be the least expensive way to provide the maximal social benefit, they attempt to realize that knowledge in something non-transportable, so that they can c
+on
+trol the distribution of benefits and profit from it (though these implementations often could be realized faster and cheaper by other people if they knew about them). The creation of reward mechanisms for knowledge distribution, in terms of enhanced soci
+al reputation of the individual, as well as direct payment for advice based on the utility of previous opinions expressed by the same person, may give people incentives to share some of the knowledge \endash 
+ e.g., observations of the economy, or ideas for inventions \endash 
+ in the areas where they tend to keep information proprietary today.  This would result in less antagonistic relationships between an individual and society, conservation of resources, and acceleration of progress.
+\par }{\b\f4\fs28 \page 
+\par    Applications of ACF in the near future}{\f4\fs24 
+\par }{\f4\fs22 
+\par   ACF provides multiple functions.  Let us examine them and see how they may be used}{\f4\fs24 .
+\par 
+\par }{\b\f4\fs24    Finding objects of desire}{\f4\fs24 
+\par }{\f4\fs22 
+\par   People spend a lot of time trying to find the best objects to satisfy their interests. In the process, they waste a lot of effor
+t looking through junk, find some occasional surprises (serendipity is a side benefit of bad searches), and miss many gems that might have made their lives much better. Email and Web access dramatically increased the efficiency of information searches and
+ distribution, but did not modify the nature of the mechanisms.  Improving this search process would increase quality of life and accelerate the adoption of new and worthy products and ideas.  This would save resources and increase the rate of social and 
+economic progress.
+\par 
+\par    An interesting issue here is that recommendations delivered by ACF come from the person's affinity groups, and are more geared towards the person's interests than suggestions from mass-media channels, whose choice recommendations are linked to the powe
+r interests of a small number of commercial and political organizations. This could very well lead to decentralization and democratization of influential powers in the society, even for mainstream interests. I would like to stress that I d
+ivide interests into fringe and mainstream here, not people. For example, my interest in philosophy may be fringe, but my health and nutrition interests may be quite typical.  I would expect that the ACF-enhanced system would be more likely to recommend a
+pple juice over Coca-Cola than would commercial advertising. The effect on the economy should be a greater incentive for companies to tailor both their products and marketing messages to consumer interests rather than to manipulate people's opinions. "Pro
+ducer push" in value exchanges would give some space to "consumer pull".
+\par 
+\par    Implications for fringe interests are still more promising. People who are interested in rare objects or obscure issues usually get no social messages targeted at them at all.  ACF may provide them with advice whose quality matches that of wider sphere
+s of interest.  ACF can also benefit people who have interests in the mainstream subjects, but who have opinions different from those of others \endash  they may be trying to do something new,
+ or have finer or exotic tastes.  For these individuals, ACF can deliver advice corresponding to their preferences. Such functions will allow ACF systems to support the diversity of tastes and interests and encourage their development, while preventing al
+ienation.
+\par 
+\par   Some caveats exist here as well.  If people's expertise and tastes in some area are underdeveloped, a straightforward ACF system might provide them with the advice of their "laggard" affinity group that may give them support but not help in dev
+eloping beyond their current level.
+\par 
+\par The hopes here are:
+\par }\pard \qj\fi-360\li360\widctlpar {\f4\fs22 
+\par {\pntext\pard\plain\f1\fs22 \'b7\tab}}\pard \qj\fi-360\li360\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}{\f4\fs22 
+if people advance in their current interest faster due to ACF, and at the same time get better advice from other social channels, they can still evolve faster.
+\par }\pard \qj\widctlpar{\*\pn \pnlvlcont\pndec }{\f4\fs22 
+\par {\pntext\pard\plain\f1\fs22 \'b7\tab}}\pard \qj\fi-360\li360\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}{\f4\fs22 
+it is possible to design ACF algorithms so that they can track the development paths of other people interested in a particular area \endash 
+ noticing, for example, that people who study arithmetic or rap music today are likely to turn to algebra or rock tomorrow \endash  and give them advice aimed at helping them move ahead.
+\par }\pard \qj\fi-360\li360\widctlpar {\f4\fs22 
+\par }\pard \qj\widctlpar {\f4\fs22 
+  Soon, ACF technology as an information search method will join the ranks of established information retrieval tools, and will make information retrieval systems more intelligent and adaptable. Increasingly semantics-rich information systems will include
+ elements of ACF functionality as integral parts, and will use them to adjust their communications with humans and each other, building representations of the environment more suitable for their tasks
+. This includes negotiation of "consensus ontologies" for different subject areas, and building models of people's interests that would help refine searches for information.  Later, automated content analysis tools based on \ldblquote 
+common sense knowledge bases\rdblquote  may aid humans in evaluating item semantics.
+\par 
+\par   The ACF methods should not necessarily be based on the straightforward matching of people's interests.  One group of people can be interested in materials that another group considers offensive or controversia
+l; educators would pay special attention to things that students find too difficult or boring; researchers may be interested in problems that have puzzled their colleagues or have not received sufficient attention; social scientists and market analysts wo
+uld study subjects experiencing rapid changes in levels of public interest or shifts of opinions; reviewers would look for new or unknown material in promising areas; fashion watchers may pay attention to things rising in popularity. As a result, the ecol
+ogy of knowledge may establish productive information exchanges among  groups that previously didn't find much in common. (Let us hope that this information will not be used for hostile purposes too often).
+\par }{\b\f4\fs22 
+\par }{\b\f4\fs24   Finding like-minded people}{\f4\fs24    
+\par }{\f4\fs22 
+\par    This is a very important function of ACF, just as it is of many social mechanisms.  Finding people who share your interests is important for finding further directions in life, starting social and economic activities, forming friendships and families, 
+}{\f4\fs22\cf1 getting advice on important personal decisions}{\i\f4\fs22 , }{\f4\fs22 
+and feeling more confident and stable in the social environment. Many people abandon ideas of businesses or social undertakings, or feel depressed and alienated only because they cannot find other individuals who share their interests, even though those p
+eople may pass them in the street, or could be reached in a few seconds with a phone call.  ACF can help you find kindred spirits wherever you go \endash  just express your preferences, and you will find that the person in the next th
+eater seat shares your interests in the arts, that your neighbor at a business banquet table is thinking of hiring somebody with your qualifications, and that the person in the airplane seat next to yours is single, fits all your dating criteria and share
+s your political affiliations and musical tastes.  Some day, you might even be able to find people sharing such bizarre interests as the historical subject of social alienation in the pre-ACF era.
+\par 
+\par   The social functions of ACF can be supplemented by other Automated Collaboration (AC) techniques, such as group scheduling, multi-user games, teleconferencing, groupware, etc., that would facilitate all kinds of activities among like-minded people.
+
+\par }{\f4\fs24 
+\par }{\b\f4\fs24    Finding people who may like a certain object or idea}{\f4\fs24 
+\par }{\f4\fs22 
+\par    The mechanism that refers people to things and ideas they may like, may also work the other way, to help things and ideas find people who may like them. So it may be not clear whether the whole process will help people pursue things, or help things to 
+pursue 
+people.  In any thing-person encounter, the beneficiary is some interest that may or may not reside within that person.  If this interest is friendly to the recipient of the connection, we have the previously described optimistic scenarios. However, the i
+nterest may easily be hostile or manipulative.  One may imagine personalized ads that would suggest snake oil to the people who are most likely to be gullible, at the maximum price they could pay for it, or political campaigns where the message delivered 
+to
+ each citizen will say exactly what this person "needs" to hear to decide in favor of this particular politician, and various other versions of "personalized truth" and manipulative messages.  Considering that the development of ACF, just as most other te
+chnologies, is propelled by pursuit of commercial gains and power more than by search for truth and general social progress, this potential is quite alarming.
+\par 
+\par }{\f4\fs24    }{\b\f4\fs32 Social consequences of ACF}{\f4\fs24 
+\par }{\f4\fs22 
+\par     Historically, the development of physical and signal transport
+s has led to democratization of these areas; travel and communication are widely available in developed countries, and the gap between the elite and the general populace now is narrower than ever. However, the development of the industrial and information
+ economies was far from peaceful and democratic, and was characterized by huge inequalities and other unpleasant phenomena, from wars over resources to mass brainwashing. In the end, the social powers came to a new equilibrium, and the grass-roots power o
+f the increasingly well informed populace balanced the stronger but indiscriminate influence of new political and economic elites.
+\par 
+\par   Could the new industry of personalized knowledge delivery overpower the existing mechanisms of grass-roots communications and upset this historical balance?  Maybe we will be lucky, and the logic of the next stage of technological development will magic
+ally coincide with general interests of  humankind and the needs of social progress and stability. But, this has never happened
+ before.  Or, perhaps, people will wake up and pass their development powers to benevolent visionaries.  This has never happened either...
+\par }{\b\f4\fs24 
+\par   A pessimistic scenario:
+\par }{\f4\fs22 
+\par    People will find themselves surrounded by a host of intelligent reactive information systems.  Most people will have no idea of what is going on, and everybody will just hope that they can find some value in the new situation, while tolerating the bad 
+effects.  Governments and businesses will develop semi-intelligent solutions with predicta
+ble economic efficiency (different for these two), but mostly with localized benefits and random social effects. People who prefer emotional stability to intellectual growth will form comfortably stagnant communities and shield themselves from disturbing 
+and challenging influences. Fringe sociopathic people with perverse interests will for the first time find secure and efficient ways to organize and communicate. The governments will cite the \ldblquote urgent necessity\rdblquote 
+ of protecting some obscure parts of the popula
+tion from whatever the officials consider criminal, and pressure the system to incorporate snooping technologies and censoring rules. Politicians and marketers will do their best to brainwash the population. Socially responsible thinkers will play about a
+s little a role as they ever did.
+\par 
+\par    Still, ACF can do something for visionaries, too: it can help them form their own common interest groups on the semantic fringes of the society, and the wise folks will at least have some pleasure jointly observing the events.
+\par 
+\par }{\b\f4\fs24 The preferred scenario:}{\f4\fs24   
+\par }{\f4\fs22 
+\par     ACF systems will provide a responsive semantic network designed by people and for people, as an expression of their interests and aspirations. Ideas coming from incompetent or malevolent forces will get caught in the global memetic sieve before they c
+ould influence a sizable part of the population. Good and useful ideas and opinions will proliferate and be distributed with unprecedented speed to all who need them, while people who produce and recommend these ideas wil
+l earn great respect from their audiences, further increasing their ability to influence events.
+\par 
+\par   Life will most likely be more complex than these scenarios, especially if one considers that ACF will never be the sole factor shaping the society.  Whether ACF may soon start offering strong positive contributions to the lives of many people depends la
+rgely on the vision and efforts of the people who develop and promote this technology.
+\par }{\b\f4\fs24 
+\par            }{\b\f4\fs28\cf1 Further applications of ACF
+\par }{\b\f4\fs24 
+\par  Managing personal resources}{\f4\fs24 
+\par }{\f4\fs22 
+\par    A common problem in an advanced society, and one that has not received sufficient attention because of lack of commercial interest, is that of ubiquitous }{\i\f4\fs22 junk}{\f4\fs22 
+. In the good old cave times, keeping track of one's few belongings was easy; today, people seem to be drowning under piles of personal possessions. The problem becomes even more difficult with data objects, as low delivery costs and virtually unlimited s
+torage potential make the accumulation of one's intellectual possessions overwhelming, while efficient handling of personal information becomes more and more crucial.
+\par 
+\par    A typical personal computer today contains several thousand files, many of which have hundreds or thousands of records. Without effective management, these information repositories are becoming "write-only memory".  The evolution of managing methods he
+re is repeating the path of larger systems. Originally, people just remembered all their files.  Then, the software allowed organized storage and searches for data.  The recent generation of PIMs \endash  Personal Information Managers \endash 
+ allows for more flexible and meaningful organization of personal information.  However, the task of classifying and managing thousands of aging pieces of information on a PC becomes a challenge even for a seaso
+ned professional.  The "Miscellaneous" category acquires thousands of diverse materials; searches by keywords become difficult ("What was that thing that I got recently from some good friend of mine that I thought I'd do something with?" \endash 
+ try this with keywords!)  In many cases, one doesn\rquote t even remember to look for something...
+\par 
+\par    Intelligent software agents promise to alleviate these problems by remembering all activity on a computer, deriving patterns from the user's behavior to help classify and prioritize messages and otherwise manage their "external memory".  But here we fa
+ce the usual hard problems of building good AI. At this point, PC intelligence is far too limited to build reasonable classifications of data and figuring out which messages are imp
+ortant, except for a few cases with usual topics and regular correspondents.  Even with good intelligence, users wouldn't receive very useful advice, if an agent's knowledge is derived only from one user's limited personal experience.
+\par 
+\par    The first generation of software for managing personal resources has already appeared on the market. The next stage may be expected to include elements of ACF, such as recorded opinions of human experts in one's sphere of interests, recommendations of 
+like-minded people, a
+nd object classification and information retrieval rules derived from their personal information-handling patterns by their own software agents. From this stage, the software servants may be constantly at work exchanging experiences with each other, gener
+alizing it for related groups of tasks, negotiating subject ontologies, etc.  With time, most of the "semantic traffic" will consist of messages created by one machine for the consumption of others, as has already happened with storage, transportation and
+ processing of physical materials, energy and information.
+\par 
+\par     With good information protection technologies, people could trust the large servers with storage of their personal data, to ensure its security and accessibility from anywhere in the world. Then, the search for personal information can be provided by 
+the same tools as the global or company-wide search, with consideration of access rights.
+\par 
+\par     Eventually, the knowledge of our habits and preferences will be distributed in, or available to, all our
+ tangible possessions, from the toaster to the walls of our houses.  As appliances acquire the physical and intellectual skills necessary for physical mobility \endash  make the transition analogous to that between plants and animals \endash 
+ the benefits of informatio
+n processing we have been discussing will extend to include manipulation of physical objects.  Mobile possessions will rearrange themselves and other appliances for our convenience, discover and bring us things we may consider of interest, take us to dest
+inations, and drive along the paths, that we are likely to enjoy the most.
+\par }{\b\f4\fs22 
+\par }{\b\f4\fs24   Reputation brokering system}{\f4\fs24 
+\par }{\f4\fs22 
+\par     With a natural progression of a human from a biological creature to a relatively individual tool manipulator to a part of a technological system, the perception of human value shifted correspondingly \endash 
+ from bodily strengths, to the amount of personal possessions, to the value of knowledge and experience necessary for taking part in an integrated economy. In today's economy, reputation \endash  the perceptio
+n by the community of the utility of one's socially productive skills \endash 
+ often represents the single most valuable asset of a person or an organization and plays an important role in most social and economic interactions.  However, there has been little in
+tentional effort to widen the use of this important social tool.  ACF technology can make a considerable contribution here, collecting, maintaining and distributing knowledge of people's reputations.
+\par }{\f4\fs24 
+\par }{\b\f4\fs24   Example of reputations: People's Better Business Bureau / Consumer reports}{\f4\fs24 
+\par }{\f4\fs22 
+\par    Many people feel suspicious of plumbers and car mechanics, as they tend to under-perform and overcharge.  However, these people do not have different DNA from everybody else's, and their occupations are not legally limited to the members of the Nationa
+l Crook Guild.  The problem is that these businesses have little incentive to perform more responsibly. The customer does not have sufficient expertise to personally control the work of these people, and usually has no access to the op
+inions of previous customers regarding their services. The business then does not feel motivated enough to give the customer the best service and price, as the excess charges would enrich it directly, while the negative opinion of the customer is unlikely
+ to repel other potential clients.
+\par 
+\par    This situation would change dramatically if the opinions on previous jobs became publicly accessible.  If you need to get any service, you would ask the ACF system for a list of business evaluations, and select the ser
+vice based on the combined knowledge of people similar to you in income, place of residence, service requirements, and cultural preferences.
+\par 
+\par   The system is not necessarily immune from abuse, as bad servicemen might ask their friends to enter fake references for their businesses. However, people whose recommendations appear misleading, would see their own reputations \endash  and influences 
+\endash  decrease in the system.  This would provide an incentive to people to be truthful, and will make sure that people who tend
+ to give bad advice, will not harm others too much.  If the system rewards the providers of good advice (would you pay 25 cents for a reference to the most experienced and honest car mechanic in your area?), then people with the most valuable consumer exp
+ertise may find themselves employed as paid consumer advisors.  If the system can transport values, it can transport rewards as well \endash 
+ collection and distribution of incentives for providing useful references and reviews may become a key part of a collaborative system ensuring "positive value feedback".
+\par }{\b\f4\fs24 
+\par 
+\par    Reputations vs. brands}{\f4\fs24 
+\par }{\f4\fs22 
+\par    Direct references to the company and product quality, coming from independent sources and tied to the interests of the particular user, seem far superior to the current simple method of building product reputation \endash  }{\i\f4\fs22 branding}{
+\f4\fs22 .  The \ldblquote brand awareness\rdblquote  is often built by massive advertising that wins one company or product a place in the limited consumer memory, at the expense of other brands. This familiarity with the brand often de
+pends more on the size of the company and its advertising budget than on the quality of any particular product. Companies can exploit brand popularity gained from previous successes to push new products with non-optimal value/cost combinations to a market
+ that does not know how to choose better, and prevent new rivals with cheaper and superior products from gaining the recognition they deserve. As better mechanisms for product recommendations appear, we may see brand advertising drift towards obsoletion, 
+as
+ the products will be judged and recommended based on their actual values and costs.  The general reputation of a company or a product line would still be important, as they would provide additional guarantees of consumer service and product quality, whic
+h is especially important for introduction of new products to the market.  However, this reputation will be built more on the consumers\rquote 
+ aggregate opinion on the quality of the product, than on the all-too-familiar non-informative ads.  In many cases, especially for new products, in addition to \endash  or even instead of \endash  the producer\rquote 
+s reputation, the consumer would rely on the reputation of the }{\i\f4\fs22 critics}{\f4\fs22  \endash 
+ such as Consumer Reports, Environmental Protection Agency or his own friends, to decide whether he should purchase this product from this particular company.  This will also give incentives to the critics to improve the quality of their product \endash 
+ advice \endash  on the market of ideas.}{\b\f4\fs22 
+\par 
+\par }{\b\f4\fs24     Advertising  and attention economy}{\i\f4\fs24 
+\par }{\b\f4\fs22 
+\par }{\f4\fs22    Signal economy,}{\b\f4\fs22  }{\f4\fs22 as most other things, works well on a certain scale.  }{\f4\fs22\cf1 
+In the absence of intelligent  message targeting, the larger the signal environment, the more there is competition for public attention, and the louder the signals should be to be heard.  People need to hear the whole message to assess its meaning, but th
+ey may turn away from it if it does not catch their attention.  So the message has to be loud, sparkling and shocking from the very beginning.  It needs to SCREAM to be heard.  Assuring this becomes the essence of the marketing
+ profession.  Meanwhile, the audience learns to turn away from a message if it\rquote 
+s attention is not arrested within a few seconds.  As a result, the attention span of the populace takes a historically unprecedented plunge, while the social environment becom
+es filled with shocking people and shocking issues, which do not necessarily have anything to do with real values or problems.   Perceptual shocks satisfy consumers by tickling their natural senses, and reinforce the dominance of perception manipulators o
+ver value creators in both political and economic decision-making bodies.  Oftentimes, these bodies are called to \ldblquote handle\rdblquote 
+ the photogenic non-issues they themselves made up in the minds of the populace.  John Perry Barlow once called this \ldblquote government by the hallucinating mob\rdblquote 
+.  At this point it does not look like changing the situation is perceived by anybody as being in their interest.  I would not try to convince you that ACF or any other technology can be a social panacea, but it still may help fix some of
+ the problems created by the previous generation of communication tools \endash 
+ the mass media.  The consumers may soon learn that expensive TV ads may be fun to watch, but modestly looking recommendations from their friends and independent experts delivered by
+ the ACF system promise more relevant products of better quality and at a lower price \endash  and they are actually worth attentively watching all the way through.  This may start some far-reaching trends.  
+\par 
+\par    The society that does not have the benefit of enlig
+htened visionary governance, is prone to be corrupted by unexpected side-effects of technological innovations (such as mass media) whose negative influences it is not intelligent enough to counter.  By the same token though, this society also does not hav
+e the strength to resist when the arrow of the technological imperative turns in the positive direction.  So, unlike a socium controlled by visionary villains, our situation at least has a chance to be improved by dumb luck\'85
+\par }{\b\f4\fs24\cf1 \page    Bringing new things to life
+\par }\pard \widctlpar {\b\f4\fs22\cf1 
+\par }\pard \qj\widctlpar {\b\f4\fs22\cf1  }{\f4\fs22\cf1 
+ So far, we discussed using people's opinions on existing things. However, people can as easily express their opinions on the things they want to bring into existence, or things they hope will never happen. They can tell how much they want to have a conce
+rt next Tuesday night, whether they think they need a bus service in their neighborhood, whether a translation of some book into their language is desirable, or whether they would join a mailing list on cactus collecting if it existed \endash 
+ and also how much 
+resources (time, money or other projects) they would sacrifice to make sure this project is implemented (or prevented) and who they would trust to perform the work.  If there is a social agreement, the project would start.  The role of ACF in this process
+ would be distribution of the initial suggestions to people who care about them, and collection of opinions about the utility of each suggestion and the best ways to implement it.  Meaningful targeting of all messages would assure that the suggestions wou
+ld be distributed only to people who do want to take part in the project, so the expense of time would be minimal.  Actually, not all interested people have to take part.  Each person can define trust quorum criteria \endash 
+ for example, any 5 of his personal friends, or at least 20% of the community, or any group whose total reputation exceeds a certain threshold \endash 
+  and delegate them the right to commit his personal resources to the project on his behalf (maybe, with certain limitations).   The outcome here is a v
+ariable-geometry representation and voting scheme in which nobody's resources are committed without their personal approval, and the most appropriate people, according to the best knowledge of the community, are trusted with evaluating the decisions and c
+arrying out the projects.  Comparisons of this scheme in efficiency with existing methods of collecting and allocating public resources may be left as an exercise to the reader.  An interesting question is whether today's methods of extraction of resource
+s from unwilling "participants" and delegation of power to "representatives" untrusted by many, may still appear efficient for }{\i\f4\fs22\cf1 any}{\f4\fs22\cf1 
+ purpose.  An ideal construction of any social mechanism, in my opinion, is one that combines the benefits of large-scale integration with maximal local and personal freedoms.  After a certain stage of development of economy and communication industry, pe
+ople started enjoying such mechanisms in their economic life; maybe, ACF will be the technology that will have the same effect on the political system and other decision-making processes.}{\f4\fs22 
+\par }{\b\f4\fs22 
+\par }{\b\f4\fs24  ACF-based personalized representation of information}{\f4\fs24 
+\par }{\f4\fs22 
+\par   Filtering the world for your attention is important, but it results in just simple decisions, whether or not you should see a given item. After that decision is made, lots of options remain in constructing your interaction with an object.  Presentation 
+of information can be adjusted in a variety of ways, based on what the ACF system learns from the behavior o
+f other people. Texts you see on the screen can be shown to you with the parts that you are likely to be most interested in, highlighted, and uninteresting details shrunk or masked.  Terms that you are not likely to understand may be converted to hyperlin
+ks leading to explanations appropriate for your level of expertise and linguistic and cultural preferences.  Similar transformations may be applied to sounds, images and any other interface parts you may encounter, based on the experience the system has g
+ained from interacting with similar people.  (More radical ideas on possible transformations of one's view of the world and artificially enhanced perception are described in my essay on Intelligent Information Filters and Enhanced Reality.)
+\par }{\i\f4\fs24 
+\par }{\f4\fs24   }{\b\f4\fs28 Real-time memetic engineering}{\f4\fs24 
+\par }{\f4\fs22 
+\par   The computational features of the knowledge economy will be based on many heuristic parameters that can be continuously adjusted for various purposes.  Slight changes in computation factors can temporarily move access traffic away from c
+ongested communication lines, change the balance between stability and serendipity of information searches, shift  advice on entertainment choices toward healthier activities at the time of a flu epidemic, support inter-group communications or increase at
+tention to third-party interests in periods of social instability, or steer students towards the choice of subjects that are likely to become understaffed in the near future. Of course, there are more direct methods of interference, such as censoring mess
+age traffic or forcing selected connections. Any private party could also help adjust the workings of the system, for example, by subsidizing prices that certain people have to pay for certain references (e.g., teenagers \endash 
+ for reading advice, or abuse victims \endash  for counseling references). The US government has one parameter now \endash  the prime rate \endash 
+ that it can more or less frequently modify to assure stability of the market, and some other legal instruments \endash  like taxes and tariffs \endash  to periodically readjust th
+ings.  The information market can be fine-tuned in real time (many times a second if it is necessary) along numerous structural parameters.  This creates wide opportunities for flexible and intelligent regulation.  And tremendous opportunities for abuse
+\'85  A system designed in the interests of the society as a whole should facilitate good influences and prevent bad ones.  For that, it should be very carefully constructed.  
+\par }{\b\f4\fs28 
+\par }{\b\f4\fs32 Future of ACF technology}{\i\f4\fs24 
+\par }{\f4\fs22 
+\par   The applications mentioned above move beyond mere inform
+ation filtering. Further extensions of this technology may include other methods of manipulating and utilizing semantic assessments of items and their features by multiple human and machine participants of the system. For better understanding of the item 
+and user spaces and resolution of ambiguities in user-item encounters where several interests of the user interact with multiple features of the item, we may want to cluster item features and user interests into functional vectors in the semantic space. (
+Visualization tools and graphical navigation utilities in this space may appear useful). The affinity factors of both items and users to these \ldblquote semantic eigenvectors\rdblquote 
+ may provide compact and meaningful representations of their essential features and assure more efficient communication of their meaning. Such \ldblquote semantic encoding\rdblquote 
+ of information about entities represented in the system may allow both dramatic improvements in information flows and significant reduction in bandwidth  requirements. The representatio
+ns can range from simple aggregate value assessments to arbitrarily complex structured descriptions of people, objects, and their relations. The exchange and usage of this high-level information may be regulated by \ldblquote 
+semantic communication protocols\rdblquote .  Possible uses of this technology are virtually unlimited. Terms such as \ldblquote Filtering systems\rdblquote , \ldblquote Recommender systems\rdblquote , and \ldblquote Semantic transport\rdblquote 
+ describe just some of the particular applications in the large emerging field of distributed knowledge processing.}{\i\f4\fs22 
+\par }{\f4\fs22 
+\par   B
+uilding the semantic transport system on the planetary scale may appear the most complex project ever undertaken in human history, with the greatest impact on social structures and with numerous technological challenges and social controversies on all lev
+els.  As we know from experience with economic and political structures, it is extremely important to build a proper architectural foundation that would assure efficiency and stability of an emerging social mechanism.
+\par 
+\par }{\b\f4\fs28     }{\b\f4\fs32 Recommended reading}{\b\f4\fs28    }{\i\f4\fs22 (as a true futurist, I allow myself to include references to yet unpublished works}{\f4\fs22 )
+\par 
+\par }{\b\f4\fs22 Resnick, Paul. "Filtering Information on the Internet".  }{\f4\fs22  Scientific American, March 1997.   An overview of non-collaborative automated filtering system (PICS).  Online copy: }{\b\i\f4\fs22 
+http://www.sciam.com/0397issue/0397resnick.html}{\f4\fs22 
+\par 
+\par }{\b\f4\fs22 Community and Personalization.}{\f4\fs22  IBM Systems Journal, Vol. 35, No 3&4, 1996.  A set of articles discussing theory and practical implementations of community news systems, user modeling issues, and content-aware media.
+ Online version: }{\b\i\f4\fs22 http://www.almaden.ibm.com/journal/sj/mit/sectionb/benderi.html}{\f4\fs22 
+\par 
+\par }{\b\f4\fs22 Communications of ACM, 1997, vol. 40(3).}{\f4\fs22  A series of articles edited by Hal R. Varian and Paul Resnick, discussing various aspects of recommender systems and their economic consequences.
+\par 
+\par }{\b\f4\fs22 Marvin Minsky, "The Society of Mind".}{\f4\fs22   Simon & Schuster, NY, 1988.  A classic book on the workings of the human consciousness architecture.
+\par 
+\par }{\b\f4\fs22 David Gelertner, \ldblquote Mirror Worlds\rdblquote . Oxford, 1992. }{\f4\fs22 The author suggests using reactive representation tec
+hnology for mediating our contacts with the world.  (Today, this function is performed by the outer layers of  an individual human mind based on the knowledge loaded from the outside world.)
+\par 
+\par }{\b\f4\fs22 Olaisen, Johan, Patrick Wilson}{\f4\fs22  and }{\b\f4\fs22 Erland Munch-Pedersen}{\f4\fs22 , editors. 1996 }{\b\f4\fs22 Information Science: From the Development of the Discipline to Social Interaction}{\f4\fs22 
+. Oslo: Scandinavian University Press. \endash  A series of articles on topics ranging from information overload to conceptual change and theory of social interaction.
+\par 
+\par }{\b\f4\fs22 Howard Bloom, "The Lucifer Principle".}{\f4\fs22  The book contains interesting discussions on society as a distributed cognition system; the author will develop these ideas in his next book, }{\b\f4\fs22 "The Irrational Invention Machine".}{
+\f4\fs22 
+\par 
+\par }{\b\f4\fs22 Hans Moravec, "The Mind Children".}{\f4\fs22  }{\b\f4\fs22 Harvard Univ. Press, 1990.}{\f4\fs22  Moravec's ideas on the future of human and machine intelligence will be further developed in his new book tentatively named }{\b\f4\fs22 
+"The Mind Age"}{\f4\fs22 .
+\par 
+\par }{\b\f4\fs22 Alexander Chislenko, "Networking in the Mind Age".}{\f4\fs22   Telepolis, August 1996.  Essay on  the future of distributed intelligence.  Online copy:  }{\b\i\f4\fs22 http://www.lucifer.com/~sasha/mindage.html}{\i\f4\fs22 
+\par }{\f4\fs22 
+\par }{\b\f4\fs22 Robin Hanson, Could Gambling Save Science? Encouraging an Honest Consensus.}{\f4\fs22  Social Epistemology 9(1):3-33,45-48, 1995.}{\b\f4\fs22   }{\f4\fs22 
+A market-based mechanism of establishing and using scientific reputations, reaching consensus on controversial theoretical issues, and choosing projects for research.  Online version:  }{\b\i\f4\fs22 http://hss.caltech.edu/~hanson/gamble.html
+\par }{\f4\fs22 
+\par }{\b\f4\fs22 Nick Szabo, "Smart Contracts".}{\f4\fs22  Extropy #16. An article on security aspects of automated collaboration.  An update is available online at }{\b\i\f4\fs22 http://www.best.com/~szabo/smart.contracts.2.html}{\f4\fs22 
+\par 
+\par }{\b\f4\fs22 Alexander Chislenko, Intelligent Information Filters and Enhanced Reality.}{\f4\fs22  Extropy #16 (vol.8, no.1) 1996.  Hypertext version:  }{\b\i\f4\fs22 http://www.lucifer.com/~sasha/EnhancedReality.html}{\b\f4\fs22  }{\f4\fs22 
+\par 
+\par }{\b\f4\fs22 Peter Russell, "The Global Brain awakens".  }{\f4\fs22 The Global Brain, Inc., 1995.}{\b\f4\fs22  }{\f4\fs22  Discussion of humanity as an emerging conscious superorganism.  Excerpts available online at   }{\b\i\f4\fs22 h
+ttp://artfolio.com/pete/GBA.html}{\f4\fs22 
+\par 
+\par }{\b\f4\fs22 Jeffrey S. Rosenschein, Gilad Zlotkin.  Rules of Encounter: designing conventions of Automated Negotiation among Computers.  }{\f4\fs22 MIT Press, 1994.
+\par 
+\par }{\b\f4\fs22 Lenat, D. B. and R. V. Guha.  Building Large Knowledge Based Systems.}{\f4\fs22   Addison Wesley, 1990.
+\par 
+\par }{\b\f4\fs22 Lenat, D. B. "CYC: A Large-Scale Investment in Knowledge Infrastructure."}{\f4\fs22  Communications of the ACM 38, no. 11 (November 1995). 
+\par }{\f4\fs24 
+\par }{\b\f4\fs24 Information Institutions: The Technological Imperative}{\f4\fs24 .  American Library Association.  Fall, 1997 
+\par A concise version of this article will appear in this book, together with other related works.
+\par Online information: }{\b\i\f4\fs22 http://www.lucifer.com/~sasha/refs/ALAbook.html}{\f4\fs24 
+\par }{\f4\fs22 
+\par }\pard \qj\widctlpar\brdrb\brdrs\brdrw15\brsp20 {\b\f4\fs22 Being on Line, Net Subjectivity.}{\f4\fs22 
+ Lusitania Press, 1997.  ISBN 1-882791-04-5  A collection of articles exploring a diverse set of  issues on consciousness and subjectivity on the Net.  Online:  }{\b\i\f4\fs22 http://www.thing.net/~lus/web/content.html}{\f4\fs22 
+\par }\pard \qj\widctlpar {\f4\fs22 
+\par }{\b\f4\fs28    World Wide Web resources}{\f4\fs24 
+\par }{\f4\fs22 
+\par }{\b\f4\fs22 Firefly Network:  }{\b\i\f4\fs22 http://www.firefly.com}{\b\f4\fs22  \endash  }{\f4\fs22 a growing collection of ACF-based recommendation systems in a variety of domains.}{\b\f4\fs22 
+\par }{\f4\fs22 
+\par }{\b\i\f4\fs22 http://www.sims.berkeley.edu/resources/collab/}{\f4\fs22  \endash  an extensive collection of references to ACF- related resources on the Web compiled by Hal. R. Varian.
+\par 
+\par }{\b\i\f4\fs22 http://www.ideosphere.com/fx/main.html \endash }{\f4\fs22  Foresight Exchange \endash  a pilot project for balancing people\rquote s opinions on things that may happen in the future.
+\par 
+\par }{\b\i\f4\fs22 http://www.cyc.com}{\b\f4\fs22  }{\f4\fs22   }{\b\f4\fs22 CYC \endash }{\f4\fs22  a multi-contextual commonsense knowledge base development led by Douglas Lenat.
+\par 
+\par }{\b\f4\fs28 About the author:
+\par }{\b\f4\fs22 
+\par }{\f4\fs22   Alexander Chislenko worked on dev
+eloping ACF algorithms for Firefly Network, Inc. Now he works in the Society of Mind group in the MIT Media Lab. He is an active member of the World Future Society and the Extropy Institute. His other writings on advanced technology and various philosophi
+cal and futurist topics may be found at }{\b\i\f4\fs22 http://www.lucifer.com/~sasha/home.html}{\f4\fs22     E-mail address: }{\b\i\f4\fs22 sasha1@netcom.com}{\b\f4\fs22 
+\par }}

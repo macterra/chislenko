@@ -1,0 +1,115 @@
+		RingWorld
+		---------
+
+
+      / The desire to reach the stars can be the cradle of
+        Extropian spirit, but we can't live in the cradle forever /
+
+      / Extropians should spend their fuel launching memes /
+   
+		   				- Alexander Chislenko
+
+   
+   This is my belated answer to the question of whether the RingWorld
+- a system of rings around the Sun to collect its energy and host
+humans - is a useful and technologically sound idea.
+
+
+ General design
+ --------------
+
+  I describe here my understanding of the Pokrovsky Shell suggestion.
+I believe RingWorld whatever it is isn't that different.
+
+    Let's imagine a ring construct a bit wider than the Earth's orbit,
+10 km wide and thick enough to host some equipment, housing, etc.
+It forms a perfect circular orbit around the Sun.
+    Then we make another ring, just like this, but a few kilometers wider,
+and orbiting under a slightly different angle. And another...
+The rings will overlap at one point, partially overlap close to it, and
+will lie at a small distance from each other in the middle.
+The whole thing looks like a gigantic shell with 2 openings (good for
+spaceships).
+  The rings will NOT completely hide the whole star from the outside
+observer, since complete covering in the 'middle' of the rings would mean
+wasteful overlaps everywhere else.
+
+  Stability and safety.
+  ---------------------
+
+  Let's consider one ring.
+We can't make it perfectly round, just *close*.
+Now, a piece that is a bit closer to the Sun, should move a bit faster,
+and vice versa.  Otherwise, closer parts will start falling in the moment
+we put the ring in orbit, and other parts will start falling out.
+No way the ring can be strong enough to resist it.
+The orbit can not be made perfectly round, and even if it was, there are
+many enough distortions in the gravity field to ensure the ring's instability.
+   So it is absolutely necessary to make rings elastic and design an
+extremely sophisticated active position-control system.
+So our ring will snake thru space, bending and stretching, with its engines
+constantly on.
+   I am not sure the captured solar energy will be sufficient for these
+tasks, but I would definitely recommend not placing any valuable objects,
+including other rings, any close to such unstable and mobile construct.
+
+  Meteorite protection.
+
+The Ringworld will need all the materials of the asteroid belt, and a good
+portion of the planetary material to construct.  Asteroids can be a better
+source of material since their lower gravity makes them easier to take apart.
+However, there will be left trillions of small stones (with size between 0
+and, say, 10 meters), that are too small to be of interest as materials.
+With their speeds of tens of kilometers per second, however, they are deadly
+dangerous for the rings (which do not have any atmosphere to protect them).
+No material can be strong enough to withstand a hit of even a relatively
+small pebble.
+  The only working protection I can think of is an SDI-like system that
+would constantly watch the surroundings of every ring for the tiniest stones
+and immediately reduce them to dust with laser beams or whatever.
+Not an easy task. Also, it may have to use a considerable portion of the
+ring's energy balance (if it has any surplus left after the position-
+correcting expenses).
+
+   Good habitat?
+   -------------
+
+   Oh, just one more energy-consuming thing:
+We'll need lots of rotating cameras within the ring to provide artificial
+gravity for humans, animals [?] and plants.
+
+   We should also remember that the ring will lack many of conventional
+niceties of our Earth: blue skies, mountains, oceans, rivers and lakes,
+clouds, rains and snows, highways and many other things that make our
+lives what they are.
+   However, rings will provide MORE LIVING SPACE - and this is one of the
+two major purposes they are needed for.  And more living space is absolutely
+necessary for the multiplying human race.
+   IMHO, though, it's much easier to teach humans proper use of condoms to
+limit their *thoughtless* multiplication than to colonize the solar system
+and persuade the same humans to abandon their natural habitats.
+
+---------------------------------------------------------------------------
+   Also, lots of human activities require spatial proximity of their
+participants and lots of other objects.  This clusterization tendency by
+itself will make sure that people will live in 3-D clusters, and leave
+the rings for energy collection only.
+Flat habitats just won't work.
+---------------------------------------------------------------------------
+
+   Energy collection.
+   ------------------
+
+This is the second (after large living space) - and the last - most
+important argument for ring construction.
+
+  So far, I came to the conclusion that people will rather live in isolated
+3-D constructs (and most stay on Earth and, maybe, a couple of terraformed
+other planets).   Rings can be left much leaner and serve for energy
+collection only.
+
+  Still, the rings may collect a lot more energy than we can now find from
+any other source, and will still be very useful after the several centuries
+of extremely expensive work, provided no breakthroughs in energy consumption
+or generation will be made by that time.
+This by itself is a condition

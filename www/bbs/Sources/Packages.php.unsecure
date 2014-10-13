@@ -1,0 +1,958 @@
+<?
+/*****************************************************************************/
+/* Packages.php                                                              */
+/*****************************************************************************/
+/* YaBB: Yet another Bulletin Board                                          */
+/* Open-Source Project started by Zef Hemel (zef@zefnet.com)                 */
+/* Software Version: YaBB SE                                                 */
+/* ========================================================================= */
+/* Software Distributed by:    http://www.yabb.info                          */
+/* Support, News, Updates at:  http://www.yabb.info/community                */
+/*                             http://yabb.xnull.com/community               */
+/* ========================================================================= */
+/* Copyright (c) 2001-2002 Lewis Media - All Rights Reserved                 */
+/* Software by: The YaBB Development Team                                    */
+/*****************************************************************************/
+/* This program is free software; you can redistribute it and/or modify it   */
+/* under the terms of the GNU General Public License as published by the     */
+/* Free Software Foundation; either version 2 of the License, or (at your    */
+/* option) any later version.                                                */
+/*                                                                           */
+/* This program is distributed in the hope that it will be useful, but       */
+/* WITHOUT ANY WARRANTY; without even the implied warranty of                */
+/* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General */
+/* Public License for more details.                                          */
+/*                                                                           */
+/* The GNU GPL can be found in gpl.txt in this directory                     */
+/*****************************************************************************/
+
+global $adminplver;
+$Packagesphpver="YaBB SE 0.8";
+
+$safe_mode = ini_get("safe_mode");
+	
+$pacmanver = "0.8";
+
+// verify the user is an administrator
+is_admin();
+include_once("$sourcedir/Packer.php");
+
+function Packages()
+{
+   global $txt, $color,$yytitle,$yyheaderdone,$settings,$db_prefix,$username,$REMOTE_ADDR,$REQUEST_URI,$modSettings,$imagesdir,$mbname,$sourcedir;
+	# Build the link tree
+	$displayLinkTree = $modSettings['enableInlineLinks'] ? "<font size=\"1\" class=\"nav\"><B><a href=\"$cgi\" class=\"nav\">$mbname</a> </b>&nbsp;|&nbsp;<b> " : "<font size=\"2\" class=\"nav\"><B><img src=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi\" class=\"nav\">$mbname</a><br>" ;
+	$displayLinkTree .= $modSettings['enableInlineLinks'] ? "<a href=\"$cgi?action=packages\" class=\"nav\">$txt[package1]</a> </b>&nbsp;|&nbsp;<b> " : "<img src=\"$imagesdir/tline.gif\" border=\"0\" alt=\"\"><IMG SRC=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi?action=packages\" class=\"nav\">$txt[package1]</a><br>" ;
+	$yytitle = "$mbname - $txt[package1]";
+	template_header();
+	print <<<EOT
+<table width="100%" align="center"><tr><td valign="bottom">$displayLinkTree</td></tr></table>
+EOT;
+	print <<<EOT
+<table border="0" width="100%" cellspacing="0" cellpadding="0" class="bordercolor"><tr><td>
+<table border="0" width="100%" cellspacing="1" cellpadding="4" class="bordercolor">
+  <tr>
+    <td class="titlebg" align="center" colspan="2">
+    <b>$mbname - $txt[package1]</b></td>
+  </tr><tr><td class="catbg" colspan="2"><b>$txt[package2]</b></td>
+  </tr><tr>
+    <td class="windowbg" width="20" valign="middle" align="center"><img src="$imagesdir/boardmod_main.gif" border="0" width="20" height="20" alt=""></td><td class="windowbg2">       <a href="$scripturl?action=packagebrowse">[ $txt[package3] ]</a><br>
+       <a href="$scripturl?action=packagecreate">[ $txt[package4] ]</a><br>
+       <a href="$scripturl?action=packageget">[ $txt[package5] ]</a><br>
+       <a href="$scripturl?action=pkinstalllist">[ $txt[package6] ]</a><br>
+   </td>
+   </tr>
+   </table></td></tr></table>
+EOT;
+ 	footer();
+	obExit();
+}
+
+function PackageRemove()
+{
+   global $scripturl, $file;
+
+   unlink("Packages/".$file);
+
+   header("Location: $scripturl?action=packages\n\n");
+}
+
+function PackageCreate()
+{
+   global $txt, $color,$yytitle,$yyheaderdone,$settings,$db_prefix,$username,$REMOTE_ADDR,$REQUEST_URI,$modSettings,$imagesdir,$mbname,$sourcedir;
+	# Build the link tree
+	$displayLinkTree = $modSettings['enableInlineLinks'] ? "<font size=\"1\" class=\"nav\"><B><a href=\"$cgi\" class=\"nav\">$mbname</a> </b>&nbsp;|&nbsp;<b> " : "<font size=\"2\" class=\"nav\"><B><img src=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi\" class=\"nav\">$mbname</a><br>" ;
+	$displayLinkTree .= $modSettings['enableInlineLinks'] ? "<a href=\"$cgi?action=packages\" class=\"nav\">$txt[package1]</a> </b>&nbsp;|&nbsp;<b> " : "<img src=\"$imagesdir/tline.gif\" border=\"0\" alt=\"\"><IMG SRC=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi?action=packages\" class=\"nav\">$txt[package1]</a><br>" ;
+	$displayLinkTree .= $modSettings['enableInlineLinks'] ? "<a href=\"$cgi?action=packagecreate\" class=\"nav\">$txt[package16]</a> </b>&nbsp;|&nbsp;<b> " : "<img src=\"$imagesdir/tline2.gif\" border=\"0\" alt=\"\"><IMG SRC=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi?action=packagecreate\" class=\"nav\">$txt[package16]</a><br>" ;
+	$yytitle = "$mbname - $txt[package1] - $txt[package16]";
+	template_header();
+	print <<<EOT
+<table width="100%" align="center"><tr><td valign="bottom">$displayLinkTree</td></tr></table>
+<table border="0" width="100%" cellspacing="0" cellpadding="0" class="bordercolor"><tr><td>
+<table border="0" width="100%" cellspacing="1" cellpadding="4" class="bordercolor">
+  <tr>
+    <td class="titlebg" align="center" colspan="2">
+    <b>$mbname - $txt[package1] - $txt[package16]</b></td>
+  </tr><tr><td class="catbg" colspan="2"><b>$txt[package17]</b></td>
+  </tr><tr>
+    <td class="windowbg" width="20" valign="middle" align="center"><img src="$imagesdir/boardmod_main.gif" border="0" width="20" height="20" alt=""></td><td class="windowbg2" width="100%">
+    <form action="$scripturl?action=packagecreate2" method="POST">
+    <table border=0 cellspacing=0 cellpadding=4>
+    <tr>
+       <td valign=top><b>$txt[package18]:</b></td>
+       <td valign=top><input type=text name="dir" size=30><br>
+       <font size=1>$txt[package19]</font></td>
+    </tr>
+    <tr>
+       <td valign=top><b>$txt[package20]:</b></td>
+       <td valign=top><input type=text name="root" size=30><br>
+       <font size=1>$txt[package21]</font></td>
+    </tr>
+    <tr>
+       <td valign=top><b>$txt[package22] ($txt[package23]):</b></td>
+       <td valign=top><input type=text name="name" size=30 value=""></td>
+    </tr>
+    <tr>
+       <td valign=top><b>$txt[package24]:</b></td>
+       <td valign=top><select name="ext">
+         <option value=".mod.yp">$txt[package25]</option>
+         <option value=".as.yp">$txt[package26]</option>
+         <option value=".lng.yp">$txt[package27]</option>
+         <option value=".yp" selected>$txt[package28]</option>
+       </select></td>
+    </tr>
+    <tr>
+       <td colspan=2><input type=submit value="$txt[package29]"></td>
+    </tr>
+    </table></form>
+    </td>
+   </tr>
+<tr><td class="catbg" colspan="2"><b>$txt[package2]</b></td>
+  </tr><tr>
+    <td class="windowbg" width="20" valign="middle" align="center"><img src="$imagesdir/boardmod_main.gif" border="0" width="20" height="20" alt=""></td><td class="windowbg2">       <a href="$scripturl?action=packagebrowse">[ $txt[package3] ]</a><br>
+       <a href="$scripturl?action=packagecreate">[ $txt[package4] ]</a><br>
+       <a href="$scripturl?action=packageget">[ $txt[package5] ]</a><br>
+       <a href="$scripturl?action=pkinstalllist">[ $txt[package6] ]</a><br>
+   </td>
+   </tr>
+   </table></td></tr></table>
+EOT;
+  	footer();
+	obExit();
+
+}
+
+function PackageCreate2()
+{
+   global $txt, $color, $scripturl, $yytitle, $name, $dir, $root, $ext,$yyheaderdone,$settings,$db_prefix,$username,$REMOTE_ADDR,$REQUEST_URI,$modSettings,$imagesdir,$mbname,$sourcedir;
+	# Build the link tree
+	$displayLinkTree = $modSettings['enableInlineLinks'] ? "<font size=\"1\" class=\"nav\"><B><a href=\"$cgi\" class=\"nav\">$mbname</a> </b>&nbsp;|&nbsp;<b> " : "<font size=\"2\" class=\"nav\"><B><img src=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi\" class=\"nav\">$mbname</a><br>" ;
+	$displayLinkTree .= $modSettings['enableInlineLinks'] ? "<a href=\"$cgi?action=packages\" class=\"nav\">$txt[package1]</a> </b>&nbsp;|&nbsp;<b> " : "<img src=\"$imagesdir/tline.gif\" border=\"0\" alt=\"\"><IMG SRC=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi?action=packages\" class=\"nav\">$txt[package1]</a><br>" ;
+	$displayLinkTree .= $modSettings['enableInlineLinks'] ? "<a href=\"$cgi?action=packagecreate\" class=\"nav\">$txt[package16]</a> </b>&nbsp;|&nbsp;<b> " : "<img src=\"$imagesdir/tline2.gif\" border=\"0\" alt=\"\"><IMG SRC=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi?action=packagecreate\" class=\"nav\">$txt[package16]</a><br>" ;
+	$yytitle = "$mbname - $txt[package1] - $txt[package16]";
+	template_header();
+	print <<<EOT
+<table width="100%" align="center"><tr><td valign="bottom">$displayLinkTree</td></tr></table>
+EOT;
+	print <<<EOT
+<table border="0" width="100%" cellspacing="0" cellpadding="0" class="bordercolor"><tr><td>
+<table border="0" width="100%" cellspacing="1" cellpadding="4" class="bordercolor">
+  <tr>
+    <td class="titlebg" align="center" colspan="2">
+    <b>$mbname - $txt[package1] - $txt[package16]</b></td>
+  </tr><tr><td class="catbg" colspan="2"><b>$txt[package30]</b></td>
+  </tr><tr>
+    <td class="windowbg" width="20" valign="middle" align="center"><img src="$imagesdir/boardmod_main.gif" border="0" width="20" height="20" alt=""></td><td class="windowbg2" width="100%">
+EOT;
+  $packer = new Packer("Packages/$name$ext");
+
+  echo <<<EOT
+   <table border=0 cellspacing=0 cellpadding=4>
+   <tr>
+      <td class=td1><textarea cols="100%" rows="7">
+EOT;
+  $packer->addFiles(array("./".$dir), "./".$root);
+
+
+  echo "</textarea><br />$txt[51]<p /><b>$txt[package31] $name$ext </b><br>$txt[package32]: <a href=\"Packages/$name$ext\">[ $txt[package33] ]</a>
+   </td>
+   </tr></table></td></tr><tr><td class=\"catbg\" colspan=\"2\"><b>$txt[package2]</b></td>
+  </tr><tr>
+    <td class=\"windowbg\" width=\"20\" valign=\"middle\" align=\"center\"><img src=\"$imagesdir/boardmod_main.gif\" border=\"0\" width=\"20\" height=\"20\" alt=\"\"></td><td class=\"windowbg2\"><a href=\"$scripturl?action=packagebrowse\">[ $txt[package3] ]</a><br>
+       <a href=\"$scripturl?action=packagecreate\">[ $txt[package4] ]</a><br>
+       <a href=\"$scripturl?action=packageget\">[ $txt[package5] ]</a><br>
+       <a href=\"$scripturl?action=pkinstalllist\">[ $txt[package6] ]</a><br>
+   </td>
+   </tr>
+   </table></td></tr></table>";
+  	footer();
+	obExit();
+}
+
+
+function PackagePremod()
+{
+   global $txt, $color, $scripturl, $file, $yytitle, $override;
+
+	$yytitle = $txt['yse153'];
+	template_header();
+	print <<<EOT
+<table border="0" cellpadding="0" cellspacing="6" align="center" width="100%">
+  <tr>
+    <td colspan=2 width="100%">
+    <table border="0" cellpadding="5" cellspacing="1" align="center" bgcolor="$color[bordercolor]" class="bordercolor" width="100%">
+      <tr>
+        <td bgcolor="$color[titlebg]" class="titlebg" height="23" align="center" colspan="2">
+        <font size="4" color="$color[titletext]">$txt[yse153]</font></td>
+      </tr><tr>
+        <td class="windowbg" bgcolor="$color[windowbg]" valign="middle" align="left" width="100%">
+EOT;
+
+     $seen = 0;
+     $instmods = file("Packages/installed.list");
+     for($i=0 ; $i<count($instmods) ; ++$i)
+       if(chop($instmods[$i]) == $file)
+         $seen = 1;
+
+     if($seen == 1 && $override != 1)
+print <<<EOT
+  $txt[yse198f]<br><br>
+  <a href="$scripturl?action=packagepremod;file=$file;override=1">[ $txt[yse198g] ]</a><br>
+EOT;
+     else
+print <<<EOT
+  $txt[yse152]<br><br>
+  <a href="$scripturl?action=packagemod;file=$file">[ $txt[yse154] ]</a><br>
+EOT;
+      
+print <<<EOT
+      <a href="$scripturl?action=packages">[ $txt[193] ]</a><br>
+      </td>
+   </tr>
+   </table></td></tr></table>
+EOT;
+  	footer();
+	obExit();
+}
+
+function PackageMod()
+{
+   global $txt, $color, $scripturl, $file, $yytitle;
+
+	$yytitle = $txt['yse155'];
+	template_header();
+	print <<<EOT
+<table border="0" cellpadding="0" cellspacing="6" align="center" width="100%">
+  <tr>
+    <td colspan=2 width="100%">
+    <table border="0" cellpadding="5" cellspacing="1" align="center" bgcolor="$color[bordercolor]" class="bordercolor" width="100%">
+      <tr>
+        <td bgcolor="$color[titlebg]" class="titlebg" height="23" align="center" colspan="2">
+        <font size="4" color="$color[titletext]">$txt[yse156]</font></td>
+      </tr><tr>
+        <td class="windowbg" bgcolor="$color[windowbg]" valign="middle" align="left" width="100%">
+EOT;
+  
+  $packer = new Packer("Packages/$file");
+  echo $packer->extract(".","",true);
+
+  $seen = 0;
+  $instmods = file("Packages/installed.list");
+  for($i=0 ; $i<count($instmods) ; ++$i)
+    if(chop($instmods[$i]) == $file)
+      $seen = 1;
+  if($seen == 0)
+  {
+    $instfile = fopen("Packages/installed.list","a");
+    $toput = chop($file)."\n";
+    fputs($instfile,$toput);
+    fclose($instfile);
+  }
+
+  if(file_exists("Packages/modification.txt"))
+    echo "
+      $txt[yse162]<br>
+      <a href=\"$scripturl?action=packagemod4\">[ $txt[yse163] ]</a><br>";
+  elseif(file_exists("Packages/modification.sql"))
+     echo "
+       $txt[yse162b]<br>
+       <a href=\"$scripturl?action=packagemodSQL\">[ $txt[yse163b] ]</a><br>";
+  elseif(file_exists("Packages/modification.php"))
+    echo "
+      $txt[yse160]<br>
+      <a href=\"$scripturl?action=packagemod3\">[ $txt[yse161] ]</a><br>";
+  elseif(file_exists("Packages/modification.mod"))
+    echo "
+      $txt[yse157]<br>
+      <a href=\"$scripturl?action=packagemod2;try=1\">[ $txt[yse158] ]</a>
+      <a href=\"$scripturl?action=packagemod2;try=0\">[ $txt[yse159] ]</a><br>";
+  else
+    echo "
+      $txt[yse164]<br><br>
+      <a href=\"$scripturl?action=packages\">[ $txt[193] ]</a><br>";
+   
+  echo "</td></tr></table></td></tr></table>";
+  	footer();
+	obExit();
+}
+
+function PackageMod2()
+{
+   global $txt, $color, $scripturl, $yytitle, $try;
+	$yytitle = $txt['yse155'];
+	template_header();
+	print <<<EOT
+<table border="0" cellpadding="0" cellspacing="6" align="center" width="100%">
+  <tr>
+    <td colspan=2 width="100%">
+    <table border="0" cellpadding="5" cellspacing="1" align="center" bgcolor="$color[bordercolor]" class="bordercolor" width="100%">
+      <tr>
+        <td bgcolor="$color[titlebg]" class="titlebg" height="23" align="center" colspan="2">
+        <font size="4" color="$color[titletext]">$txt[yse155]</font></td>
+      </tr><tr>
+        <td class="windowbg" bgcolor="$color[windowbg]" valign="middle" align="left" width="100%">
+EOT;
+
+  // Apply mod
+  $file = implode("", file("Packages/modification.mod"));
+  $file = str_replace("\r", "", $file);
+
+  $info['packagemanager'] = 'v0.8';
+  $file2 = $file;
+
+  while(preg_match("/<(id|version|author|email|homepage|info|approved)>\n(.+?)\n<\\/\\1>/is", $file2, $regs))
+  {
+    $info["$regs[1]"] = $regs[2];
+    $file = str_replace("<$regs[1]>\n$regs[2]\n</$regs[1]>", "", $file);
+  }
+
+  if($info['approved'] == "yes") echo "\n$txt[pacman1]\n";
+  if($info['id'] != "")          echo "\n<br>$txt[pacman2]: $info[id]\n";
+  if($info['version'] != "")     echo "\n<br>$txt[pacman3]: $info[version]\n";
+  if($info['author'] != "")      echo "\n<br>$txt[pacman4]: $info[author]\n";
+  if($info['email'] != "")       echo "\n<br>$txt[pacman5]: $info[email]\n";
+  if($info['homepage'] != "")    echo "\n<br>$txt[pacman6]: $info[homepage]\n";
+  if($info['info'] != "")        echo "\n<br>$txt[pacman7]: $info[info]\n";
+  echo "<br>";
+
+  // Now find and parse the mod info
+  $currentfile = "";
+  $filecontents = "";
+  $searchfor = "";
+
+  while(preg_match("/<(file|search|add|replace|before)>\n(.+?)\n<\\/\\1>/is", $file, $regs))
+  {
+    if($regs[1] == "file")
+    {
+      if($currentfile && !$try)
+      {
+         copy($currentfile, $currentfile."~");
+         $fp = fopen($currentfile, "w");
+         fputs($fp, $filecontents);
+         fclose($fp);
+         echo "<b>$txt[yse165] $currentfile, $txt[yse166] ".$currentfile."~</b><br>\n";
+      }
+      $currentfile = $regs[2];
+      $filecontents = implode("", file($currentfile));
+      $filecontents = str_replace("\r", "", $filecontents);
+      echo "<h2>$currentfile</h2>";
+    }
+    elseif($regs[1] == "search")
+    {
+      $searchfor = $regs[2];
+      $MS_display_fix = htmlspecialchars($searchfor);
+      echo "$txt[yse167] <hr><pre>$MS_display_fix</pre><hr>";
+    }
+    elseif($regs[1] == "add")
+    {
+      if(strstr($filecontents, $searchfor))
+      {
+         $MS_display_fix = htmlspecialchars($regs[2]);
+         echo "$txt[yse168c] <hr><pre>$MS_display_fix</pre><hr>";
+         $filecontents = str_replace($searchfor, $searchfor."\n".$regs[2], $filecontents);
+      }
+      else
+         echo "$txt[yse169]<br>";
+      $searchfor = "";
+    }
+    elseif($regs[1] == "before")
+    {
+      if(strstr($filecontents, $searchfor))
+      {
+         $MS_display_fix = htmlspecialchars($regs[2]);
+         echo "$txt[yse168b] <hr><pre>$MS_display_fix</pre><hr>";
+         $filecontents = str_replace($searchfor, $regs[2]."\n".$searchfor, $filecontents);
+      }
+      else
+         echo "$txt[yse169] <br>";
+      $searchfor = "";
+    }
+    elseif($regs[1] == "replace")
+    {
+      if(strstr($filecontents, $searchfor))
+      {
+         $MS_display_fix = htmlspecialchars($regs[2]);
+         echo "$txt[yse170]<hr><pre>$MS_display_fix</pre><hr>";
+         $filecontents = str_replace($searchfor, $regs[2], $filecontents);
+      }
+      else
+         echo "$txt[yse169]<br>";
+      $searchfor = "";
+    }
+    $file = str_replace("<$regs[1]>\n$regs[2]\n</$regs[1]>", "", $file);
+  }
+  if($currentfile && !$try)
+  {
+    copy($currentfile, $currentfile."~");
+    $fp = fopen($currentfile, "w");
+    fputs($fp, $filecontents);
+    fclose($fp);
+    echo "<b>$txt[yse165] $currentfile, $txt[yse165] ".$currentfile."~</b><br>\n";
+  }
+  echo "$txt[51]<br><br>";
+
+  // Done...
+  if(!$try) unlink("Packages/modification.mod");
+  if($try)
+     echo "$txt[yse171]<br>
+      <a href=\"$scripturl?action=packagemod2;try=0\">[ $txt[yse159b] ]</a><br>
+      <a href=\"$scripturl?action=packages\">[ $txt[193] ]</a><br>";
+  else
+  {
+     echo $txt['yse172'];
+
+     echo "
+       $txt[yse164]<br><br>
+       <a href=\"$scripturl?action=packages\">[ $txt[193] ]</a><br>";
+  }
+  echo "</td></tr></table></td></tr></table>";
+  footer();
+  obExit();
+}
+
+function PackageMod3()
+{
+   global $txt, $color, $scripturl, $yytitle, $try;
+	$yytitle = $txt['yse155'];
+	template_header();
+	print <<<EOT
+<table border="0" cellpadding="0" cellspacing="6" align="center" width="100%">
+  <tr>
+    <td colspan=2 width="100%">
+    <table border="0" cellpadding="5" cellspacing="1" align="center" bgcolor="$color[bordercolor]" class="bordercolor" width="100%">
+      <tr>
+        <td bgcolor="$color[titlebg]" class="titlebg" height="23" align="center" colspan="2">
+        <font size="4" color="$color[titletext]">$txt[yse155]</font></td>
+      </tr><tr>
+        <td class="windowbg" bgcolor="$color[windowbg]" valign="middle" align="left" width="100%">
+EOT;
+  echo "<b>$txt[yse173]</b><hr>";
+
+  include("Packages/modification.php");
+  
+  unlink("Packages/modification.php");
+  if(file_exists("Packages/modification.mod"))
+    echo "
+      $txt[yse157]<br>
+      <a href=\"$scripturl?action=packagemod2;try=1\">[ $txt[yse158] ]</a>
+      <a href=\"$scripturl?action=packagemod2;try=0\">[ $txt[yse159] ]</a><br>";
+  else
+    echo "
+      $txt[yse164]<br><br>
+      <a href=\"$scripturl?action=packages\">[ $txt[193] ]</a><br>";
+  echo "</td></tr></table></td></tr></table>";
+  footer();
+  obExit();
+}
+
+function PackageMod4()
+{
+   global $txt, $color, $scripturl, $yytitle, $try;
+	$yytitle = $txt['yse155'];
+	template_header();
+	print <<<EOT
+<table border="0" cellpadding="0" cellspacing="6" align="center" width="100%">
+  <tr>
+    <td colspan=2 width="100%">
+    <table border="0" cellpadding="5" cellspacing="1" align="center" bgcolor="$color[bordercolor]" class="bordercolor" width="100%">
+      <tr>
+        <td bgcolor="$color[titlebg]" class="titlebg" height="23" align="center" colspan="2">
+        <font size="4" color="$color[titletext]">$txt[yse174]</font></td>
+      </tr><tr>
+        <td class="windowbg" bgcolor="$color[windowbg]" valign="middle" align="left" width="100%">
+EOT;
+  echo "<b>$txt[yse175]</b><br>";
+  echo "<hr><pre>";
+  echo htmlspecialchars(implode("", file("Packages/modification.txt")));
+  echo "</pre><hr>";
+
+  unlink("Packages/modification.txt");
+  if(file_exists("Packages/modification.sql"))
+     echo "
+       $txt[yse162b]<br>
+       <a href=\"$scripturl?action=packagemodSQL\">[ $txt[yse163b] ]</a><br>";
+  elseif(file_exists("Packages/modification.php"))
+    echo "
+      $txt[yse160]<br>
+      <a href=\"$scripturl?action=packagemod3\">[ $txt[yse161] ]</a><br>";
+  elseif(file_exists("Packages/modification.mod"))
+    echo "
+      $txt[yse157]<br>
+      <a href=\"$scripturl?action=packagemod2;try=1\">[ $txt[yse158] ]</a>
+      <a href=\"$scripturl?action=packagemod2;try=0\">[ $txt[yse159] ]</a><br>";
+  else
+    echo "
+      $txt[yse164]<br><br>
+      <a href=\"$scripturl?action=packages\">[ $txt[193] ]</a><br>";
+  echo "</td></tr></table></td></tr></table>";
+  footer();
+  obExit();
+}
+
+function PackageAvatars()
+{
+   global $txt, $color,$yytitle,$yyheaderdone,$settings,$db_prefix,$username,$REMOTE_ADDR,$REQUEST_URI,$modSettings,$imagesdir,$mbname,$sourcedir,$color, $scripturl, $file;
+	# Build the link tree
+	$displayLinkTree = $modSettings['enableInlineLinks'] ? "<font size=\"1\" class=\"nav\"><B><a href=\"$cgi\" class=\"nav\">$mbname</a> </b>&nbsp;|&nbsp;<b> " : "<font size=\"2\" class=\"nav\"><B><img src=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi\" class=\"nav\">$mbname</a><br>" ;
+	$displayLinkTree .= $modSettings['enableInlineLinks'] ? "<a href=\"$cgi?action=packages\" class=\"nav\">$txt[package1]</a> </b>&nbsp;|&nbsp;<b> " : "<img src=\"$imagesdir/tline.gif\" border=\"0\" alt=\"\"><IMG SRC=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi?action=packages\" class=\"nav\">$txt[package1]</a><br>" ;
+	$displayLinkTree .= $modSettings['enableInlineLinks'] ? "<a href=\"$cgi?action=packagecreate\" class=\"nav\">$txt[package37]</a> </b>&nbsp;|&nbsp;<b> " : "<img src=\"$imagesdir/tline2.gif\" border=\"0\" alt=\"\"><IMG SRC=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi?action=packagecreate\" class=\"nav\">$txt[package37]</a><br>" ;
+	$yytitle = "$mbname - $txt[package1] - $txt[package37]";
+	template_header();
+	print <<<EOT
+<table width="100%" align="center"><tr><td valign="bottom">$displayLinkTree</td></tr></table>
+<table border="0" width="100%" cellspacing="0" cellpadding="0" class="bordercolor"><tr><td>
+<table border="0" width="100%" cellspacing="1" cellpadding="4" class="bordercolor">
+  <tr>
+    <td class="titlebg" align="center" colspan="2">
+    <b>$mbname - $txt[package1] - $txt[package37]</b></td>
+  </tr><tr><td class="catbg" colspan="2"><b>$txt[package38]</b></td>
+  </tr><tr>
+    <td class="windowbg" width="20" valign="middle" align="center"><img src="$imagesdir/boardmod_main.gif" border="0" width="20" height="20" alt=""></td><td class="windowbg2" width="100%"><textarea cols="100%" rows="7">
+EOT;
+  
+  $packer = new Packer("Packages/$file");
+  echo $packer->extract(".");
+
+  echo <<<EOT
+</textarea><br />$txt[package39]
+</td></tr><tr><td class=\"catbg\" colspan=\"2\"><b>$txt[package2]</b></td>
+  </tr><tr>
+    <td class=\"windowbg\" width=\"20\" valign=\"middle\" align=\"center\"><img src=\"$imagesdir/boardmod_main.gif\" border=\"0\" width=\"20\" height=\"20\" alt=\"\"></td><td class=\"windowbg2\"><a href=\"$scripturl?action=packagebrowse\">[ $txt[package3] ]</a><br>
+       <a href=\"$scripturl?action=packagecreate\">[ $txt[package4] ]</a><br>
+       <a href=\"$scripturl?action=packageget\">[ $txt[package5] ]</a><br>
+       <a href=\"$scripturl?action=pkinstalllist\">[ $txt[package6] ]</a><br>
+   </td>
+   </tr>
+   </table></td></tr></table>
+EOT;
+  	footer();
+	obExit();
+}
+
+function PackageLanguage()
+{
+   global $txt, $color,$yytitle,$yyheaderdone,$settings,$db_prefix,$username,$REMOTE_ADDR,$REQUEST_URI,$modSettings,$imagesdir,$mbname,$sourcedir,$color, $scripturl, $file;
+	# Build the link tree
+	$displayLinkTree = $modSettings['enableInlineLinks'] ? "<font size=\"1\" class=\"nav\"><B><a href=\"$cgi\" class=\"nav\">$mbname</a> </b>&nbsp;|&nbsp;<b> " : "<font size=\"2\" class=\"nav\"><B><img src=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi\" class=\"nav\">$mbname</a><br>" ;
+	$displayLinkTree .= $modSettings['enableInlineLinks'] ? "<a href=\"$cgi?action=packages\" class=\"nav\">$txt[package1]</a> </b>&nbsp;|&nbsp;<b> " : "<img src=\"$imagesdir/tline.gif\" border=\"0\" alt=\"\"><IMG SRC=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi?action=packages\" class=\"nav\">$txt[package1]</a><br>" ;
+	$displayLinkTree .= $modSettings['enableInlineLinks'] ? "<a href=\"$cgi?action=packagecreate\" class=\"nav\">$txt[package37]</a> </b>&nbsp;|&nbsp;<b> " : "<img src=\"$imagesdir/tline2.gif\" border=\"0\" alt=\"\"><IMG SRC=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi?action=packagecreate\" class=\"nav\">$txt[package37]</a><br>" ;
+	$yytitle = "$mbname - $txt[package1] - $txt[package37]";
+	template_header();
+	print <<<EOT
+<table width="100%" align="center"><tr><td valign="bottom">$displayLinkTree</td></tr></table>
+<table border="0" width="100%" cellspacing="0" cellpadding="0" class="bordercolor"><tr><td>
+<table border="0" width="100%" cellspacing="1" cellpadding="4" class="bordercolor">
+  <tr>
+    <td class="titlebg" align="center" colspan="2">
+    <b>$mbname - $txt[package1] - $txt[package37]</b></td>
+  </tr><tr><td class="catbg" colspan="2"><b>$txt[package40]</b></td>
+  </tr><tr>
+    <td class="windowbg" width="20" valign="middle" align="center"><img src="$imagesdir/boardmod_main.gif" border="0" width="20" height="20" alt=""></td><td class="windowbg2" width="100%"><textarea cols="100%" rows="7">
+EOT;
+  
+  $packer = new Packer("Packages/$file");
+  echo $packer->extract(".");
+
+  echo <<<EOT
+</textarea><br />$txt[package41]
+</td></tr><tr><td class=\"catbg\" colspan=\"2\"><b>$txt[package2]</b></td>
+  </tr><tr>
+    <td class=\"windowbg\" width=\"20\" valign=\"middle\" align=\"center\"><img src=\"$imagesdir/boardmod_main.gif\" border=\"0\" width=\"20\" height=\"20\" alt=\"\"></td><td class=\"windowbg2\"><a href=\"$scripturl?action=packagebrowse\">[ $txt[package3] ]</a><br>
+       <a href=\"$scripturl?action=packagecreate\">[ $txt[package4] ]</a><br>
+       <a href=\"$scripturl?action=packageget\">[ $txt[package5] ]</a><br>
+       <a href=\"$scripturl?action=pkinstalllist\">[ $txt[package6] ]</a><br>
+   </td>
+   </tr>
+   </table></td></tr></table>
+EOT;
+  	footer();
+	obExit();
+}
+
+
+function PackageList()
+{
+   global $txt, $color, $scripturl, $file;
+
+	$yytitle = $txt['yse180'];
+	template_header();
+	print <<<EOT
+<table border="0" cellpadding="0" cellspacing="6" align="center" width="100%">
+  <tr>
+    <td colspan=2 width="100%">
+    <table border="0" cellpadding="5" cellspacing="1" align="center" bgcolor="$color[bordercolor]" class="bordercolor" width="100%">
+      <tr>
+        <td bgcolor="$color[titlebg]" class="titlebg" height="23" align="center" colspan="2">
+        <font size="4" color="$color[titletext]">$txt[yse180]</font></td>
+      </tr><tr>
+        <td class="windowbg" bgcolor="$color[windowbg]" valign="middle" align="left" width="100%">
+EOT;
+  $packer = new Packer("Packages/$file");
+  $files = $packer->listFiles();
+  echo "
+  <b>$txt[yse181] $file</b>
+  <ol>";
+  for($i=0 ; $i<count($files); ++$i)
+  {
+    echo "<li>".$files[$i]['name']." (".$files[$i]['size']." bytes)\n";
+  }
+  echo "</ol><a href=\"$scripturl?action=packages\">[ $txt[193] ]</a>";
+  echo "</td></tr></table></td></tr></table>";
+  	footer();
+	obExit();
+}
+
+function PackageModSQL()
+{
+   global $txt, $color, $scripturl, $yytitle, $try, $db_prefix;
+	$yytitle = $txt['yse155'];
+	template_header();
+	print <<<EOT
+<table border="0" cellpadding="0" cellspacing="6" align="center" width="100%">
+  <tr>
+    <td colspan=2 width="100%">
+    <table border="0" cellpadding="5" cellspacing="1" align="center" bgcolor="$color[bordercolor]" class="bordercolor" width="100%">
+      <tr>
+        <td bgcolor="$color[titlebg]" class="titlebg" height="23" align="center" colspan="2">
+        <font size="4" color="$color[titletext]">$txt[yse174b]</font></td>
+      </tr><tr>
+        <td class="windowbg" bgcolor="$color[windowbg]" valign="middle" align="left" width="100%">
+EOT;
+
+	$fullfile = implode("",file("Packages/modification.sql"));
+
+  $fullfile = str_replace("<TBLPREFIX>",$db_prefix,$fullfile);
+
+  echo "<b>$txt[yse175b]</b><br>";
+  echo "<hr><pre>";
+  echo htmlspecialchars($fullfile);
+  echo "</pre><hr>";
+
+  echo "<b>$txt[yse175c]</b><br>";
+  echo "<hr><pre>";
+
+  $SQL_query = mysql_query($fullfile);
+
+  if(($SQL_error = mysql_error()) != '') echo "$txt[yse175d] $SQL_error";
+  else if(mysql_affected_rows() != 0 || mysql_num_rows() != 0) echo "$txt[yse175e]";
+  else {
+    print "";
+    while($SQL_row = mysql_fetch_row($SQL_query))
+    {
+      foreach($SQL_row as $SQL_printing)
+      {
+        print "$SQL_printing  ";
+      }
+      print "<br>\n";
+    }
+  }
+    print "</pre><hr>";
+    
+   // Done
+   unlink("Packages/modification.sql");
+  if(file_exists("Packages/modification.php"))
+    echo "
+      $txt[yse160]<br>
+      <a href=\"$scripturl?action=packagemod3\">[ $txt[yse161] ]</a><br>";
+  elseif(file_exists("Packages/modification.mod"))
+    echo "
+      $txt[yse157]<br>
+      <a href=\"$scripturl?action=packagemod2;try=1\">[ $txt[yse158] ]</a>
+      <a href=\"$scripturl?action=packagemod2;try=0\">[ $txt[yse159] ]</a><br>";
+  else
+    echo "
+      $txt[yse164]<br><br>
+      <a href=\"$scripturl?action=packages\">[ $txt[193] ]</a><br>";
+  echo "</td></tr></table></td></tr></table>";
+  footer();
+  obExit();
+}
+
+function PackageUninstall()
+{
+   global $txt, $color, $scripturl, $yytitle, $try, $filetokill;
+	$yytitle = $txt['yse198c'];
+	template_header();
+	print <<<EOT
+<table border="0" cellpadding="0" cellspacing="6" align="center" width="100%">
+  <tr>
+    <td colspan=2 width="100%">
+    <table border="0" cellpadding="5" cellspacing="1" align="center" bgcolor="$color[bordercolor]" class="bordercolor" width="100%">
+      <tr>
+        <td bgcolor="$color[titlebg]" class="titlebg" height="23" align="center" colspan="2">
+        <font size="4" color="$color[titletext]">$txt[yse198c]</font></td>
+      </tr><tr>
+        <td class="windowbg" bgcolor="$color[windowbg]" valign="middle" align="left" width="100%">
+EOT;
+
+  $packer = new Packer("Packages/$filetokill");
+  echo $packer->extract(".","",true);
+
+  // Apply mod
+  $file = implode("", file("Packages/modification.mod"));
+  $file = str_replace("\r", "", $file);
+
+  // Now find and parse the mod info
+  $currentfile = "";
+  $filecontents = "";
+  $searchfor = "";
+  
+  echo "$txt[pacman27] $filetokill<br><br>\n";
+
+  while(preg_match("/<(file|search|add|replace|before)>\n(.+?)\n<\\/\\1>/is", $file, $regs))
+  {
+    if($regs[1] == "file")
+    {
+      if($currentfile && !$try)
+      {
+         copy($currentfile, $currentfile."~");
+         $fp = fopen($currentfile, "w");
+         fputs($fp, $filecontents);
+         fclose($fp);
+         echo "<b>$txt[yse165] $currentfile, $txt[yse166] ".$currentfile."~</b><br>\n";
+      }
+      $currentfile = $regs[2];
+      $filecontents = implode("", file($currentfile));
+      $filecontents = str_replace("\r", "", $filecontents);
+      echo "<h2>$currentfile</h2>";
+    }
+    elseif($regs[1] == "search")
+    {
+      $searchfor = $regs[2];
+      $MS_display_fix = htmlspecialchars($searchfor);
+      echo "$txt[pacman11] <hr><pre>$MS_display_fix</pre><hr>";
+    }
+    elseif($regs[1] == "add")
+    {
+      if(strstr($filecontents, $searchfor."\n".$regs[2]))
+      {
+         $MS_display_fix = htmlspecialchars($regs[2]);
+         echo "$txt[pacman12] <hr><pre>$MS_display_fix</pre><hr>";
+         $filecontents = str_replace($searchfor."\n".$regs[2], $searchfor, $filecontents);
+      }
+      else
+         echo "$txt[pacman14] <br>";
+      $searchfor = "";
+    }
+    elseif($regs[1] == "before")
+    {
+      if(strstr($filecontents, $regs[2]."\n".$searchfor))
+      {
+         $MS_display_fix = htmlspecialchars($regs[2]);
+         echo "$txt[pacman13] <hr><pre>$MS_display_fix</pre><hr>";
+         $filecontents = str_replace($regs[2]."\n".$searchfor, $searchfor, $filecontents);
+      }
+      else
+         echo "$txt[pacman14] <br>";
+      $searchfor = "";
+    }
+    elseif($regs[1] == "replace")
+    {
+      if(strstr($filecontents, $regs[2]))
+      {
+         $MS_display_fix = htmlspecialchars($regs[2]);
+         echo "$txt[pacman15] <hr><pre>$MS_display_fix</pre><hr>";
+         $filecontents = str_replace($regs[2], $searchfor, $filecontents);
+      }
+      else
+         echo "$txt[pacman14] <br>";
+      $searchfor = "";
+    }
+    $file = str_replace("<$regs[1]>\n$regs[2]\n</$regs[1]>", "", $file);
+  }
+  if($currentfile && !$try)
+  {
+    copy($currentfile, $currentfile."~");
+    $fp = fopen($currentfile, "w");
+    fputs($fp, $filecontents);
+    fclose($fp);
+    echo "<b>$txt[yse165] $currentfile, $txt[yse165] ".$currentfile."~</b><br>\n";
+  }
+  echo "$txt[51]<br><br>";
+
+  // Done...
+  if(!$try) unlink("Packages/modification.mod");
+  if(file_exists("Packages/modification.sql") && !$try) unlink("Packages/modification.sql");
+  if(file_exists("Packages/modification.php") && !$try) unlink("Packages/modification.php");
+  if(file_exists("Packages/modification.txt") && !$try) unlink("Packages/modification.txt");
+  if($try)
+     echo "$txt[yse171b]<br>
+      <a href=\"$scripturl?action=packageuninstall;try=0\">[ $txt[yse159] ]</a><br>
+      <a href=\"$scripturl?action=pkinstalllist\">[ $txt[193] ]</a><br>";
+  else
+  {
+     echo $txt[yse172b];
+
+     $server = $filetokill;
+     $servers = file("Packages/installed.list");
+     $fp = fopen("Packages/installed.list", "w");
+     for($i=0 ; $i<count($servers) ; ++$i)
+       if(chop($servers[$i]) != $server)
+         fputs($fp, chop($servers[$i])."\n");
+     fclose($fp);
+     
+     echo "
+       $txt[yse164]<br><br>
+       <a href=\"$scripturl?action=pkinstalllist\">[ $txt[193] ]</a><br>";
+  }
+  echo "</td></tr></table></td></tr></table>";
+  footer();
+  obExit();
+}
+
+function InstalledList()
+{
+  global $yytitle, $txt, $color, $scripturl;
+
+  $mods = array();
+  $rf = fopen("Packages/installed.list", "r") or die("Could not connect to server");
+  while(!feof($rf))
+    $mods[] = fgets($rf, 4096);
+  fclose($rf);
+  for($i=0 ; $i<count($mods) ; ++$i) chop($mods[$i]);
+
+  $yytitle = $txt['package3'];
+	template_header();
+	print <<<EOT
+<table border="0" cellpadding="0" cellspacing="6" align="center" width="100%">
+  <tr>
+    <td colspan=2 width="100%">
+    <table border="0" cellpadding="5" cellspacing="1" align="center" bgcolor="$color[bordercolor]" class="bordercolor" width="100%">
+      <tr>
+        <td bgcolor="$color[titlebg]" class="titlebg" height="23" align="center" colspan="2">
+        <font size="4" color="$color[titletext]">$txt[package3]</font></td>
+      </tr><tr>
+        <td class="windowbg" bgcolor="$color[windowbg]" valign="middle" align="left" width="100%">
+         <ol>
+EOT;
+  $mods_installed = 0;
+  if(count($mods)==1 && !chop($mods[0]))
+     echo "<li>$txt[yse189b]";
+  else
+    {
+      for($i=0 ; $i<count($mods) ; ++$i)
+      {
+         $file = $mods[$i];
+         $j = $i+1;
+         if($mods[$i] != '')
+         {
+           echo "
+             $j. $file
+             <a href=\"$scripturl?action=packageuninstall;filetokill=$file\">[ $txt[yse198b] ]</a> 
+             <a href=\"$scripturl?action=packageuninstall;filetokill=$file;try=1\">[ $txt[yse198e] ]</a><br>
+           ";
+           $mods_installed = 1;
+         }
+       }
+    }
+      
+  echo <<<EOT
+   </ol>
+   <a href="$scripturl?action=pkflushlist">[ $txt[yse198d] ]</a><br>
+   <a href="$scripturl?action=packages">[ $txt[193] ]</a>
+   </td>
+   </tr>
+   </table></td></tr></table>
+EOT;
+  	footer();
+	obExit();
+}
+
+function FlushInstall()
+{
+   $f = fopen("Packages/installed.list","w");
+   fputs($f,"");
+   fclose($f);
+
+   header("Location: $scripturl?action=pkinstalllist\n\n");
+}
+
+function PackageBrowse()
+{
+   global $txt, $color,$yytitle,$yyheaderdone,$settings,$db_prefix,$username,$REMOTE_ADDR,$REQUEST_URI,$modSettings,$imagesdir,$mbname,$sourcedir;
+	# Build the link tree
+	$displayLinkTree = $modSettings['enableInlineLinks'] ? "<font size=\"1\" class=\"nav\"><B><a href=\"$cgi\" class=\"nav\">$mbname</a> </b>&nbsp;|&nbsp;<b> " : "<font size=\"2\" class=\"nav\"><B><img src=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi\" class=\"nav\">$mbname</a><br>" ;
+	$displayLinkTree .= $modSettings['enableInlineLinks'] ? "<a href=\"$cgi?action=packages\" class=\"nav\">$txt[package1]</a> </b>&nbsp;|&nbsp;<b> " : "<img src=\"$imagesdir/tline.gif\" border=\"0\" alt=\"\"><IMG SRC=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi?action=packages\" class=\"nav\">$txt[package1]</a><br>" ;
+	$displayLinkTree .= $modSettings['enableInlineLinks'] ? "<a href=\"$cgi?action=packagebrowse\" class=\"nav\">$txt[package3]</a> </b>&nbsp;|&nbsp;<b> " : "<img src=\"$imagesdir/tline2.gif\" border=\"0\" alt=\"\"><IMG SRC=\"$imagesdir/open.gif\" border=\"0\" alt=\"\">&nbsp;&nbsp;<a href=\"$cgi?action=packagebrowse\" class=\"nav\">$txt[package3]</a><br>" ;
+	$yytitle = "$mbname - $txt[package1] - $txt[package3]";
+	template_header();
+	print <<<EOT
+<table width="100%" align="center"><tr><td valign="bottom">$displayLinkTree</td></tr></table>
+EOT;
+	print <<<EOT
+<table border="0" width="100%" cellspacing="0" cellpadding="0" class="bordercolor"><tr><td>
+<table border="0" width="100%" cellspacing="1" cellpadding="4" class="bordercolor">
+  <tr>
+    <td class="titlebg" align="center" colspan="2">
+    <b>$mbname - $txt[package1] - $txt[package3]</b></td>
+  </tr>
+EOT;
+
+   if($dir = @opendir("Packages"))
+   {
+      $unk = ""; $mod = ""; $avs = ""; $lang = "";
+      while($file = readdir($dir))
+      {
+         if(!strstr($file, ".yp"))
+            continue;
+         $base = "<tr><td><font size=\"2\">$file</font></td><td align=\"right\"><font size=\"2\">";
+         $end = "<a href=\"$scripturl?action=packagelist;file=$file\">[ $txt[package14] ]</a>
+               <a href=\"$scripturl?action=packageremove;file=$file\">[ $txt[package15] ]</a></font></td></tr>";
+         if(ereg("(.+)\.mod\.yp", $file, $regs))
+   	      $mod .= "$base<a href=\"$scripturl?action=packagepremod;file=$file\">[ $txt[package11] ]</a> $end";
+         else if(ereg("(.+)\.as\.yp", $file, $regs))
+   	      $avs .= "$base<a href=\"$scripturl?action=packageavatars;file=$file\">[ $txt[package12] ]</a>\n$end";
+         else if(ereg("(.+)\.lng\.yp", $file, $regs))
+   	      $lang .= "$base<a href=\"$scripturl?action=packagelanguage;file=$file\">[ $txt[package13] ]</a>\n$end";
+   	 else $unk .= "$base$end";
+       }
+       closedir($dir);
+       echo <<<EOT
+       <tr><td class="catbg" colspan="2"><b>$txt[package7]</b></td>
+  </tr><tr>
+    <td class="windowbg" width="20" valign="middle" align="center"><img src="$imagesdir/boardmod_main.gif" border="0" width="20" height="20" alt=""></td><td class="windowbg2"><table border="0" cellpadding="1" cellspacing="0" width="100%">$mod</table></td>
+         </tr><tr><td class="catbg" colspan="2"><b>$txt[package8]</b></td>
+  </tr><tr>
+    <td class="windowbg" width="20" valign="middle" align="center"><img src="$imagesdir/boardmod_main.gif" border="0" width="20" height="20" alt=""></td><td class="windowbg2"><table border="0" cellpadding="1" cellspacing="0" width="100%">$avs</table></td>
+         </tr><tr><td class="catbg" colspan="2"><b>$txt[package9]</b></td>
+  </tr><tr>
+    <td class="windowbg" width="20" valign="middle" align="center"><img src="$imagesdir/boardmod_main.gif" border="0" width="20" height="20" alt=""></td><td class="windowbg2"><table border="0" cellpadding="1" cellspacing="0" width="100%">$lang</table></td>
+         </tr><tr><td class="catbg" colspan="2"><b>$txt[package10]</b></td>
+  </tr><tr>
+    <td class="windowbg" width="20" valign="middle" align="center"><img src="$imagesdir/boardmod_main.gif" border="0" width="20" height="20" alt=""></td><td class="windowbg2"><table border="0" cellpadding="1" cellspacing="0" width="100%">$unk</table></td>
+         </tr><tr><td class="catbg" colspan="2"><b>$txt[package2]</b></td>
+  </tr><tr>
+    <td class="windowbg" width="20" valign="middle" align="center"><img src="$imagesdir/boardmod_main.gif" border="0" width="20" height="20" alt=""></td><td class="windowbg2">       <a href="$scripturl?action=packagebrowse">[ $txt[package3] ]</a><br>
+       <a href="$scripturl?action=packagecreate">[ $txt[package4] ]</a><br>
+       <a href="$scripturl?action=packageget">[ $txt[package5] ]</a><br>
+       <a href="$scripturl?action=pkinstalllist">[ $txt[package6] ]</a><br>
+   </td>
+   </tr>
+   </table></td></tr></table>
+EOT;
+   }
+ 	footer();
+	obExit();
+}
+
+?>

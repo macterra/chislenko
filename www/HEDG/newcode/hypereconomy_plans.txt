@@ -1,0 +1,89 @@
+This document contains a list of development issues for the hypereconomy project.
+The code can be found at http://www.lucifer.com/~sasha/HEDG/newcode
+
+Maintainer:  Sasha Chislenko <sasha@media.mit.edu>
+Last updated:  10/11/98
+
+Eventually, these tasks should have names and dates against them.
+This list contains just some suggestions of what should be done;
+use your own judgment of what is easy and needed most.
+? signs mean that I (Sasha) am not sure the task should be worked
+on right now.
+
+If you have fixed anything. or have questions, please send mail
+to hedg-code@media.mit.edu
+
+Immediate tasks:
+
+     - test variable access model
+     - figure out why performance of all models peaks in the middle of a run
+     - add round function to miscFunc to round the data to the given precision.
+     - put increment functions into appropriate classes, mostly Banner.java
+     - put printing functions into corresponding classes (banner data line and
+       header should be printed in banner.java, etc.)
+       make sure all data is printed in a readable way
+     - need to separate response model from optimization code (Response.java ?)
+     - look up occurrences of ?, "should", "eventually", in all code,
+       and handle the issues
+     - check parameters read from file for correctness (rename into HyperE.param ?)
+     - rename parameters into param.NUM_XXX, etc.  (?)
+     - use new calls instead of deprecated - see compiler diagnostics
+     - separate code better into classes and routines
+     - get ready to divide the work among multiple developers
+     - write readme.txt - list of modules and project installation guide
+
+Development plans for near future:
+
+     - use capital to actually improve performance (now it degrades it)
+     - add a test function to each class, and a test module
+     - experiment with other methods and improve them
+     - at the end of run, compute and print total values (prices) of remaining
+       inventory
+     ? add perfect knowledge option (Madan)
+     - research alternative development environments (J++, IBM java compiler) for
+           code speed and convenience
+     ? categories should look more like generic advisory agents / resource owners
+       we can have in each category, the list of agents it covers, and in each agent,
+       a list of categories.  After that we can have a graph-like agent hierarchy
+
+Continuing issues:
+
+     - test all elements carefully, report errors everywhere they may be detected
+     - speed up execution
+     - project documentation, module descriptions, comments in code
+     - maintain HEDG pages on the web.
+
+More grand-scale plans:
+
+     - experiment with different optimization methods and heuristic parameters: first
+       manually, then prepare performance tests, then get ready to automate the
+       optimization process.
+
+    -  find out under what combinations of parameters what kind of models work well for
+       what group of agents (by fluctuation patterns, number of accesses, and other
+       criteria).  Find minimal test cases for all such areas.  Automate the above
+       process so these things can be found automatically on all domains.
+       A good solution here seems to use a database (try MS Access) to store the
+       model data.  The data will be imported from the model output files after a run,
+       and then we'll have several queries that will collect the stats, and graphic
+       utilities to plot them 
+       
+     - Read more on utility theory and see what is worth implementing
+
+     - need a way of generating a statistical access/response model from real-world data
+       The task here is to take a file of access data and compute the best parameters
+       that would allow the Access Generator to generate a statistically similar file.
+       (this is not as urgent as the above tasks).
+
+     - more complex model of the environment.  Research the real system, and replicate
+       some patterns.  That should include: random peaks, non-sinusoid periodical
+       behavior, dependency among categories, "hidden" categories, irrelevant
+       categorization for some resources, etc.
+
+     - research possibilities of abuse in the system: agent's behavior that is
+           beneficial to the agent but degrades overall performance.
+
+     ? introduce users: each access will have a few features of a user (e.g. browser
+       type, and ip address); take users into account in all rules.
+       
+     - create an evolutionary engine for generating efficient rules.

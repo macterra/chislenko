@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<HTML>
+<HEAD>
+<TITLE>Draft of semantic article by Alexander Chislenko, Michael Bukatin</TITLE>
+<META NAME="KEYWORDS" CONTENT="semantics, denotational semantics, artificial intelligence, complex systems">
+<META NAME="Description" CONTENT="Draft of semantic article by Alexander Chislenko, Michael Bukatin">
+<META NAME="AUTHOR" CONTENT="Alexander_Chislenko, Michael Bukatin">
+<META HTTP-EQUIV="Reply-to" CONTENT="sasha1@netcom.com (Alexander Chislenko)">
+<META HTTP-EQUIV="Content-language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=windows-1251">
+<META NAME="Publisher" CONTENT="Alexander_Chislenko">
+<META NAME="rating" CONTENT="General">
+<META NAME="Distribution" CONTENT="Global">
+<META NAME="Copyright" CONTENT="Alexander Chislenko,Michael Bukatin">
+<LINK REL=HOME HREF="http://www.lucifer.com/~sasha/home.html">
+<BASE HREF="http://www.lucifer.com/~sasha/articles/">
+</HEAD>
+
+<BODY BGCOLOR="#EEEEEE">
+<H1>Semantic Stuff</H1>
+
+
+<CENTER><A REL=copyright onMouseOver="window.status='You can conditionally copy this document'; return true" HREF="Copyright.html">&copy;</A> 1997
+<A REL=AUTHOR HREF="http://www.lucifer.com/~sasha/home.html">Alexander Chislenko</A>,
+<A REL=AUTHOR HREF="http://www.cs.brandeis.edu/~bukatin/index.html">Michael Bukatin</A>
+</CENTER>
+<DIV ALIGN="JUSTIFY">
+
+<H2>Introduction</H3>
+
+Traditional setup of Denotational semantics: traditional structures are represented
+by texts; space of structures is a space of grammar parsings; space
+of corresponding meanings of these objects; semantic function [[ ]]
+maps structure space into the function space; both spaces are partially
+ordered: X <= Y means that we know all information about Y that is known
+about X. Functions should be monotonous: the more information is taken
+as an input, the more is given as an output.  Also we want that if we
+have an increasing sequence than there should be a point that has all
+information in these point.  We also want continuity - the function on
+the limit is equal to the limit of the function - Scott continuity .
+Topology: open set: every point should belong to it together with all
+points that are greater or equal to it; also, if the limit of a sequence
+belongs to a set, that an end of this sequence should belong to it, too.
+
+There are several hundreds of works where such spaces are built for
+simple programming languages, and studying consequences, such as equivalence
+of programs.
+<P>
+Ideally, it would be nice to build a structure that would allow to apply
+classical mathematics to programs and their meanings.  There have been no
+serious attempts to do it; Michael and Josh suggested generalized metrics
+for such spaces; (relaxed metrics") - distance between any objects is an
+interval number; if an object is partially defined, then the relaxed distance
+between an object and a copy of it is not 0.  Also, there have been some
+results in the direction of theory of measure and integrals for such spaces
+and relations of relaxed metrics to measures; one of the key open issues is
+how to find reasonably effective realization for a given function.
+
+<P>
+<H3>Effective complexity of systems</H3>
+
+  Lets look at a structure and a function it implements.
+Now lets try to build an optimal structure that realizes the same function
+(or an equivalent function).  Now let's estimate the complexity of this
+new structure.  We will call it the effective complexity of the original
+structure (or any other structure that realizes the same function).
+This is also Kolmogorov's complexity of the realized function.
+Or in the case of equivalent functions, this would be the minimal
+(reasonable) complexity of the first function.
+<P>
+In the practical case, we would be interested not in the complexity but
+in the price of the implementations (considering breaking restrictions
+infinitely expensive).
+<P>
+We may want to consider the distance between the original structure and
+one implementing the same function optimally.  Let's call it effectiveness.
+We want to measure this distance in the structure space.
+We may want to take into account that there are many similar structures.
+If we have a limit of distances here, then the structure may have no limit.
+If we have several optimal implementations, then the minimal distance should
+be chosen.
+<P>
+If we have two similarly effective structures, than the one with smaller
+distance to an optimum would be better - if we want to use distance for
+optimization of structures.
+
+<H3>Evolution of structures</H3>
+
+There are two aspects of evolution:
+
+<UL>
+<LI>Change
+<LI>Estimation of efficiency
+</UL>
+
+ In the case of non-intentional evolution, the change happens in the
+structure space.  The efficiency is always estimated in the function
+space.
+<P>
+The intentional evolution is different in that in many cases efficient
+solutions are already known for some functions.  The solution space
+is now "mediated", as for many functions we know decently effective
+implementations; let us call such structures "modules".
+<P>
+In the layered model, the change happens in the module space; of course,
+there are still tasks of increasing the set of modules - this is the
+intelligence of the evolutionary subject.
+
+<P>Note: in the module-based system, there is also an issue of interfaces.
+
+<H3>Terms and topics:</H3>
+
+<UL>
+<LI>Denotational semantics
+<LI>AI
+<LI>Relation of function space to structure space;
+<LI>Topological structure of information spaces
+<LI>task of generating a reasonably effective structure inplementing
+a given function
+<LI>effective complexity of systems
+<LI>Relation of function space to structure space
+</UL>
+
+<H3>Goals</H3>
+
+
+
+
+<H2>References</H2>
+
+</DIV>
+<img src="http://tracker.clicktrade.com/Tracker/Depth.dll?ad=14528" ALT="" WIDTH=1 HEIGHT=1></BODY>
+</HTML>

@@ -1,0 +1,101 @@
+			Drifting Identities.
+
+
+   I always wondered how far I can evolve without stopping being myself...
+It seems possible that the identity issue can be the ultimate limit to
+growth.
+
+   First of all, I think there is no such thing as an objective identity.
+So let us consider a pair of an object (whose identity we are discussing),
+and an observer/evaluator.
+
+   Let's throw some math at it:  assume that our object is represented by
+a point O evolving along a path P in a phase space S.
+The Evaluator E is a function that projects S into an "identity space" I.
+Usually E assigns the same value to all points of a whole big area of S -
+a set of objects with "the same identity". So E[valuator] is essentially
+a map on a phase space.
+
+   Usually, at least when talking about conscious entities, we require
+that the objects with the same "identity" should not only be in the same
+domain, but lie on the same path.  This is a simple axiom, we can accept
+it or not. It sounds somewhat artificial to me though. If one can evolve
+from O1 to O2 without losing my identity, why just not agree that O1=O2
+as far as identity is concerned?  Otherwise, we should consider 'virtual
+identities' which we can realize by actually going there.
+   
+   OK, this is a foundation.  No matter how small and shaky it looks, it
+can support the argument it was built for:
+
+
+   Growth vs. identity dilemma.
+   ----------------------------
+
+   I don't really care what other Evaluators think about whether and
+when I am going to cross an identity border on my evolutionary path.
+Some of the evaluators seem to be of interest though: those that are
+attached to the objects populating my current identity domain (i.e.
+those into which I can possibly evolve without losing my identity as
+I understand it in my current state).  I would pay special attention
+to the part of this domain consisting of potentially reachable states.
+    Now I want to choose my path through this thing.
+    There's very little chance that I'll walk about it forever.
+(It is possible though that this border lies beyond my current concept
+horizon, which means that (subjectively and temporarily) I can enjoy
+the feeling of "eternal identity").
+    Sooner or later, though, my path will cross the border.
+    We can call this point just a loss of identity, or a personal
+singularity, or death.
+    Do I want to go to this point? It depends of whether I like my domain.
+If I do not, I might.
+    Here we could also note that death in this sense does not necessarily
+mean desintegration, it may well be expansion beyond recognition, which,
+without much logical reason, I perceive as a more appealing choice.
+In fact, though, they are not that easy to distinguish, since all my
+evaluation criteria fade near that border.
+   Now I move along my path to the border, and look at it.
+   My perception of my identity domain can change, and the crossing point
+may move.
+   It the simplest case, it doesn't.  That's how most humans perceive
+natural death.
+   Sometimes it can move towards me (I can't think of good examples now).
+   In case of expansion it looks like it will always move away, and
+*subjectively* I will never cross the border.
+   It raises some interesting issues though.  What if I know that if
+I choose this path, I will soon come to a point D which currently looks
+like the most miserable and disgusting outcome of my life, with a full
+loss of identity. However, if I go and don't look too far ahead,
+I'd always be happy with my state and immediate prospects, until the
+very point D - and beyond.
+   Should I choose the destination that I currently respect, or the path
+that will be enjoyable? Not an easy choice keeping in mind that upon
+coming to that nice destination I might change enough to meet it with 
+disgust, and the entity that would enjoy the other path just won't be me...
+   
+   I would expect that all we all (not humans, extropians) will face some
+tough choices here as soon as we learn how to grow.
+
+   There is also an explanation why we don't see people "dying thru
+expansion".  And this is just because we *define* our notion of identity
+as something that is preserved in the transformations we are used to seeing.
+When (not if) the transformations will become more drastic, this notion
+will be shattered.
+    In fact, if we just look at our own lives, we go thru so many
+transitions that hardly preserve our identity in any reasonable
+definition of this word...
+
+			- - -
+
+   Now I am ending the message being attracted by a personal singularity
+point that I try to cross daily and that is only an example of a rich
+variety of identities that constitute something that I [?] call "myself".
+It's 2 a.m., time to sleep. I am discontinuing my conscious existence,
+and leaving this message together with all my belongings to the tomorrow's
+being who I have never seen and who will probably think that he is *me*.
+Hope he'll mail it.
+
+
+		- Alexander Chislenko <sasha1@netcom.com>
+Home page: http://www.lucifer.com/~sasha/home.html
+
+             Originally written  07/10/92
